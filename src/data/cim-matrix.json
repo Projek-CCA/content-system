@@ -1,0 +1,1373 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "type",
+      "label": "Content Type",
+      "question": "What should this content do?",
+      "description": "The job this piece of content has. Mix your types across the week so your feed teaches, entertains and sells.",
+      "briefLabel": "Goal",
+      "color": "#2563eb",
+      "items": [
+        {
+          "id": "educate",
+          "label": "Educate",
+          "description": "Content that teaches your audience something useful. It builds trust and positions you as the expert people come back to.",
+          "brief": "Teach {audience} something useful so they save it and see {brand} as the expert.",
+          "howTo": [
+            "Pick one lesson per video. Don't teach everything at once.",
+            "Lead with the benefit: what will they be able to do after watching?",
+            "Use on-screen text so it works on mute.",
+            "End by asking them to save it for later."
+          ],
+          "example": "A dentist explains the 3 foods that stain your teeth the most."
+        },
+        {
+          "id": "social",
+          "label": "Social Content",
+          "description": "Content made to start a conversation. Its job is comments, shares and tags, which push your reach to new people.",
+          "brief": "Get {audience} commenting, sharing and tagging friends so the post reaches new people.",
+          "howTo": [
+            "Make it easy to answer in one word or one emoji.",
+            "Ask about something people already have an opinion on.",
+            "Reply to comments in the first hour to keep the conversation going.",
+            "Pin the best comment."
+          ],
+          "example": "A kopitiam asks: teh tarik or kopi O? Comment your order."
+        },
+        {
+          "id": "bizness",
+          "label": "Bizness",
+          "description": "Content that sells. It turns viewers into buyers by showing the offer, the proof and the next step.",
+          "brief": "Turn viewers into buyers of {product}: show the offer, the proof and exactly what to do next.",
+          "howTo": [
+            "Be clear about the offer: what it is, the price or promo, and the deadline.",
+            "Show proof: results, reviews, numbers.",
+            "Give one clear next step (WhatsApp, link, visit).",
+            "Don't post only this type. Balance it with Educate and Social."
+          ],
+          "example": "A tudung brand shows its new Raya collection with a 48-hour early-bird price."
+        },
+        {
+          "id": "trend",
+          "label": "Trend",
+          "description": "Content that rides what is already popular (a sound, meme, skit format or dance) and puts your brand into it.",
+          "brief": "Ride a current trend and put {brand}'s own twist on it so it feels native to the feed.",
+          "howTo": [
+            "Scroll your For You page for 10 minutes and note the sounds and formats that keep repeating.",
+            "Jump on trends early: within days, not weeks.",
+            "Keep the format recognisable; change the context to your business.",
+            "Save the trending sound to your favourites before you shoot."
+          ],
+          "example": "A property agent uses a trending sound to act out 'me explaining the SPA to first-time buyers'."
+        },
+        {
+          "id": "inspire",
+          "label": "Inspire",
+          "description": "Content that moves people: transformations, journeys and motivation. It builds a loyal audience that roots for you.",
+          "brief": "Move {audience} emotionally so they remember {brand} and root for you.",
+          "howTo": [
+            "Show real emotion. The struggle is what makes the win matter.",
+            "Use a slower pace and music that matches the mood.",
+            "Keep it honest; audiences can tell when a story is fake.",
+            "End with a line people want to share."
+          ],
+          "example": "A home baker shares the journey from 5 orders a month to a full-time business."
+        },
+        {
+          "id": "bts",
+          "label": "Behind the Scenes",
+          "description": "Content that shows what normally happens off camera: the process, the people and the daily grind. It makes your brand human and trustworthy.",
+          "brief": "Show {audience} what happens behind the scenes at {brand} so they trust the people and process behind {product}.",
+          "howTo": [
+            "Film the real, unpolished process. That's the appeal.",
+            "Introduce people by name.",
+            "Show the effort and care that customers never see.",
+            "Film vertical, handheld and close."
+          ],
+          "example": "A cake shop shows the 4am prep before a big wedding order."
+        }
+      ]
+    },
+    {
+      "id": "present",
+      "label": "Present Style",
+      "question": "How will you present it?",
+      "description": "The format of the video. The options depend on the content type you picked.",
+      "briefLabel": "Present it as",
+      "dependsOn": "type",
+      "color": "#7c3aed",
+      "items": [
+        {
+          "id": "edu-storytelling",
+          "label": "Storytelling",
+          "parents": ["educate"],
+          "description": "Teach a lesson through a story (something that happened to you or a customer) instead of listing facts.",
+          "brief": "Teach the lesson through a real story: the situation, the problem, what you learned.",
+          "structure": [
+            "Hook: drop the viewer into the most dramatic moment of the story.",
+            "Context: who, where, what was happening.",
+            "Problem: what went wrong or what was at stake.",
+            "Lesson: what you learned and how it applies to {audience}.",
+            "CTA: ask if it has ever happened to them."
+          ],
+          "hooks": [
+            "The day I learned the truth about {subject}",
+            "Nobody warned me about {subject}",
+            "A customer taught me a lesson about {subject}"
+          ],
+          "howTo": [
+            "Start in the middle of the action, not with 'so one day...'.",
+            "Keep it to one story and one lesson.",
+            "Use your face and voice. Stories need a person."
+          ],
+          "example": "A mechanic tells the story of a customer who ignored a small engine noise, and the RM3,000 bill that followed."
+        },
+        {
+          "id": "facts",
+          "label": "Facts",
+          "parents": ["educate"],
+          "description": "Share surprising, true facts your audience didn't know. Short, punchy and very saveable.",
+          "brief": "Share surprising facts, one per scene, that make people say 'I didn't know that'.",
+          "structure": [
+            "Hook: open with the most surprising fact.",
+            "Explain it simply in one or two lines.",
+            "Say why it matters to {audience}.",
+            "Optional: stack two or three more facts.",
+            "CTA: 'Follow for more facts like this.'"
+          ],
+          "hooks": [
+            "Most people don't know this about {subject}",
+            "A surprising fact about {subject}",
+            "The truth about {subject} in 30 seconds"
+          ],
+          "howTo": [
+            "Check your facts. One wrong fact destroys trust.",
+            "Put the fact on screen as text.",
+            "Use a number whenever you can."
+          ],
+          "example": "A skincare brand explains why you still need sunscreen on a cloudy day."
+        },
+        {
+          "id": "top-list",
+          "label": "Top 3/5",
+          "parents": ["educate"],
+          "description": "A countdown list of 3 or 5 points. Easy to follow and easy to watch till the end.",
+          "brief": "Count down 3 or 5 quick points, saving the best one for last.",
+          "structure": [
+            "Hook: say the list title, 'Top 3 ...'.",
+            "Point #3 (good).",
+            "Point #2 (better).",
+            "Point #1 (best, the reason to watch till the end).",
+            "CTA: ask which one they would add."
+          ],
+          "hooks": [
+            "Top 3 things to know about {subject}",
+            "Top 5 mistakes people make when it comes to {subject}",
+            "3 things I wish I knew earlier about {subject}"
+          ],
+          "howTo": [
+            "Put the number in the hook. It tells viewers how long to stay.",
+            "One scene per point.",
+            "Save the strongest point for #1."
+          ],
+          "example": "A travel agent counts down the top 5 hidden spots in Langkawi."
+        },
+        {
+          "id": "how-to",
+          "label": "How-To Tutorial",
+          "parents": ["educate"],
+          "description": "A step-by-step guide that shows exactly how to do something, so viewers can copy you right away.",
+          "brief": "Walk through it step by step so viewers can copy you right away.",
+          "structure": [
+            "Hook: show the end result first.",
+            "Step 1, step 2, step 3, one scene each.",
+            "A common mistake to avoid.",
+            "CTA: 'Save this so you can try it later.'"
+          ],
+          "hooks": [
+            "Do this, not that, when it comes to {subject}",
+            "The simple 3-step guide to {subject}",
+            "Here's exactly how we handle {subject}"
+          ],
+          "howTo": [
+            "Show, don't just tell. Film your hands doing each step.",
+            "Number each step on screen.",
+            "Keep each step under 10 seconds."
+          ],
+          "example": "A barista shows how to make a proper kopi at home in 3 steps."
+        },
+        {
+          "id": "myth-fact",
+          "label": "Myth vs Fact",
+          "parents": ["educate"],
+          "description": "Bust a common belief in your industry: say the myth, then reveal the truth.",
+          "brief": "Bust a common myth and replace it with the truth.",
+          "structure": [
+            "Hook: state the myth as if it's true.",
+            "Big 'MYTH' stamp or buzzer.",
+            "Reveal the fact, with proof.",
+            "Repeat for one or two more myths.",
+            "CTA: 'What other myths have you heard?'"
+          ],
+          "hooks": [
+            "Stop believing these myths about {subject}",
+            "Myth or fact? Let's test what you know about {subject}",
+            "You've been told the wrong thing about {subject}"
+          ],
+          "howTo": [
+            "Pick myths your customers actually believe. Check your comments and DMs.",
+            "Use a clear visual for MYTH and FACT (colours, stamps, sounds).",
+            "Back the fact with proof or experience."
+          ],
+          "example": "A personal trainer busts the myth that you can't eat rice if you want to lose weight."
+        },
+        {
+          "id": "quiz-reward",
+          "label": "Quiz + Reward",
+          "parents": ["social"],
+          "description": "Ask a question and give a prize for the correct (or a random) answer. Rewards drive a huge number of comments.",
+          "brief": "Ask a question and reward the winners. The prize is what drives the comments.",
+          "structure": [
+            "Hook: 'Answer this and win ...'.",
+            "Show the question (and options).",
+            "Explain how to enter: comment, follow, tag a friend.",
+            "State the deadline and when winners are announced.",
+            "Follow up with a winner-announcement video."
+          ],
+          "hooks": [
+            "Answer this question about {subject} and win a prize!",
+            "Giveaway: get this question about {subject} right and win"
+          ],
+          "howTo": [
+            "Make the prize relevant to your business to attract buyers, not freebie hunters.",
+            "Keep the rules simple. Comment plus follow is enough.",
+            "Always announce winners publicly. It builds trust for the next one.",
+            "Check the platform's promotion rules before running a giveaway."
+          ],
+          "example": "A burger shop asks people to guess how many patties it sold last weekend. The closest answer wins a free meal."
+        },
+        {
+          "id": "a-or-b",
+          "label": "A or B",
+          "parents": ["social"],
+          "description": "Give two choices and ask people to pick one. The lowest-effort way to get comments.",
+          "brief": "Give two clear options and ask viewers to pick one in the comments.",
+          "structure": [
+            "Hook: 'A or B?' with both options on screen.",
+            "Show option A.",
+            "Show option B.",
+            "CTA: 'Comment A or B.'"
+          ],
+          "hooks": [
+            "A or B: which one wins when it comes to {subject}?",
+            "You can only pick one. Settle the debate about {subject}"
+          ],
+          "howTo": [
+            "Make both options equally tempting. A one-sided choice gets no debate.",
+            "Label them clearly: A on the left, B on the right.",
+            "Reply to comments and pick a side yourself."
+          ],
+          "example": "A nasi lemak stall: sambal manis or sambal pedas? Comment A or B."
+        },
+        {
+          "id": "a-or-b-opinion",
+          "label": "A or B + Pendapat",
+          "altLabel": "A or B + Opinion",
+          "parents": ["social"],
+          "description": "Like A or B, but viewers also have to explain why. Longer comments mean more engagement and real insight into your audience.",
+          "brief": "Give two options and ask viewers to pick one and explain why (pendapat).",
+          "structure": [
+            "Hook: the choice, framed as a debate.",
+            "Show both options.",
+            "Give your own pick and one reason.",
+            "CTA: 'Which one, and why? Tell me in the comments.'"
+          ],
+          "hooks": [
+            "Which would you pick when it comes to {subject}? Defend your answer",
+            "Unpopular opinion about {subject}. Agree or not?"
+          ],
+          "howTo": [
+            "Take a side yourself. It invites people to disagree.",
+            "Read the best comments in a follow-up video.",
+            "Use what people say as research for your next content."
+          ],
+          "example": "A car dealer: new car or recond? Tell us which and why."
+        },
+        {
+          "id": "quiz",
+          "label": "Quiz",
+          "parents": ["social"],
+          "description": "A quick question or test that viewers answer in their head or in the comments. People love proving they know the answer.",
+          "brief": "Ask a quick quiz question and make viewers want to prove they know the answer.",
+          "structure": [
+            "Hook: the question, with a challenge ('only 1 in 10 get this right').",
+            "Show the options or a countdown timer.",
+            "Pause, or tell them to comment before the reveal.",
+            "Reveal the answer, with a short explanation.",
+            "CTA: 'Did you get it right?'"
+          ],
+          "hooks": [
+            "Only 1 in 10 people get this right about {subject}",
+            "Quick quiz: how much do you really know about {subject}?"
+          ],
+          "howTo": [
+            "Make it hard enough to be interesting, easy enough to guess.",
+            "Put a countdown on screen to build tension.",
+            "Reveal the answer at the end, or in the comments."
+          ],
+          "example": "A clinic asks: which drink has more sugar, teh tarik or a can of soda?"
+        },
+        {
+          "id": "biz-storytelling",
+          "label": "Storytelling",
+          "parents": ["bizness"],
+          "description": "Sell through a story: a customer's problem and how your product solved it, or why you started the business.",
+          "brief": "Sell through a story: a real customer or the founder, the problem, and how {product} changed things.",
+          "structure": [
+            "Hook: the problem or the turning point.",
+            "The situation before (the pain).",
+            "The moment they found {product}.",
+            "The result after.",
+            "CTA: the offer and how to get it."
+          ],
+          "hooks": [
+            "The story behind {subject}",
+            "What happened when a customer asked us about {subject}"
+          ],
+          "howTo": [
+            "Make the customer the hero, not your product.",
+            "Use real names and real results (with permission).",
+            "Keep the pitch to the last 10 seconds."
+          ],
+          "example": "A tuition centre tells the story of a student who went from failing to an A in maths."
+        },
+        {
+          "id": "hard-sell",
+          "label": "Hard Sell",
+          "parents": ["bizness"],
+          "description": "A direct pitch: here's the product, here's the offer, buy now. Works best on warm audiences and with a deadline.",
+          "brief": "Pitch {product} directly: the offer, the price, the deadline and how to buy.",
+          "structure": [
+            "Hook: call out the buyer ('If you need ..., stop scrolling').",
+            "Show the product and its top benefit.",
+            "The offer: price, bonus, deadline.",
+            "Proof: a review or a result.",
+            "CTA: exactly how to buy, right now."
+          ],
+          "hooks": [
+            "Stop scrolling if you've been thinking about {subject}",
+            "If you care about {subject}, this offer is for you"
+          ],
+          "howTo": [
+            "Create urgency with a real deadline or limited stock.",
+            "Show the price. Hiding it loses buyers.",
+            "Use it in about 1 in 5 posts so your feed doesn't feel like an ad."
+          ],
+          "example": "A furniture shop shows its best-selling sofa with RM300 off this weekend only."
+        },
+        {
+          "id": "feedback",
+          "label": "Feedback",
+          "parents": ["bizness"],
+          "description": "Let your customers do the selling: reviews, testimonials, screenshots of messages and before/after results.",
+          "brief": "Let customers sell for you: real reviews, testimonials and results for {product}.",
+          "structure": [
+            "Hook: the most powerful line from the review.",
+            "Who the customer is and what their problem was.",
+            "What they say about {product}.",
+            "Proof on screen (screenshot, before/after).",
+            "CTA: invite viewers to try it too."
+          ],
+          "hooks": [
+            "What our customers really say about {subject}",
+            "Real customers, honest opinions on {subject}"
+          ],
+          "howTo": [
+            "Always ask the customer for permission first.",
+            "Video testimonials beat screenshots; screenshots beat nothing.",
+            "Choose reviews that answer a common doubt."
+          ],
+          "example": "A renovation company shows WhatsApp messages from a happy client next to the finished kitchen."
+        },
+        {
+          "id": "problem-solution",
+          "label": "Problem → Solution",
+          "parents": ["bizness"],
+          "description": "Show a problem your customers know too well, then show how your product fixes it. A soft sell that doesn't feel like an ad.",
+          "brief": "Show a problem {audience} know too well, then show {product} fixing it.",
+          "structure": [
+            "Hook: show the problem in action.",
+            "Agitate: why it's so annoying or costly.",
+            "Reveal {product} as the fix.",
+            "Show it working.",
+            "CTA: where to get it."
+          ],
+          "hooks": [
+            "The biggest problem with {subject}, and how we fix it",
+            "Still struggling when it comes to {subject}? Watch this"
+          ],
+          "howTo": [
+            "Exaggerate the problem a little for effect, but keep the solution real.",
+            "Show, don't claim. Film it working.",
+            "Pair it with a before/after split screen."
+          ],
+          "example": "A cleaning service shows a greasy kitchen hood, then the sparkling result."
+        },
+        {
+          "id": "lakonan",
+          "label": "Lakonan",
+          "altLabel": "Skit / Acting",
+          "parents": ["trend"],
+          "description": "A short acted skit, usually following a trending format or sound: POV scenes, 'types of customers', dramatic re-enactments.",
+          "brief": "Act it out as a short skit (lakonan) using a trending format or sound.",
+          "structure": [
+            "Hook: set up the scene with a 'POV:' or 'When...' caption.",
+            "Act out the situation (play several characters if needed).",
+            "The twist or punchline.",
+            "Tie it back to {brand} in a subtle way.",
+            "CTA: 'Tag someone who does this.'"
+          ],
+          "hooks": [
+            "POV: you finally understand {subject}",
+            "When your friend asks you about {subject}"
+          ],
+          "howTo": [
+            "Use a trending sound or skit format so the algorithm pushes it.",
+            "Keep it under 30 seconds with a clear punchline.",
+            "Costume or prop changes make multiple characters clear."
+          ],
+          "example": "A bakery acts out 'types of customers when the kek lapis runs out'."
+        },
+        {
+          "id": "dance",
+          "label": "Dance",
+          "parents": ["trend"],
+          "description": "Join a trending dance or choreography, with your team, your product or your shop as the twist.",
+          "brief": "Do the trending dance, with {brand}'s team, product or shop as the twist.",
+          "structure": [
+            "Hook: the text overlay that gives the dance its context.",
+            "The dance (follow the trend closely).",
+            "Your twist: product, uniform, location or team.",
+            "CTA: 'Follow for more' or tag a friend."
+          ],
+          "hooks": [
+            "Me after figuring out {subject}",
+            "Our team when someone asks about {subject}"
+          ],
+          "howTo": [
+            "Learn the trend from the original video first.",
+            "The text overlay is what makes it about your business.",
+            "It doesn't have to be perfect. Fun beats polished."
+          ],
+          "example": "A clinic's nurses do a trending dance with the caption 'when the last patient of the day leaves'."
+        },
+        {
+          "id": "trending-sound",
+          "label": "Trending Sound / Meme",
+          "parents": ["trend"],
+          "description": "Use a viral sound or meme format and apply it to your business. Low effort, high reach.",
+          "brief": "Use a viral sound or meme format and apply it to {brand}'s world.",
+          "structure": [
+            "Hook: the text overlay that sets up the meme.",
+            "Lip-sync or act to the sound.",
+            "The punchline, tied to your business.",
+            "CTA: tag someone who relates."
+          ],
+          "hooks": [
+            "Me explaining {subject} to my friends",
+            "Nobody: ... Me when someone mentions {subject}:"
+          ],
+          "howTo": [
+            "Use the sound while it's rising, not when it's already everywhere.",
+            "Match the meaning of the sound to your situation.",
+            "Keep it short. Most meme videos are under 15 seconds."
+          ],
+          "example": "A property agent lip-syncs to a trending sound: 'when the buyer says the loan is approved'."
+        },
+        {
+          "id": "transformation",
+          "label": "Before & After",
+          "parents": ["inspire"],
+          "description": "Show a transformation: a person, a space, a product or a business, from before to after.",
+          "brief": "Show the transformation, before and after, and let the result speak.",
+          "structure": [
+            "Hook: flash the 'after' for a split second.",
+            "The 'before', honest and unflattering.",
+            "The process (sped up).",
+            "The big reveal.",
+            "CTA: 'Want the same result? ...'"
+          ],
+          "hooks": [
+            "From zero to this: our journey with {subject}",
+            "Before and after: see what changed with {subject}"
+          ],
+          "howTo": [
+            "Shoot the before and after from the exact same angle.",
+            "Use a transition (snap, whip pan, cover the lens) for the reveal.",
+            "Time-lapse the middle."
+          ],
+          "example": "A landscaper shows an overgrown garden turned into a family-friendly backyard."
+        },
+        {
+          "id": "struggle-success",
+          "label": "Struggle to Success",
+          "parents": ["inspire"],
+          "description": "Share an honest journey from hard times to where you are now. Vulnerability builds loyal fans.",
+          "brief": "Share the honest journey from struggle to where {brand} is today.",
+          "structure": [
+            "Hook: the lowest point.",
+            "What was going wrong.",
+            "The turning point.",
+            "Where you are now (with proof).",
+            "The lesson for {audience}."
+          ],
+          "hooks": [
+            "I almost gave up on {subject}",
+            "From struggling with {subject} to this"
+          ],
+          "howTo": [
+            "Use old photos and videos. They make it real.",
+            "Don't brag at the end; share the lesson.",
+            "Talk to camera for the emotional parts."
+          ],
+          "example": "A caterer shares starting from a home kitchen during the pandemic and now running a central kitchen."
+        },
+        {
+          "id": "motivational",
+          "label": "Motivational Talk",
+          "parents": ["inspire"],
+          "description": "A short, heartfelt message that encourages your audience. Shareable and great for building a personal brand.",
+          "brief": "Give {audience} a short, heartfelt message of encouragement.",
+          "structure": [
+            "Hook: speak to a feeling ('If you feel stuck ...').",
+            "The message or lesson in 2–3 lines.",
+            "A personal example.",
+            "The line people will screenshot.",
+            "CTA: 'Send this to someone who needs it.'"
+          ],
+          "hooks": [
+            "If you're worried about {subject}, watch this",
+            "A reminder for anyone thinking about {subject}"
+          ],
+          "howTo": [
+            "Speak slowly and look into the lens.",
+            "Soft background music, captions on.",
+            "Keep it under 45 seconds."
+          ],
+          "example": "A business coach reminds new entrepreneurs that the first year is supposed to be hard."
+        },
+        {
+          "id": "day-in-life",
+          "label": "Day in the Life",
+          "parents": ["bts"],
+          "description": "Follow a day at your business from open to close. People love seeing how things really run.",
+          "brief": "Follow a real day at {brand} from open to close.",
+          "structure": [
+            "Hook: the time and the first task ('5:30am, first batch of the day').",
+            "Quick clips through the day, with time stamps.",
+            "One challenge or surprise moment.",
+            "End of day, with the result.",
+            "CTA: 'Want to see more days like this?'"
+          ],
+          "hooks": [
+            "A day in the life at {brand}: {subject}",
+            "Come spend a day with us and see {subject} up close"
+          ],
+          "howTo": [
+            "Put the time on screen for each clip.",
+            "Film many short clips, 2–3 seconds each.",
+            "Voiceover or captions tell the story."
+          ],
+          "example": "A florist shows a full day before Valentine's, from 6am delivery to the last bouquet."
+        },
+        {
+          "id": "how-its-made",
+          "label": "How It's Made",
+          "parents": ["bts"],
+          "description": "Show the process of making or delivering your product or service. Satisfying to watch and builds perceived value.",
+          "brief": "Show how {product} is made or delivered, step by step.",
+          "structure": [
+            "Hook: the most satisfying moment of the process.",
+            "Raw materials or starting point.",
+            "Each step, sped up.",
+            "The finished product.",
+            "CTA: how to order."
+          ],
+          "hooks": [
+            "How it's made: {subject}",
+            "What really goes on behind {subject}"
+          ],
+          "howTo": [
+            "Close-ups and satisfying sounds work best.",
+            "Speed up the boring parts.",
+            "Show the care and quality checks."
+          ],
+          "example": "A batik maker shows the canting, dyeing and drying process."
+        },
+        {
+          "id": "meet-team",
+          "label": "Meet the Team",
+          "parents": ["bts"],
+          "description": "Introduce the people behind your business: their roles, personalities and fun facts.",
+          "brief": "Introduce the people behind {brand}, their roles and personalities.",
+          "structure": [
+            "Hook: 'Meet the person who ...'.",
+            "Name, role, how long they've been with you.",
+            "A fun fact or a quick question.",
+            "Them at work.",
+            "CTA: 'Say hi in the comments!'"
+          ],
+          "hooks": [
+            "Meet the people behind {subject}",
+            "The team that handles {subject}"
+          ],
+          "howTo": [
+            "Ask everyone the same fun question to make it a series.",
+            "Let them be themselves. Don't over-script.",
+            "Get their consent before posting."
+          ],
+          "example": "A clinic introduces its receptionist, who remembers every patient's name."
+        }
+      ]
+    },
+    {
+      "id": "shooting",
+      "label": "Shooting Style",
+      "question": "How will you shoot it?",
+      "description": "How the camera captures the content: the technique, the setting or the movement.",
+      "briefLabel": "Shoot it",
+      "color": "#ea580c",
+      "items": [
+        {
+          "id": "whip-pan",
+          "label": "Whip Pan",
+          "description": "A very fast swing of the camera left or right that blurs the frame, used as a transition between scenes. It adds energy and makes cuts feel seamless.",
+          "brief": "Use fast whip pans to jump between scenes or points. It keeps the energy high.",
+          "howTo": [
+            "Swing the phone quickly in one direction at the end of shot A.",
+            "Start shot B with a swing in the same direction, then stop on your subject.",
+            "Cut the two clips in the middle of the blur so it looks like one move.",
+            "Keep the swing speed and direction consistent across the video."
+          ],
+          "example": "Each point of a Top 3 list is revealed with a whip pan to a new spot in the shop."
+        },
+        {
+          "id": "reaction",
+          "label": "Reaction",
+          "description": "Film genuine reactions (yours or someone else's) to a product, a taste, a reveal or another video. Faces make people stop scrolling.",
+          "brief": "Capture real reactions on camera. Faces and first impressions sell the moment.",
+          "howTo": [
+            "Film the reaction in close-up with the face well lit.",
+            "Don't over-script it; genuine surprise wins.",
+            "Use picture-in-picture or split screen when reacting to another video.",
+            "Keep the reaction short and cut to the best moment."
+          ],
+          "example": "Customers taste the new menu item for the first time on camera."
+        },
+        {
+          "id": "outdoor",
+          "label": "Outdoor",
+          "description": "Shoot outside: on location, in the street, at the site. Natural light and real surroundings make content feel authentic.",
+          "brief": "Shoot it outdoors on location for natural light and real-world context.",
+          "howTo": [
+            "Film in the morning or late afternoon for soft light; avoid harsh noon sun.",
+            "Use a clip-on mic. Wind and traffic ruin audio.",
+            "Pick a background that tells viewers where you are.",
+            "Check who and what is in frame; get permission when needed."
+          ],
+          "example": "A property agent films a talk in front of the new development."
+        },
+        {
+          "id": "indoor",
+          "label": "Indoor",
+          "description": "Shoot inside a space you control: your shop, office, studio or home. You control the light, sound and background.",
+          "brief": "Shoot indoors in a controlled space so the light, sound and background stay clean.",
+          "howTo": [
+            "Face a window, or put a ring light or softbox in front of you.",
+            "Tidy the background and add one element that shows your brand.",
+            "Turn off fans and air-cond during takes for clean audio.",
+            "Keep the camera at eye level."
+          ],
+          "example": "A consultant films a talking-head tip at a desk with the logo on the wall behind."
+        },
+        {
+          "id": "moving",
+          "label": "Moving",
+          "description": "The camera or presenter is in motion: walking and talking, following the subject, or filming from a moving car. Motion keeps the eye engaged.",
+          "brief": "Keep the camera moving (walk and talk, or follow the action) so every frame feels alive.",
+          "howTo": [
+            "Hold the phone with both hands close to your body, or use a gimbal.",
+            "Walk heel-to-toe to reduce shake.",
+            "Plan your route so you don't stop mid-sentence.",
+            "Turn on stabilisation in your camera settings."
+          ],
+          "example": "An owner walks through the shop explaining each section while the camera follows."
+        },
+        {
+          "id": "highlight",
+          "label": "Highlight",
+          "description": "A fast montage of the best moments (an event, a day, a project) cut to music. It shows a lot in a few seconds.",
+          "brief": "Cut the best moments into a fast highlight reel synced to music.",
+          "howTo": [
+            "Film lots of short 2–3 second clips from different angles.",
+            "Cut on the beat of the music.",
+            "Open with your strongest clip.",
+            "Keep the whole thing under 30 seconds."
+          ],
+          "example": "An event company's 20-second recap of a wedding, cut to a trending song."
+        },
+        {
+          "id": "foodie",
+          "label": "Foodie",
+          "description": "The food-review style: close-ups of the food, the first bite, an honest reaction and quick details on price and location.",
+          "brief": "Shoot it foodie-review style: close-ups, the first bite, an honest reaction and the key details.",
+          "howTo": [
+            "Get tight close-ups: the pull, the pour, the steam, the crunch.",
+            "Film the first bite and react honestly.",
+            "Put the price, location and opening hours on screen.",
+            "Shoot near natural light for appetising colours."
+          ],
+          "references": [
+            {
+              "label": "KL Foodie",
+              "note": "Study how they open the video, frame the food and deliver the verdict."
+            },
+            {
+              "label": "Bang Sadok",
+              "note": "Study how they open the video, frame the food and deliver the verdict."
+            }
+          ],
+          "example": "A restaurant owner reviews their own signature dish like a food critic."
+        },
+        {
+          "id": "talking-head",
+          "label": "Talking Head",
+          "description": "You speak directly to the camera, framed from the chest up. Simple, personal and the fastest way to build trust.",
+          "brief": "Talk straight to camera, framed chest-up, like you're chatting to one friend.",
+          "howTo": [
+            "Put the lens at eye level and look into it, not at the screen.",
+            "Cut out pauses with jump cuts to keep the pace up.",
+            "Add captions. Most people watch on mute.",
+            "Change the angle or zoom every few seconds to reset attention."
+          ],
+          "example": "A lawyer answers one common question about wills in 45 seconds."
+        },
+        {
+          "id": "pov",
+          "label": "POV",
+          "description": "Shot from the viewer's point of view, as if they are the one doing it. Very immersive and great for 'what it's like' content.",
+          "brief": "Shoot from a first-person point of view so viewers feel like they're doing it.",
+          "howTo": [
+            "Hold the phone at eye or chest level, pointing where your eyes look.",
+            "Show your hands in frame to make it feel real.",
+            "Add a 'POV:' caption to set the scene.",
+            "Move slowly. POV shots get shaky fast."
+          ],
+          "example": "POV: you're the barista during the lunch rush."
+        },
+        {
+          "id": "green-screen",
+          "label": "Green Screen",
+          "description": "You appear in front of an image, article, website or video. Perfect for reacting to news, reviews or screenshots.",
+          "brief": "Use the green-screen effect to talk in front of a screenshot, article or image.",
+          "howTo": [
+            "Use the app's built-in green screen effect. No real green screen needed.",
+            "Pick a clear, readable background image.",
+            "Point to what you're talking about on screen.",
+            "Swap the background for each point."
+          ],
+          "example": "An accountant reacts to a news headline about new tax rules."
+        },
+        {
+          "id": "street-interview",
+          "label": "Street Interview",
+          "description": "Ask members of the public a question and film their answers. Real people, real opinions, very shareable.",
+          "brief": "Ask real people a question on the street and film their honest answers.",
+          "howTo": [
+            "Use a handheld or clip-on wireless mic.",
+            "Ask a short, fun question that's easy to answer.",
+            "Always ask permission before filming and posting.",
+            "Keep only the best 3–5 answers."
+          ],
+          "example": "A fitness brand asks people in a mall: how many push-ups can you do?"
+        },
+        {
+          "id": "voiceover-broll",
+          "label": "Voiceover + B-roll",
+          "description": "Record your voice separately and lay it over supporting footage (B-roll). Great if you're shy on camera.",
+          "brief": "Record a voiceover and cover it with B-roll footage. No need to show your face.",
+          "howTo": [
+            "Write and record the voiceover first, then film footage to match.",
+            "Record in a quiet room with the phone close to your mouth.",
+            "Change shots every 2–3 seconds.",
+            "Build a B-roll library of your shop, product and team to reuse."
+          ],
+          "example": "A candle brand narrates its story over clips of pouring and packing."
+        },
+        {
+          "id": "close-up-asmr",
+          "label": "Close-up / ASMR",
+          "description": "Extreme close-ups with satisfying sounds: pouring, cutting, packing, unboxing. Oddly satisfying content gets watched to the end and replayed.",
+          "brief": "Go extreme close-up and let the satisfying sounds do the talking.",
+          "howTo": [
+            "Get the phone as close as it can focus.",
+            "Record in a silent room; sound is half the content.",
+            "Use slow, deliberate movements.",
+            "Skip the music, or keep it very low."
+          ],
+          "example": "An online shop films orders being packed, with every crinkle and tape sound."
+        },
+        {
+          "id": "split-screen",
+          "label": "Split Screen / Duet",
+          "description": "Two videos side by side: before/after, A vs B, or you reacting to another creator's video with Duet or Remix.",
+          "brief": "Use a split screen to compare two things, or duet another video.",
+          "howTo": [
+            "Use the Duet, Remix or Collab features on TikTok, Reels or Shorts.",
+            "Line up both sides so the action happens at the same time.",
+            "Label each side clearly.",
+            "Works great with the Reaction and A or B styles."
+          ],
+          "example": "A tailor duets a viral 'fashion fail' video, showing how to fix it."
+        }
+      ]
+    },
+    {
+      "id": "topic",
+      "label": "Topic",
+      "question": "What will you talk about?",
+      "description": "The subject of the content: what it's about.",
+      "briefLabel": "Talk about",
+      "color": "#16a34a",
+      "items": [
+        {
+          "id": "product-service",
+          "label": "Product & Service",
+          "description": "Talk about what you sell: features, benefits, how it's made and how to use it.",
+          "brief": "Focus on {product}: what it is, why it's better, and how to use it.",
+          "subjects": [
+            "{product}",
+            "choosing the right {product}",
+            "the way we make {product}",
+            "getting the most out of {product}"
+          ],
+          "howTo": [
+            "Focus on one feature or benefit per video.",
+            "Show the product in use, not just sitting on a table.",
+            "Answer the viewer's question: what's in it for me?"
+          ],
+          "example": "Why our kuih is made fresh every morning, never frozen."
+        },
+        {
+          "id": "target-market",
+          "label": "Target Market",
+          "description": "Talk about your ideal customers (their problems, wants and daily lives) so they feel seen.",
+          "brief": "Speak directly to {audience}: their problems, wants and daily life, so they feel seen.",
+          "subjects": [
+            "the problems {audience} face",
+            "what {audience} really want",
+            "the questions {audience} always ask"
+          ],
+          "howTo": [
+            "Use their words. Read your comments and DMs for the phrases they use.",
+            "Call them out in the first line.",
+            "Show you understand the problem before offering a solution."
+          ],
+          "example": "3 things every first-time home buyer worries about."
+        },
+        {
+          "id": "leads-generation",
+          "label": "Leads Generation",
+          "description": "Content designed to collect contacts or enquiries: people who comment, DM or sign up to get something from you.",
+          "brief": "Give {audience} a reason to reach out: a freebie, quote or trial in exchange for a comment, DM or sign-up.",
+          "subjects": [
+            "getting a free quote",
+            "our free guide",
+            "a free trial of {product}",
+            "our price list"
+          ],
+          "howTo": [
+            "Offer something valuable and specific (price list, checklist, free consultation).",
+            "Use a keyword CTA: 'Comment NAK and we'll DM you.'",
+            "Follow up every lead within 24 hours.",
+            "Track how many leads each video brings in."
+          ],
+          "example": "Comment 'RUMAH' and we'll send you our free first-home buyer checklist."
+        },
+        {
+          "id": "demographic",
+          "label": "Demographic",
+          "description": "Tailor content to one specific group (by age, gender, location, income or life stage) so it feels made for them.",
+          "brief": "Make it for one specific group within {audience} (by age, life stage or location) so it feels personal.",
+          "subjects": [
+            "{product} for first-timers",
+            "{product} for students vs working adults",
+            "{product} at every age",
+            "{product} for families"
+          ],
+          "howTo": [
+            "Pick one group per video. 'Everyone' means no one.",
+            "Name the group in the hook.",
+            "Use examples and situations that group recognises."
+          ],
+          "example": "Skincare in your 20s vs your 40s: what should change?"
+        },
+        {
+          "id": "current-issues",
+          "label": "Current Issues",
+          "description": "Connect your business to what people are talking about right now: news, viral moments, policy changes, price hikes.",
+          "brief": "Link {brand} to what people are talking about right now so the content feels timely.",
+          "subjects": [
+            "this week's viral news",
+            "rising prices",
+            "the latest changes in {niche}",
+            "the latest trend in {niche}"
+          ],
+          "howTo": [
+            "Move fast. Current issues expire in days.",
+            "Add your expert view; don't just repeat the news.",
+            "Stay away from sensitive topics (race, religion, royalty) unless you're sure it's appropriate."
+          ],
+          "example": "What the new electricity tariff means for small restaurant owners."
+        },
+        {
+          "id": "general-knowledge",
+          "label": "General Knowledge",
+          "description": "Interesting facts, history and trivia about your industry that people enjoy learning and passing on.",
+          "brief": "Share interesting knowledge about {niche} that people enjoy learning and passing on.",
+          "subjects": [
+            "the history of {product}",
+            "common myths in {niche}",
+            "the science behind {product}",
+            "{niche} basics"
+          ],
+          "howTo": [
+            "Pick facts that make people say 'wow' or 'I never knew that'.",
+            "Tie the fact back to your business in one line.",
+            "Double-check your sources."
+          ],
+          "example": "The real reason nasi lemak is wrapped in banana leaf."
+        },
+        {
+          "id": "faq",
+          "label": "FAQ",
+          "description": "Answer the questions customers ask you again and again: in DMs, on WhatsApp, at the counter.",
+          "brief": "Answer one question {audience} ask you again and again.",
+          "subjects": [
+            "our most asked question",
+            "the price of {product}",
+            "delivery and after-sales",
+            "how long {product} lasts"
+          ],
+          "howTo": [
+            "Keep a running list of questions from DMs and WhatsApp. Each one is a video.",
+            "One question per video.",
+            "Reply to a comment with a video answer."
+          ],
+          "example": "Do you deliver to Sabah and Sarawak? Here's how it works."
+        },
+        {
+          "id": "behind-brand",
+          "label": "Behind the Brand",
+          "description": "Your founder story, values, team and mission: the people and the 'why' behind the business.",
+          "brief": "Show the people and the 'why' behind {brand}.",
+          "subjects": [
+            "the story behind {brand}",
+            "the team behind {brand}",
+            "why we started {brand}",
+            "our biggest mistake"
+          ],
+          "howTo": [
+            "Be personal and honest. That's what makes it connect.",
+            "Share the values that affect how you serve customers.",
+            "Turn it into a series (Episode 1, 2, 3...)."
+          ],
+          "example": "Why we still hand-pack every order even though we could automate it."
+        },
+        {
+          "id": "festive",
+          "label": "Festive & Seasonal",
+          "description": "Tie your content to the calendar: Raya, CNY, Deepavali, Christmas, Merdeka, school holidays, payday, year-end sales.",
+          "brief": "Tie it to the season (festive, holidays or payday) so it's relevant this week.",
+          "subjects": [
+            "Raya preparations",
+            "the festive season",
+            "the school holidays",
+            "payday weekend"
+          ],
+          "howTo": [
+            "Plan festive content 3–4 weeks ahead.",
+            "Respect the culture and traditions of each festival.",
+            "Pair it with a festive offer or limited edition."
+          ],
+          "example": "5 Raya open house menu ideas you can order from us."
+        },
+        {
+          "id": "tips-hacks",
+          "label": "Tips & Hacks",
+          "description": "Quick, practical tips that save time, money or effort. Instantly useful and very saveable.",
+          "brief": "Give a quick, practical tip that saves {audience} time, money or effort.",
+          "subjects": [
+            "saving money on {product}",
+            "making {product} last longer",
+            "quick hacks for {product}"
+          ],
+          "howTo": [
+            "One tip per video, shown in action.",
+            "Put the result at the start.",
+            "Ask them to save it."
+          ],
+          "example": "The trick to keeping your kek lapis moist for two weeks."
+        }
+      ]
+    },
+    {
+      "id": "hook",
+      "label": "Hook",
+      "question": "How will you grab attention in the first 3 seconds?",
+      "description": "The first 3 seconds decide whether people keep watching. Pick an opening technique.",
+      "briefLabel": "Open with",
+      "optional": true,
+      "color": "#db2777",
+      "items": [
+        {
+          "id": "question",
+          "label": "Question",
+          "description": "Open with a question the viewer wants answered, so they stay for the answer.",
+          "brief": "Open with a question viewers need answered.",
+          "hooks": [
+            "Have you ever wondered about {subject}?",
+            "Why does nobody talk about {subject}?"
+          ],
+          "howTo": [
+            "Ask something your audience has actually wondered.",
+            "Put the question on screen as text too.",
+            "Answer it by the end. Don't bait and switch."
+          ]
+        },
+        {
+          "id": "bold-statement",
+          "label": "Bold Statement",
+          "description": "Open with a strong, slightly controversial claim that makes people want to argue or learn more.",
+          "brief": "Open with a bold, slightly controversial statement.",
+          "hooks": [
+            "Everything you know about {subject} is wrong.",
+            "This will change how you think about {subject}."
+          ],
+          "howTo": [
+            "Say it with confidence, straight to camera.",
+            "Back it up in the video, or you lose trust.",
+            "Controversial is fine; offensive is not."
+          ]
+        },
+        {
+          "id": "pov-setup",
+          "label": "POV Setup",
+          "description": "Set a scene with a 'POV:' caption so viewers instantly imagine themselves in it.",
+          "brief": "Open with a 'POV:' caption that puts viewers in the scene.",
+          "hooks": [
+            "POV: you just found out the truth about {subject}",
+            "POV: your friend won't stop talking about {subject}"
+          ],
+          "howTo": [
+            "The POV line must be readable in under 2 seconds.",
+            "Make it relatable to your target audience.",
+            "Pairs well with the POV shooting style and Lakonan."
+          ]
+        },
+        {
+          "id": "call-out",
+          "label": "Call-out",
+          "description": "Call out a specific group so they feel the video was made just for them.",
+          "brief": "Open by calling out {audience} directly.",
+          "hooks": [
+            "Calling all {audience}: let's talk about {subject}.",
+            "{audience}, this one's for you. It's about {subject}."
+          ],
+          "howTo": [
+            "Be specific: 'first-time home buyers', not 'everyone'.",
+            "Say it and show it as text in the first second."
+          ]
+        },
+        {
+          "id": "shocking-number",
+          "label": "Shocking Number",
+          "description": "Open with a surprising statistic or number.",
+          "brief": "Open with a surprising number or statistic.",
+          "hooks": [
+            "9 out of 10 people don't know this about {subject}.",
+            "Only 1% of people know this about {subject}."
+          ],
+          "howTo": [
+            "Use real numbers. Make sure the statistic is true.",
+            "Show the number big on screen."
+          ]
+        },
+        {
+          "id": "mistake-warning",
+          "label": "Mistake Warning",
+          "description": "Warn viewers about a mistake they might be making. Nobody wants to be the one getting it wrong.",
+          "brief": "Open with a warning about a common mistake.",
+          "hooks": [
+            "Stop making this mistake when it comes to {subject}.",
+            "The #1 mistake people make when it comes to {subject}."
+          ],
+          "howTo": [
+            "Name the mistake fast, then explain the fix.",
+            "Use a red cross or buzzer sound for emphasis."
+          ]
+        },
+        {
+          "id": "result-first",
+          "label": "Result First",
+          "description": "Show the final result in the first second, then explain how you got there.",
+          "brief": "Open with the end result, then show how you got there.",
+          "hooks": [
+            "Here's the end result. Now let me show you {subject}.",
+            "Watch till the end to see what happened with {subject}."
+          ],
+          "howTo": [
+            "The result must be visually impressive.",
+            "Works great with Before & After and How-To."
+          ]
+        },
+        {
+          "id": "challenge",
+          "label": "Challenge",
+          "description": "Challenge viewers to guess, spot or answer something before you reveal it.",
+          "brief": "Open by challenging viewers to guess before the reveal.",
+          "hooks": [
+            "I bet you can't guess this about {subject}.",
+            "Try not to be surprised by this about {subject}."
+          ],
+          "howTo": [
+            "Make the reveal worth waiting for.",
+            "Tell them to comment their guess before the reveal."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "talent",
+      "label": "On Camera",
+      "question": "Who's on camera?",
+      "description": "The face (or hands, or voice) of the content.",
+      "briefLabel": "On camera",
+      "optional": true,
+      "color": "#0d9488",
+      "items": [
+        {
+          "id": "owner",
+          "label": "Owner / Founder",
+          "description": "The face of the business. People buy from people, and founders build the most trust.",
+          "brief": "Put the owner or founder of {brand} on camera. People buy from people.",
+          "howTo": [
+            "Be consistent. Show up regularly so people recognise you.",
+            "Share opinions and personality, not just information."
+          ]
+        },
+        {
+          "id": "staff",
+          "label": "Staff / Team",
+          "description": "Your team members on camera. It shows your culture and shares the load of being the face of the brand.",
+          "brief": "Feature your staff or team. It shows the culture behind {brand}.",
+          "howTo": [
+            "Find the team members who enjoy being on camera.",
+            "Get written consent to feature staff."
+          ]
+        },
+        {
+          "id": "customer",
+          "label": "Customer",
+          "description": "Real customers on camera: reviews, reactions, before/after. The most believable proof there is.",
+          "brief": "Put a real customer on camera. Nothing is more believable.",
+          "howTo": [
+            "Ask right after a great experience, when they're happiest.",
+            "Always get permission to post.",
+            "A small thank-you gift makes people more willing."
+          ]
+        },
+        {
+          "id": "influencer",
+          "label": "Influencer / KOL",
+          "description": "A creator or key opinion leader with their own audience features your brand.",
+          "brief": "Bring in an influencer or KOL to borrow their audience and credibility.",
+          "howTo": [
+            "Pick creators whose audience matches yours, not just the biggest follower count.",
+            "Give them a brief, but let them do it in their own style.",
+            "Agree on usage rights so you can repost."
+          ]
+        },
+        {
+          "id": "faceless",
+          "label": "Faceless",
+          "description": "No face needed: hands, the product, a voiceover or text only. Great for camera-shy owners.",
+          "brief": "Keep it faceless: hands, product, voiceover or text only.",
+          "howTo": [
+            "Pairs well with Voiceover + B-roll, POV and Close-up.",
+            "Use a consistent voice or text style so people recognise you."
+          ]
+        },
+        {
+          "id": "character",
+          "label": "Character / Persona",
+          "description": "A recurring character you or your team play (a mak cik, a grumpy boss, a clueless customer). Audiences come back for characters.",
+          "brief": "Use a recurring character or persona that audiences recognise and come back for.",
+          "howTo": [
+            "Give the character a signature look, line or prop.",
+            "Put them in a series of situations from your business.",
+            "Keep it light and never mock real customers."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tone",
+      "label": "Tone",
+      "question": "What's the mood?",
+      "description": "How the content should feel.",
+      "briefLabel": "Tone",
+      "optional": true,
+      "color": "#d97706",
+      "items": [
+        {
+          "id": "funny",
+          "label": "Funny",
+          "description": "Make them laugh. Humour gets shared more than anything else.",
+          "brief": "Make it funny. Humour gets shared."
+        },
+        {
+          "id": "emotional",
+          "label": "Emotional",
+          "description": "Make them feel something: pride, nostalgia, empathy, happiness.",
+          "brief": "Make it emotional so it's remembered and shared."
+        },
+        {
+          "id": "authority",
+          "label": "Serious / Expert",
+          "description": "Calm, confident and factual. Positions you as the authority.",
+          "brief": "Keep it serious and expert. Speak with authority."
+        },
+        {
+          "id": "hype",
+          "label": "Hype / Energetic",
+          "description": "Fast, loud and exciting. Great for launches, promos and events.",
+          "brief": "Make it high-energy: fast cuts, big voice, upbeat music."
+        },
+        {
+          "id": "calm",
+          "label": "Calm / Aesthetic",
+          "description": "Slow, beautiful and satisfying. Soft music and clean visuals.",
+          "brief": "Keep it calm and aesthetic: slow shots, soft music, clean visuals."
+        },
+        {
+          "id": "relatable",
+          "label": "Relatable / Casual",
+          "description": "Like talking to a friend. Everyday language and situations people recognise.",
+          "brief": "Keep it casual and relatable, like talking to a friend."
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "label": "Call to Action",
+      "question": "What should viewers do next?",
+      "description": "The one action you want viewers to take at the end.",
+      "briefLabel": "Call to action",
+      "optional": true,
+      "color": "#4f46e5",
+      "items": [
+        {
+          "id": "comment",
+          "label": "Comment",
+          "description": "Ask viewers to comment: one word, one emoji or their opinion. Comments boost reach.",
+          "brief": "Ask viewers to comment: one word, one emoji or their opinion."
+        },
+        {
+          "id": "share",
+          "label": "Tag / Share",
+          "description": "Ask viewers to tag or send it to a friend. Shares are the strongest signal for reach.",
+          "brief": "Ask viewers to tag or share it with a friend who needs to see it."
+        },
+        {
+          "id": "save",
+          "label": "Save",
+          "description": "Ask viewers to save the video for later. Best for Educate and Tips content.",
+          "brief": "Ask viewers to save it for later."
+        },
+        {
+          "id": "follow",
+          "label": "Follow for Part 2",
+          "description": "Tease a part 2 and ask viewers to follow so they don't miss it.",
+          "brief": "Tease a part 2 and ask viewers to follow so they don't miss it."
+        },
+        {
+          "id": "keyword",
+          "label": "Comment / DM Keyword",
+          "description": "Ask viewers to comment or DM a keyword to receive something: a price list, link or freebie. Great for leads.",
+          "brief": "Ask viewers to comment or DM a keyword (e.g. 'NAK') to receive something."
+        },
+        {
+          "id": "whatsapp",
+          "label": "WhatsApp Us",
+          "description": "Send viewers to WhatsApp to enquire or order.",
+          "brief": "Send viewers to WhatsApp {brand} to enquire or order."
+        },
+        {
+          "id": "link",
+          "label": "Link in Bio",
+          "description": "Send viewers to the link in your bio to buy, book or sign up.",
+          "brief": "Send viewers to the link in bio to buy, book or sign up."
+        },
+        {
+          "id": "visit",
+          "label": "Visit Us",
+          "description": "Invite viewers to come to your shop or location.",
+          "brief": "Invite viewers to visit {brand} in person."
+        }
+      ]
+    },
+    {
+      "id": "length",
+      "label": "Length",
+      "question": "How long should it be?",
+      "description": "Target duration of the video.",
+      "briefLabel": "Length",
+      "optional": true,
+      "color": "#64748b",
+      "items": [
+        {
+          "id": "loop",
+          "label": "7–15 sec (Loop)",
+          "description": "Ultra short and built to loop. Best for trends, reactions and one-liners.",
+          "brief": "Keep it 7–15 seconds, built to loop."
+        },
+        {
+          "id": "short",
+          "label": "15–30 sec",
+          "description": "The sweet spot for most short-form content.",
+          "brief": "Aim for 15–30 seconds."
+        },
+        {
+          "id": "medium",
+          "label": "30–60 sec",
+          "description": "Room for a list, a quick tutorial or a short story.",
+          "brief": "Aim for 30–60 seconds."
+        },
+        {
+          "id": "long",
+          "label": "60–90 sec",
+          "description": "For storytelling and deeper explanations. Needs a strong hook and tight editing.",
+          "brief": "Aim for 60–90 seconds with tight editing."
+        },
+        {
+          "id": "extended",
+          "label": "2–3 min",
+          "description": "Longer videos for stories, reviews and tutorials with real depth.",
+          "brief": "Go for 2–3 minutes and keep a hook every 20–30 seconds."
+        }
+      ]
+    }
+  ]
+}
