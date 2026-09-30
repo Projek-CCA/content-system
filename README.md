@@ -34,8 +34,17 @@ npm test           # unit tests (generator logic + data checks)
 npm run build      # typecheck + production build into dist/
 ```
 
-Deploying: it's a static Vite app. On Vercel, import the repo and keep the defaults
-(build command `npm run build`, output directory `dist`).
+### Deploying
+
+It's a static Vite app built with relative paths, so the same build works at a domain root
+or in a sub-folder.
+
+- **GitHub Pages** (https://projek-cca.github.io/content-system/):
+  `.github/workflows/deploy-pages.yml` tests, builds and deploys on every push. One-time
+  setup: repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+  (With "Deploy from a branch" Pages serves the unbuilt source and the page stays blank.)
+- **Vercel**: import the repo and keep the defaults (build command `npm run build`, output
+  directory `dist`).
 
 ## Project layout
 
@@ -124,7 +133,8 @@ shows in the info panel and the Library. To add one, set `media` on the item:
 | `embed` | Any iframe-able link (TikTok, Instagram or Vimeo embed URLs). |
 
 Put files in `public/media/<column id>/<item id>.<ext>`, e.g.
-`public/media/shooting/whip-pan.mp4` becomes `/media/shooting/whip-pan.mp4`. You can also set
+`public/media/shooting/whip-pan.mp4` becomes `/media/shooting/whip-pan.mp4` (paths starting
+with `/` are resolved relative to the app, so they work on GitHub Pages too). You can also set
 media from the **Customise** screen (edit item → Visual example) and export the JSON.
 Vertical 9:16 clips look best, since the slot is shaped like a phone screen.
 

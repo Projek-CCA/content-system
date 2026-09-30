@@ -1,5 +1,5 @@
 import type { Media } from '../data/types';
-import { embedUrl } from '../lib/media';
+import { assetUrl, embedUrl } from '../lib/media';
 import { Icon } from './Icon';
 
 interface Props {
@@ -31,7 +31,7 @@ export function MediaSlot({ media, label, shape = 'portrait', thumbnail = false 
   if (media.type === 'image') {
     return (
       <figure className={className}>
-        <img src={media.src} alt={media.caption || `${label} example`} loading="lazy" />
+        <img src={assetUrl(media.src)} alt={media.caption || `${label} example`} loading="lazy" />
         {!thumbnail && <Caption media={media} />}
       </figure>
     );
@@ -41,8 +41,8 @@ export function MediaSlot({ media, label, shape = 'portrait', thumbnail = false 
     return (
       <figure className={className}>
         <video
-          src={media.src}
-          poster={media.poster}
+          src={assetUrl(media.src)}
+          poster={media.poster && assetUrl(media.poster)}
           muted
           loop
           playsInline

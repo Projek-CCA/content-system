@@ -7,6 +7,15 @@ export function youtubeId(src: string): string | undefined {
   return match?.[1];
 }
 
+/**
+ * Resolve a media path from the matrix data. "/media/x.mp4" means public/media/x.mp4,
+ * which must stay relative to the app so it also works under a sub-path (GitHub Pages).
+ */
+export function assetUrl(src: string): string {
+  if (src.startsWith('/') && !src.startsWith('//')) return import.meta.env.BASE_URL + src.slice(1);
+  return src;
+}
+
 /** iframe URL for youtube/embed media, undefined for anything else. */
 export function embedUrl(media: Media): string | undefined {
   if (media.type === 'youtube') {
