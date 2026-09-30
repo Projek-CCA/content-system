@@ -314,7 +314,7 @@ a {
 
 .app-header {
   position: sticky;
-  top: 0;
+  top: env(safe-area-inset-top, 0px);
   z-index: 20;
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: blur(10px);
@@ -1148,7 +1148,7 @@ button.chip:hover {
     position: fixed;
     left: 12px;
     right: 12px;
-    bottom: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     z-index: 15;
     display: flex;
     gap: 8px;
@@ -1897,6 +1897,11 @@ button.chip:hover {
   justify-content: flex-end;
   gap: 8px;
   padding-top: 6px;
+}
+
+.confirm__message {
+  white-space: pre-line;
+  margin-bottom: 16px;
 }
 
 /* ---------- Toast ---------- */

@@ -97,6 +97,17 @@ interface AppStateValue {
 
   toast: string | null;
   notify: (message: string) => void;
+
+  /** In-page confirmation (window.confirm is blocked in some embedded viewers). */
+  askConfirm: (message: string, confirmLabel?: string) => Promise<boolean>;
+  pendingConfirm: PendingConfirm | null;
+  resolveConfirm: (ok: boolean) => void;
+}
+
+interface PendingConfirm {
+  message: string;
+  confirmLabel: string;
+  resolve: (ok: boolean) => void;
 }
 
 const AppStateContext = createContext<AppStateValue | null>(null);
@@ -115,6 +126,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const [view, setView] = useState<View>('build');
   const [detail, setDetail] = useState<AppStateValue['detail']>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const [pendingConfirm, setPendingConfirm] = useState<PendingConfirm | null>(null);
   const toastTimer = useRef<number | undefined>(undefined);
 
   const matrix = useMemo(() => {
@@ -275,6 +287,14 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
 
     toast,
     notify,
+
+    askConfirm: (message, confirmLabel = 'Delete') =>
+      new Promise<boolean>((resolve) => setPendingConfirm({ message, confirmLabel, resolve })),
+    pendingConfirm,
+    resolveConfirm: (ok) => {
+      pendingConfirm?.resolve(ok);
+      setPendingConfirm(null);
+    },
   };
 
   return <AppStateContext.Provider value={value}>{children}</AppStateContext.Provider>;

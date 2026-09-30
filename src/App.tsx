@@ -1,5 +1,6 @@
 import { BatchView } from './components/BatchView';
 import { BuildView } from './components/BuildView';
+import { ConfirmDialog } from './components/ConfirmDialog';
 import { CustomiseView } from './components/CustomiseView';
 import { Icon, type IconName } from './components/Icon';
 import { ItemDetail } from './components/ItemDetail';
@@ -59,6 +60,7 @@ export function App() {
       </main>
 
       <ItemDetail />
+      <ConfirmDialog />
       <div className={`toast ${toast ? 'is-visible' : ''}`} role="status" aria-live="polite">
         {toast}
       </div>

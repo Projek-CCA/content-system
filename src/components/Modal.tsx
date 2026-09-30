@@ -5,7 +5,7 @@ export function Modal({ title, onClose, children, wide }: { title: string; onClo
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const previous = document.activeElement as HTMLElement | null;
-    ref.current?.querySelector<HTMLElement>('input, textarea, select')?.focus();
+    ref.current?.querySelector<HTMLElement>('[data-autofocus], input, textarea, select')?.focus();
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
     document.addEventListener('keydown', onKey);
     document.body.classList.add('no-scroll');

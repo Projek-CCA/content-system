@@ -1,6 +1,6 @@
 import { type CSSProperties, type FormEvent, useRef, useState } from 'react';
 import type { Matrix, MatrixCategory, MatrixItem, MediaType } from '../data/types';
-import { dateStamp, downloadFile } from '../lib/export';
+import { copyText, dateStamp, downloadFile } from '../lib/export';
 import { slugify, uniqueId } from '../lib/matrix';
 import { suggestedMediaPath } from '../lib/media';
 import { validateMatrix } from '../lib/validate';
@@ -17,7 +17,7 @@ type Editing =
 
 /** Add and edit columns and items. Changes are saved in this browser and can be exported as JSON. */
 export function CustomiseView() {
-  const { matrix, updateMatrix, resetMatrix, isCustomised, isActive, setActive, notify } = useAppState();
+  const { matrix, updateMatrix, resetMatrix, isCustomised, isActive, setActive, notify, askConfirm } = useAppState();
   const [currentId, setCurrentId] = useState<string | undefined>(matrix.categories[0]?.id);
   const [editing, setEditing] = useState<Editing>(null);
   const [importReport, setImportReport] = useState<{ errors: string[]; warnings: string[] } | null>(null);
@@ -46,10 +46,10 @@ export function CustomiseView() {
       return m;
     });
 
-  const deleteCategory = (cat: MatrixCategory) => {
+  const deleteCategory = async (cat: MatrixCategory) => {
     const dependents = matrix.categories.filter((c) => c.dependsOn === cat.id);
     const extra = dependents.length ? `\n\n${dependents.map((d) => d.label).join(', ')} will stop depending on it.` : '';
-    if (!window.confirm(`Delete the "${cat.label}" column and its ${cat.items.length} items?${extra}`)) return;
+    if (!(await askConfirm(`Delete the "${cat.label}" column and its ${cat.items.length} items?${extra}`, 'Delete column'))) return;
     updateMatrix((m) => {
       m.categories = m.categories.filter((c) => c.id !== cat.id);
       for (const c of m.categories) if (c.dependsOn === cat.id) delete c.dependsOn;
@@ -58,12 +58,12 @@ export function CustomiseView() {
     setCurrentId(matrix.categories.find((c) => c.id !== cat.id)?.id);
   };
 
-  const deleteItem = (cat: MatrixCategory, item: MatrixItem) => {
+  const deleteItem = async (cat: MatrixCategory, item: MatrixItem) => {
     const orphans = children.flatMap((child) =>
       child.items.filter((i) => i.parents?.length === 1 && i.parents[0] === item.id).map((i) => `${i.label} (${child.label})`),
     );
     const extra = orphans.length ? `\n\nThese only belong under it and will be deleted too: ${orphans.join(', ')}.` : '';
-    if (!window.confirm(`Delete "${item.label}"?${extra}`)) return;
+    if (!(await askConfirm(`Delete "${item.label}"?${extra}`))) return;
     updateMatrix((m) => {
       const target = m.categories.find((c) => c.id === cat.id)!;
       target.items = target.items.filter((i) => i.id !== item.id);
@@ -94,7 +94,7 @@ export function CustomiseView() {
       return;
     }
     const items = result.matrix.categories.reduce((n, c) => n + c.items.length, 0);
-    if (!window.confirm(`Replace your matrix with this file (${result.matrix.categories.length} columns, ${items} items)?`)) return;
+    if (!(await askConfirm(`Replace your matrix with this file (${result.matrix.categories.length} columns, ${items} items)?`, 'Replace matrix'))) return;
     const imported = result.matrix;
     updateMatrix(() => imported);
     setCurrentId(imported.categories[0]?.id);
@@ -116,6 +116,12 @@ export function CustomiseView() {
           <button className="btn" onClick={exportJson}>
             <Icon name="download" /> Export JSON
           </button>
+          <button
+            className="btn"
+            onClick={async () => notify((await copyText(`${JSON.stringify(matrix, null, 2)}\n`)) ? 'Matrix JSON copied' : 'Could not copy')}
+          >
+            <Icon name="copy" /> Copy JSON
+          </button>
           <button className="btn" onClick={() => fileInput.current?.click()}>
             <Icon name="upload" /> Import JSON
           </button>
@@ -133,7 +139,7 @@ export function CustomiseView() {
           <button
             className="btn btn--ghost"
             disabled={!isCustomised}
-            onClick={() => window.confirm('Undo all your changes and go back to the built-in matrix?') && resetMatrix()}
+            onClick={async () => (await askConfirm('Undo all your changes and go back to the built-in matrix?', 'Reset')) && resetMatrix()}
           >
             Reset to default
           </button>

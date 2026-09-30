@@ -5,7 +5,7 @@ import { Icon } from './Icon';
 
 /** Shortlisted ideas, with a simple idea → scripted → filmed → posted pipeline. */
 export function SavedView() {
-  const { saved, updateSaved, removeSaved, loadSelection, setView } = useAppState();
+  const { saved, updateSaved, removeSaved, loadSelection, setView, askConfirm } = useAppState();
   const [filter, setFilter] = useState<IdeaStatus | 'all'>('all');
   const visible = filter === 'all' ? saved : saved.filter((idea) => idea.status === filter);
 
@@ -102,7 +102,7 @@ export function SavedView() {
                 </button>
                 <button
                   className="icon-btn"
-                  onClick={() => window.confirm('Delete this idea?') && removeSaved(idea.id)}
+                  onClick={async () => (await askConfirm('Delete this idea?')) && removeSaved(idea.id)}
                   aria-label="Delete idea"
                   title="Delete idea"
                 >
