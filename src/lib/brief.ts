@@ -1,5 +1,6 @@
 import type { MatrixCategory, MatrixItem, Profile, Reference, Selection } from '../data/types';
 import { type Board, findItem, hashString, selectionKey } from './matrix';
+import { strings } from './localize';
 import { capitalise, capitaliseParts, fill, fillParts, type TextPart } from './template';
 
 export interface Pick {
@@ -38,8 +39,9 @@ const DEFAULT_SUBJECT = '{product}';
 /**
  * Turn a selection into a content brief.
  *
- * The hook comes from the right-most selected item that has `hooks` (so an
- * active Hook column overrides the Present Style hooks). {subject} is filled
+ * Hook templates are pooled from every selected item (content type, present
+ * style, topic...), unless a picked item's column has `hooksOverride` (the
+ * Hook column), whose hooks then decide the opening alone. {subject} is filled
  * with the user's own content focus when they gave one, otherwise from the
  * `subjects` of the selected items. `variant` cycles through every
  * hook × subject pairing.
@@ -53,8 +55,8 @@ export function buildBrief(board: Board, selection: Selection, variant = 0, focu
     else if (category.items.length > 0) missing.push(category);
   }
 
-  const hookSource = [...picks].reverse().find((p) => p.item.hooks?.length);
-  const hooks = hookSource?.item.hooks ?? [];
+  const override = [...picks].reverse().find((p) => p.category.hooksOverride && p.item.hooks?.length);
+  const hooks = [...new Set(override ? override.item.hooks : picks.flatMap((p) => p.item.hooks ?? []))];
   const subjects = focus.trim() ? [focus.trim()] : picks.flatMap((p) => p.item.subjects ?? []);
   const subjectPool = subjects.length ? subjects : [DEFAULT_SUBJECT];
   const key = selectionKey(board, selection);
@@ -114,15 +116,16 @@ export function briefTitle(brief: IdeaBrief): string {
 /** Plain-text version of the brief, for copying into notes or WhatsApp. */
 export function briefToText(brief: IdeaBrief, profile: Partial<Profile>): string {
   const out: string[] = [];
-  out.push(`CONTENT IDEA: ${briefTitle(brief)}`);
+  const t = strings(profile.language);
+  out.push(`${t.contentIdea}: ${briefTitle(brief)}`);
   out.push('');
   if (profile.focus?.trim()) {
-    out.push(`About: ${profile.focus.trim()}`);
+    out.push(`${t.about}: ${profile.focus.trim()}`);
     out.push('');
   }
   const hook = hookText(brief, profile);
   if (hook) {
-    out.push(`Hook starter: "${hook}"`);
+    out.push(`${t.hookStarter}: "${hook}"`);
     out.push('');
   }
   for (const line of brief.lines) {
@@ -131,24 +134,24 @@ export function briefToText(brief: IdeaBrief, profile: Partial<Profile>): string
   const points = parsePoints(profile.points);
   if (points.length) {
     out.push('');
-    out.push('Must include:');
+    out.push(`${t.mustInclude}:`);
     points.forEach((point) => out.push(`- ${point}`));
   }
   for (const block of brief.structure) {
     out.push('');
-    out.push(`Structure (${block.item.label}):`);
+    out.push(`${t.structure} (${block.item.label}):`);
     block.steps.forEach((step, i) => out.push(`${i + 1}. ${fill(step, profile)}`));
   }
   if (brief.tips.length) {
     out.push('');
-    out.push('Tips:');
+    out.push(`${t.tips}:`);
     for (const block of brief.tips) {
       for (const tip of block.tips) out.push(`- ${block.item.label}: ${fill(tip, profile)}`);
     }
   }
   if (brief.references.length) {
     out.push('');
-    out.push(`Style references: ${brief.references.flatMap((r) => r.references.map((ref) => ref.label)).join(', ')}`);
+    out.push(`${t.styleRefs}: ${brief.references.flatMap((r) => r.references.map((ref) => ref.label)).join(', ')}`);
   }
   return out.join('\n');
 }

@@ -44,7 +44,10 @@ export function validateMatrix(data: unknown): ValidationResult {
     for (const key of ['description', 'briefLabel', 'dependsOn', 'color'] as const) {
       if (cat[key] !== undefined && !isString(cat[key])) errors.push(`${name}: "${key}" must be text.`);
     }
-    if (cat.optional !== undefined && typeof cat.optional !== 'boolean') errors.push(`${name}: "optional" must be true or false.`);
+    for (const key of ['optional', 'hooksOverride'] as const) {
+      if (cat[key] !== undefined && typeof cat[key] !== 'boolean') errors.push(`${name}: "${key}" must be true or false.`);
+    }
+    if (cat.ms !== undefined && !isObject(cat.ms)) errors.push(`${name}: "ms" must be an object of translated text.`);
     if (!Array.isArray(cat.items)) {
       errors.push(`${name}: "items" must be a list.`);
       return;
@@ -73,6 +76,18 @@ export function validateMatrix(data: unknown): ValidationResult {
         const media = item.media;
         if (!isObject(media) || !MEDIA_TYPES.includes(media.type as MediaType) || !isString(media.src)) {
           errors.push(`${itemName}: "media" needs a "type" (${MEDIA_TYPES.join(', ')}) and a "src".`);
+        }
+      }
+      if (item.ms !== undefined) {
+        const ms = item.ms;
+        if (!isObject(ms)) errors.push(`${itemName}: "ms" must be an object of translated text.`);
+        else {
+          for (const key of ['label', 'altLabel', 'description', 'brief', 'example'] as const) {
+            if (ms[key] !== undefined && !isString(ms[key])) errors.push(`${itemName}: "ms.${key}" must be text.`);
+          }
+          for (const key of ['howTo', 'structure', 'hooks', 'subjects'] as const) {
+            if (ms[key] !== undefined && !isStringArray(ms[key])) errors.push(`${itemName}: "ms.${key}" must be a list of text.`);
+          }
         }
       }
       if (item.references !== undefined) {

@@ -5,6 +5,7 @@ import { briefToAiPrompt, briefToText, buildBrief, hookText, parsePoints } from 
 import { buildBoard, generateBatch, seededRng } from './matrix';
 import { applyOverlay, diffMatrix, isEmptyOverlay } from './overlay';
 import { fill, fillParts } from './template';
+import { localizeMatrix } from './localize';
 import { validateMatrix } from './validate';
 
 const matrix = defaultMatrix as Matrix;
@@ -85,7 +86,8 @@ describe('buildBrief', () => {
     const core = buildBoard(matrix, ['type', 'present', 'shooting', 'topic']);
     const selection = { type: 'educate', present: 'top-list', shooting: 'whip-pan', topic: 'product-service' };
     const first = buildBrief(core, selection, 0);
-    expect(first.hookVariations).toBe(3 * 4);
+    // Hooks pooled from the type, present style and topic (3 each) × 4 topic subjects.
+    expect(first.hookVariations).toBe(9 * 4);
     const hooks = new Set(Array.from({ length: first.hookVariations }, (_, v) => buildBrief(core, selection, v).hook));
     expect(hooks.size).toBe(first.hookVariations);
   });
@@ -96,7 +98,7 @@ describe('buildBrief', () => {
     const focus = 'cooking rendang with Adabi rendang paste';
     const brief = buildBrief(core, selection, 0, focus);
     expect(brief.hook).toContain(focus);
-    expect(brief.hookVariations).toBe(3);
+    expect(brief.hookVariations).toBe(9);
   });
 
   it('puts the focus and key points in the text and AI prompt', () => {
@@ -129,6 +131,47 @@ describe('buildBrief', () => {
     const prompt = briefToAiPrompt(brief, profile);
     expect(prompt).toContain('Brand: Kek Mama');
     expect(prompt).toContain('Shooting Style: Whip Pan');
+  });
+});
+
+describe('Bahasa Melayu output', () => {
+  const ms = localizeMatrix(matrix, 'Bahasa Melayu');
+  const mixed = localizeMatrix(matrix, 'Mixed (BM + English)');
+
+  it('translates every column and item, with the same hooks and subjects coverage', () => {
+    for (const cat of matrix.categories) {
+      expect(cat.ms?.question, cat.id).toBeTruthy();
+      for (const item of cat.items) {
+        const where = `${cat.id}/${item.id}`;
+        expect(item.ms?.description, where).toBeTruthy();
+        expect(item.ms?.brief, where).toBeTruthy();
+        if (item.hooks) expect(item.ms?.hooks?.length, where).toBe(item.hooks.length);
+        if (item.subjects) expect(item.ms?.subjects?.length, where).toBe(item.subjects.length);
+        if (item.structure) expect(item.ms?.structure?.length, where).toBe(item.structure.length);
+        const texts = [item.ms?.brief, ...(item.ms?.structure ?? []), ...(item.ms?.hooks ?? []), ...(item.ms?.subjects ?? [])];
+        for (const text of texts) {
+          if (text) expect(text.replace(/\{(brand|product|audience|niche|subject)\}/g, ''), where).not.toMatch(/[{}]/);
+        }
+      }
+    }
+  });
+
+  it('writes the whole brief in BM, and only the hooks in Mixed', () => {
+    const selection = { type: 'business-ads', present: 'lakonan', shooting: 'foodie', topic: 'product-service' };
+    const ids = ['type', 'present', 'shooting', 'topic'];
+    const bm = buildBrief(buildBoard(ms, ids), selection, 0, 'masak rendang dengan pes rendang Adabi');
+    expect(bm.hook).toMatch(/masak rendang/);
+    expect(bm.lines[0].label).toBe('Matlamat');
+    expect(bm.lines[0].text).toContain('Tukar penonton');
+
+    const mix = buildBrief(buildBoard(mixed, ids), selection, 0);
+    const bmHooks = new Set(ms.categories.flatMap((c) => c.items.flatMap((i) => i.hooks ?? [])));
+    expect([...bmHooks].some((h) => mix.hook!.startsWith(h.split('{')[0]))).toBe(true);
+    expect(mix.lines[0].label).toBe('Goal');
+
+    const text = briefToText(bm, { ...profile, language: 'Bahasa Melayu', points: 'Halal' });
+    expect(text).toContain('IDEA CONTENT');
+    expect(text).toContain('Wajib ada:');
   });
 });
 

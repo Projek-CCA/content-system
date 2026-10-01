@@ -5,7 +5,7 @@ import { MediaSlot } from './MediaSlot';
 
 /** Browse and learn every item in the matrix: what it is and what it looks like. */
 export function LibraryView() {
-  const { matrix, openDetail, isActive } = useAppState();
+  const { contentMatrix: matrix, openDetail, isActive } = useAppState();
   const [query, setQuery] = useState('');
   const [only, setOnly] = useState<string>('all');
   const q = query.trim().toLowerCase();

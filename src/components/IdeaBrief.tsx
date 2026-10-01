@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import { briefToAiPrompt, briefToText, buildBrief, hookParts, parsePoints } from '../lib/brief';
 import { copyText } from '../lib/export';
+import { strings } from '../lib/localize';
 import { lockMap, randomSelection } from '../lib/matrix';
 import { useAppState } from '../state/AppState';
 import { Filled, Parts } from './Filled';
@@ -10,6 +11,7 @@ import { Icon } from './Icon';
 export function IdeaBrief() {
   const { board, selection, variant, nextVariant, profile, randomise, loadSelection, saveIdea, isSaved, notify, openDetail } = useAppState();
   const brief = buildBrief(board, selection, variant, profile.focus);
+  const t = strings(profile.language);
 
   if (brief.picks.length === 0) {
     return (
@@ -39,7 +41,7 @@ export function IdeaBrief() {
   return (
     <aside className="brief" id="idea" aria-live="polite">
       <div className="brief__head">
-        <span className="eyebrow">Your content idea</span>
+        <span className="eyebrow">{t.yourIdea}</span>
         <div className="brief__chips">
           {brief.picks.map(({ category, item }) => (
             <button
@@ -58,27 +60,27 @@ export function IdeaBrief() {
       {brief.missing.length > 0 && (
         <div className="notice">
           <span>
-            Still to pick: <strong>{brief.missing.map((c) => c.label).join(', ')}</strong>
+            {t.stillToPick}: <strong>{brief.missing.map((c) => c.label).join(', ')}</strong>
           </span>
           <button className="btn btn--small" onClick={completeRest}>
-            <Icon name="dice" size={14} /> Fill the rest
+            <Icon name="dice" size={14} /> {t.fillRest}
           </button>
         </div>
       )}
 
       {focus && (
         <p className="brief__focus">
-          <span className="eyebrow">About</span> {focus}
+          <span className="eyebrow">{t.about}</span> {focus}
         </p>
       )}
 
       {parts.length > 0 && (
         <div className="hook">
           <div className="hook__label">
-            <span>Hook starter</span>
+            <span>{t.hookStarter}</span>
             {brief.hookVariations > 1 && (
               <button className="link-btn" onClick={nextVariant} title="Try another hook for this combination">
-                <Icon name="refresh" size={14} /> Another hook
+                <Icon name="refresh" size={14} /> {t.anotherHook}
                 <span className="muted"> ({(variant % brief.hookVariations) + 1}/{brief.hookVariations})</span>
               </button>
             )}
@@ -86,7 +88,7 @@ export function IdeaBrief() {
           <p className="hook__text">
             “<Parts parts={parts} />”
           </p>
-          <p className="muted small">A starting point. Tweak the words so they sound like you.</p>
+          <p className="muted small">{t.hookHint}</p>
         </div>
       )}
 
@@ -103,7 +105,7 @@ export function IdeaBrief() {
 
       {points.length > 0 && (
         <section className="brief__section">
-          <h3>Must include</h3>
+          <h3>{t.mustInclude}</h3>
           <ul className="ticks">
             {points.map((point) => (
               <li key={point}>{point}</li>
@@ -114,7 +116,9 @@ export function IdeaBrief() {
 
       {brief.structure.map((block) => (
         <section key={block.item.id} className="brief__section">
-          <h3>Structure · {block.item.label}</h3>
+          <h3>
+            {t.structure} · {block.item.label}
+          </h3>
           <ol className="steps">
             {block.steps.map((step) => (
               <li key={step}>
@@ -127,7 +131,7 @@ export function IdeaBrief() {
 
       {brief.tips.length > 0 && (
         <section className="brief__section">
-          <h3>Tips</h3>
+          <h3>{t.tips}</h3>
           {brief.tips.map((block) => (
             <details key={block.category.id} className="tips">
               <summary>
@@ -147,7 +151,7 @@ export function IdeaBrief() {
 
       {brief.references.length > 0 && (
         <p className="small refs-line">
-          <strong>Style references:</strong> {brief.references.flatMap((r) => r.references.map((ref) => ref.label)).join(' · ')}
+          <strong>{t.styleRefs}:</strong> {brief.references.flatMap((r) => r.references.map((ref) => ref.label)).join(' · ')}
         </p>
       )}
 

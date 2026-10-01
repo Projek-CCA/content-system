@@ -61,7 +61,14 @@ export interface MatrixItem {
   /** Visual example. Missing or null shows a placeholder you can swap later. */
   media?: Media | null;
   references?: Reference[];
+  /** Bahasa Melayu text. Any field left out falls back to the English one. */
+  ms?: ItemText;
 }
+
+/** The translatable text of an item. */
+export type ItemText = Partial<
+  Pick<MatrixItem, 'label' | 'altLabel' | 'description' | 'brief' | 'howTo' | 'structure' | 'example' | 'hooks' | 'subjects'>
+>;
 
 export interface MatrixCategory {
   /** Unique id. Lowercase kebab-case. */
@@ -74,12 +81,19 @@ export interface MatrixCategory {
   briefLabel?: string;
   /** If set, items in this category are filtered by the selected item of that category. */
   dependsOn?: string;
+  /** When an item from this column is picked, its hooks replace the pooled hooks (e.g. the Hook column). */
+  hooksOverride?: boolean;
   /** Optional columns are switched off until the user adds them to the board. */
   optional?: boolean;
   /** Accent colour for the column (any CSS colour). */
   color?: string;
   items: MatrixItem[];
+  /** Bahasa Melayu text. Any field left out falls back to the English one. */
+  ms?: CategoryText;
 }
+
+/** The translatable text of a category. */
+export type CategoryText = Partial<Pick<MatrixCategory, 'label' | 'question' | 'description' | 'briefLabel'>>;
 
 export interface Matrix {
   version: 1;

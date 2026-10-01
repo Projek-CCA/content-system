@@ -20,7 +20,28 @@
             "Use on-screen text so it works on mute.",
             "End by asking them to save it for later."
           ],
-          "example": "A dentist explains the 3 foods that stain your teeth the most."
+          "example": "A dentist explains the 3 foods that stain your teeth the most.",
+          "hooks": [
+            "Here's what nobody tells you about {subject}",
+            "Save this if you want to understand {subject}",
+            "The one thing you need to know about {subject}"
+          ],
+          "ms": {
+            "description": "Content yang mengajar sesuatu yang berguna kepada penonton. Ia membina kepercayaan dan menjadikan anda pakar yang orang rujuk.",
+            "brief": "Ajar {audience} sesuatu yang berguna supaya mereka simpan video ini dan lihat {brand} sebagai pakar.",
+            "howTo": [
+              "Satu pelajaran untuk satu video. Jangan ajar semua sekali gus.",
+              "Mulakan dengan manfaat: apa yang mereka boleh buat selepas menonton?",
+              "Guna teks di skrin supaya video tetap faham walaupun tanpa bunyi.",
+              "Akhiri dengan ajak mereka save video untuk rujukan."
+            ],
+            "example": "Doktor gigi terangkan 3 makanan yang paling cepat menyebabkan gigi kuning.",
+            "hooks": [
+              "Ini yang tiada siapa beritahu anda tentang {subject}",
+              "Save video ni kalau anda nak faham tentang {subject}",
+              "Satu perkara yang anda perlu tahu tentang {subject}"
+            ]
+          }
         },
         {
           "id": "traffic",
@@ -33,7 +54,28 @@
             "Reply to comments in the first hour to keep the conversation going.",
             "Pin the best comment."
           ],
-          "example": "A kopitiam asks: teh tarik or kopi O? Comment your order."
+          "example": "A kopitiam asks: teh tarik or kopi O? Comment your order.",
+          "hooks": [
+            "Be honest: what do you think about {subject}?",
+            "Tag someone who needs to hear this about {subject}",
+            "Let's settle this once and for all: {subject}"
+          ],
+          "ms": {
+            "description": "Content untuk tarik trafik. Tugasnya ialah dapatkan komen, share dan tag, yang membawa reach anda kepada orang baru dan ke page anda.",
+            "brief": "Buat {audience} komen, share dan tag kawan supaya post ini sampai kepada orang baru.",
+            "howTo": [
+              "Buat soalan yang boleh dijawab dengan satu perkataan atau satu emoji.",
+              "Tanya tentang perkara yang orang memang ada pendapat.",
+              "Balas komen dalam sejam pertama supaya perbualan terus hidup.",
+              "Pin komen yang terbaik."
+            ],
+            "example": "Kopitiam tanya: teh tarik atau kopi O? Komen order anda.",
+            "hooks": [
+              "Jujur: apa pendapat anda tentang {subject}?",
+              "Tag kawan yang perlu dengar ini tentang {subject}",
+              "Jom selesaikan sekali untuk semua: {subject}"
+            ]
+          }
         },
         {
           "id": "business-ads",
@@ -46,7 +88,28 @@
             "Give one clear next step (WhatsApp, link, visit).",
             "Don't post only this type. Balance it with Educate and Traffic Content."
           ],
-          "example": "A tudung brand shows its new Raya collection with a 48-hour early-bird price."
+          "example": "A tudung brand shows its new Raya collection with a 48-hour early-bird price.",
+          "hooks": [
+            "Don't scroll past this if you care about {subject}",
+            "Here's why everyone's talking about {subject}",
+            "The deal you've been waiting for: {subject}"
+          ],
+          "ms": {
+            "description": "Content gaya iklan yang menjual. Ia menukar penonton kepada pembeli dengan menunjukkan tawaran, bukti dan langkah seterusnya.",
+            "brief": "Tukar penonton kepada pembeli {product}: tunjuk tawaran, bukti dan apa yang perlu dibuat seterusnya.",
+            "howTo": [
+              "Jelaskan tawaran: apa produknya, harga atau promosi, dan tarikh tamat.",
+              "Tunjuk bukti: hasil, review, angka.",
+              "Beri satu langkah seterusnya yang jelas (WhatsApp, link, datang ke kedai).",
+              "Jangan post jenis ini sahaja. Seimbangkan dengan Educate dan Traffic Content."
+            ],
+            "example": "Jenama tudung tunjuk koleksi Raya baharu dengan harga early-bird selama 48 jam.",
+            "hooks": [
+              "Jangan scroll dulu kalau anda ambil berat tentang {subject}",
+              "Ini sebab semua orang bercakap tentang {subject}",
+              "Tawaran yang anda tunggu-tunggu: {subject}"
+            ]
+          }
         },
         {
           "id": "trend",
@@ -59,7 +122,28 @@
             "Keep the format recognisable; change the context to your business.",
             "Save the trending sound to your favourites before you shoot."
           ],
-          "example": "A property agent uses a trending sound to act out 'me explaining the SPA to first-time buyers'."
+          "example": "A property agent uses a trending sound to act out 'me explaining the SPA to first-time buyers'.",
+          "hooks": [
+            "Everyone's doing this trend, so here's {subject}",
+            "Trend check: {subject} edition",
+            "Tell me you know {subject} without telling me"
+          ],
+          "ms": {
+            "description": "Content yang menunggang trend semasa (bunyi, meme, format lakonan atau tarian) dan memasukkan jenama anda ke dalamnya.",
+            "brief": "Tunggang trend semasa dan beri sentuhan {brand} sendiri supaya ia terasa sebati dengan feed.",
+            "howTo": [
+              "Scroll For You page selama 10 minit dan catat bunyi dan format yang asyik berulang.",
+              "Masuk trend awal: dalam beberapa hari, bukan beberapa minggu.",
+              "Kekalkan format yang orang kenal; tukar konteks kepada bisnes anda.",
+              "Simpan bunyi trending dalam favourites sebelum mula rakam."
+            ],
+            "example": "Ejen hartanah guna bunyi trending untuk lakonkan \"saya terangkan SPA kepada pembeli rumah pertama\".",
+            "hooks": [
+              "Semua orang buat trend ni, jadi ini versi {subject}",
+              "Trend check: edisi {subject}",
+              "Cakap anda tahu tentang {subject} tanpa cakap"
+            ]
+          }
         },
         {
           "id": "inspire",
@@ -72,7 +156,28 @@
             "Keep it honest; audiences can tell when a story is fake.",
             "End with a line people want to share."
           ],
-          "example": "A home baker shares the journey from 5 orders a month to a full-time business."
+          "example": "A home baker shares the journey from 5 orders a month to a full-time business.",
+          "hooks": [
+            "This changed how I see {subject}",
+            "If {subject} feels hard right now, watch this",
+            "Nobody saw this coming: our story with {subject}"
+          ],
+          "ms": {
+            "description": "Content yang menyentuh perasaan: transformasi, perjalanan dan motivasi. Ia membina pengikut setia yang menyokong anda.",
+            "brief": "Sentuh perasaan {audience} supaya mereka ingat {brand} dan menyokong anda.",
+            "howTo": [
+              "Tunjuk emosi sebenar. Perjuangan itulah yang buat kejayaan bermakna.",
+              "Guna rentak lebih perlahan dan muzik yang sesuai dengan mood.",
+              "Jujur; penonton boleh rasa kalau cerita itu dibuat-buat.",
+              "Akhiri dengan ayat yang orang mahu kongsi."
+            ],
+            "example": "Home baker kongsi perjalanan daripada 5 order sebulan kepada bisnes sepenuh masa.",
+            "hooks": [
+              "Ini yang ubah cara saya lihat {subject}",
+              "Kalau {subject} rasa susah sekarang, tonton ini",
+              "Tiada siapa sangka: kisah kami dengan {subject}"
+            ]
+          }
         },
         {
           "id": "bts",
@@ -85,48 +190,99 @@
             "Show the effort and care that customers never see.",
             "Film vertical, handheld and close."
           ],
-          "example": "A cake shop shows the 4am prep before a big wedding order."
+          "example": "A cake shop shows the 4am prep before a big wedding order.",
+          "hooks": [
+            "What really happens behind {subject}",
+            "You've never seen this side of {subject}",
+            "Come behind the scenes of {subject}"
+          ],
+          "ms": {
+            "description": "Content yang tunjuk apa yang biasanya berlaku di belakang kamera: proses, orang dan rutin harian. Ia buat jenama anda lebih manusiawi dan dipercayai.",
+            "brief": "Tunjuk kepada {audience} apa yang berlaku di sebalik tabir {brand} supaya mereka percaya orang dan proses di sebalik {product}.",
+            "howTo": [
+              "Rakam proses sebenar tanpa disolek. Itulah tarikannya.",
+              "Perkenalkan orang dengan nama mereka.",
+              "Tunjuk usaha dan teliti yang pelanggan tak pernah nampak.",
+              "Rakam secara menegak, pegang tangan dan dekat."
+            ],
+            "example": "Kedai kek tunjuk persiapan jam 4 pagi sebelum tempahan majlis kahwin yang besar.",
+            "hooks": [
+              "Apa sebenarnya berlaku di sebalik {subject}",
+              "Anda tak pernah tengok sisi ini tentang {subject}",
+              "Jom ke belakang tabir {subject}"
+            ]
+          }
         }
-      ]
+      ],
+      "ms": {
+        "question": "Apa tujuan content ini?",
+        "description": "Tugas content ini. Campurkan jenis content sepanjang minggu supaya feed anda mendidik, menghiburkan dan menjual.",
+        "briefLabel": "Matlamat"
+      }
     },
     {
       "id": "present",
       "label": "Present Style",
       "question": "How will you present it?",
-      "description": "The format of the video. The options depend on the content type you picked.",
+      "description": "The format of the video. Any present style works with any content type.",
       "briefLabel": "Present it as",
-      "dependsOn": "type",
       "color": "#7c3aed",
       "items": [
         {
-          "id": "edu-storytelling",
+          "id": "storytelling",
           "label": "Storytelling",
-          "parents": ["educate"],
-          "description": "Teach a lesson through a story (something that happened to you or a customer) instead of listing facts.",
-          "brief": "Teach the lesson through a real story: the situation, the problem, what you learned.",
+          "description": "Tell a real story (yours, a customer's or the brand's) instead of listing facts or claims. Stories teach and sell better than claims.",
+          "brief": "Tell it as a real story: the situation, the problem, the turning point and what changed.",
           "structure": [
             "Hook: drop the viewer into the most dramatic moment of the story.",
             "Context: who, where, what was happening.",
             "Problem: what went wrong or what was at stake.",
-            "Lesson: what you learned and how it applies to {audience}.",
-            "CTA: ask if it has ever happened to them."
+            "Turning point: what you learned, or how {product} changed things.",
+            "CTA: ask if it has ever happened to them, or share the offer."
           ],
           "hooks": [
             "The day I learned the truth about {subject}",
             "Nobody warned me about {subject}",
-            "A customer taught me a lesson about {subject}"
+            "A customer taught me a lesson about {subject}",
+            "The story behind {subject}",
+            "What happened when a customer asked us about {subject}"
           ],
           "howTo": [
             "Start in the middle of the action, not with 'so one day...'.",
-            "Keep it to one story and one lesson.",
-            "Use your face and voice. Stories need a person."
+            "Keep it to one story and one point.",
+            "Make the customer the hero, not your product.",
+            "Use real names and real results (with permission)."
           ],
-          "example": "A mechanic tells the story of a customer who ignored a small engine noise, and the RM3,000 bill that followed."
+          "example": "A mechanic tells the story of a customer who ignored a small engine noise, and the RM3,000 bill that followed.",
+          "ms": {
+            "description": "Ceritakan kisah sebenar (anda, pelanggan atau jenama) dan bukan sekadar senarai fakta atau dakwaan. Cerita lebih berkesan untuk mengajar dan menjual.",
+            "brief": "Sampaikan sebagai cerita sebenar: situasi, masalah, titik perubahan dan apa yang berubah.",
+            "structure": [
+              "Hook: terus masuk ke saat paling dramatik dalam cerita.",
+              "Konteks: siapa, di mana, apa yang sedang berlaku.",
+              "Masalah: apa yang tak kena atau apa yang dipertaruhkan.",
+              "Titik perubahan: apa yang anda belajar, atau bagaimana {product} mengubah keadaan.",
+              "CTA: tanya sama ada mereka pernah alaminya, atau kongsi tawaran."
+            ],
+            "hooks": [
+              "Hari saya tahu kebenaran tentang {subject}",
+              "Tiada siapa beritahu saya tentang {subject}",
+              "Seorang pelanggan ajar saya sesuatu tentang {subject}",
+              "Kisah di sebalik {subject}",
+              "Apa jadi bila seorang pelanggan tanya kami tentang {subject}"
+            ],
+            "howTo": [
+              "Mula di tengah-tengah aksi, bukan dengan \"jadi satu hari tu...\".",
+              "Satu cerita, satu poin.",
+              "Jadikan pelanggan wira cerita, bukan produk anda.",
+              "Guna nama dan hasil sebenar (dengan izin)."
+            ],
+            "example": "Mekanik cerita tentang pelanggan yang abaikan bunyi kecil pada enjin, dan bil RM3,000 yang menyusul."
+          }
         },
         {
           "id": "facts",
           "label": "Facts",
-          "parents": ["educate"],
           "description": "Share surprising, true facts your audience didn't know. Short, punchy and very saveable.",
           "brief": "Share surprising facts, one per scene, that make people say 'I didn't know that'.",
           "structure": [
@@ -146,12 +302,33 @@
             "Put the fact on screen as text.",
             "Use a number whenever you can."
           ],
-          "example": "A skincare brand explains why you still need sunscreen on a cloudy day."
+          "example": "A skincare brand explains why you still need sunscreen on a cloudy day.",
+          "ms": {
+            "description": "Kongsi fakta benar yang mengejutkan dan penonton tak tahu. Pendek, padat dan orang suka save.",
+            "brief": "Kongsi fakta mengejutkan, satu fakta satu babak, sampai orang kata \"tak tahu pun\".",
+            "structure": [
+              "Hook: buka dengan fakta paling mengejutkan.",
+              "Terangkan dengan mudah dalam satu atau dua ayat.",
+              "Kenapa ia penting kepada {audience}.",
+              "Pilihan: tambah dua atau tiga fakta lagi.",
+              "CTA: \"Follow untuk lebih banyak fakta macam ni.\""
+            ],
+            "hooks": [
+              "Ramai orang tak tahu ini tentang {subject}",
+              "Satu fakta mengejutkan tentang {subject}",
+              "Kebenaran tentang {subject} dalam 30 saat"
+            ],
+            "howTo": [
+              "Semak fakta anda. Satu fakta salah boleh rosakkan kepercayaan.",
+              "Letak fakta sebagai teks di skrin.",
+              "Guna angka bila boleh."
+            ],
+            "example": "Jenama skincare terangkan kenapa anda masih perlu sunscreen pada hari mendung."
+          }
         },
         {
           "id": "top-list",
           "label": "Top 3/5",
-          "parents": ["educate"],
           "description": "A countdown list of 3 or 5 points. Easy to follow and easy to watch till the end.",
           "brief": "Count down 3 or 5 quick points, saving the best one for last.",
           "structure": [
@@ -171,12 +348,33 @@
             "One scene per point.",
             "Save the strongest point for #1."
           ],
-          "example": "A travel agent counts down the top 5 hidden spots in Langkawi."
+          "example": "A travel agent counts down the top 5 hidden spots in Langkawi.",
+          "ms": {
+            "description": "Senarai kira detik 3 atau 5 perkara. Senang diikuti dan orang tonton sampai habis.",
+            "brief": "Kira detik 3 atau 5 perkara secara pantas, simpan yang terbaik untuk akhir.",
+            "structure": [
+              "Hook: sebut tajuk senarai, \"Top 3 ...\".",
+              "Perkara #3 (bagus).",
+              "Perkara #2 (lebih bagus).",
+              "Perkara #1 (terbaik, sebab orang tonton sampai habis).",
+              "CTA: tanya apa yang mereka nak tambah."
+            ],
+            "hooks": [
+              "3 perkara yang anda perlu tahu tentang {subject}",
+              "5 kesilapan yang orang selalu buat bila melibatkan {subject}",
+              "3 perkara yang saya harap saya tahu lebih awal tentang {subject}"
+            ],
+            "howTo": [
+              "Letak nombor dalam hook. Ia beritahu penonton berapa lama perlu tonton.",
+              "Satu babak untuk satu perkara.",
+              "Simpan perkara paling kuat untuk #1."
+            ],
+            "example": "Agen pelancongan kira detik 5 lokasi tersembunyi di Langkawi."
+          }
         },
         {
           "id": "how-to",
           "label": "How-To Tutorial",
-          "parents": ["educate"],
           "description": "A step-by-step guide that shows exactly how to do something, so viewers can copy you right away.",
           "brief": "Walk through it step by step so viewers can copy you right away.",
           "structure": [
@@ -195,12 +393,32 @@
             "Number each step on screen.",
             "Keep each step under 10 seconds."
           ],
-          "example": "A barista shows how to make a proper kopi at home in 3 steps."
+          "example": "A barista shows how to make a proper kopi at home in 3 steps.",
+          "ms": {
+            "description": "Panduan langkah demi langkah yang tunjuk cara buat sesuatu, supaya penonton boleh terus ikut.",
+            "brief": "Tunjuk langkah demi langkah supaya penonton boleh terus ikut.",
+            "structure": [
+              "Hook: tunjuk hasil akhir dahulu.",
+              "Langkah 1, langkah 2, langkah 3, satu babak setiap satu.",
+              "Satu kesilapan biasa yang perlu dielak.",
+              "CTA: \"Save video ni supaya boleh cuba nanti.\""
+            ],
+            "hooks": [
+              "Buat ini, jangan buat itu, bila melibatkan {subject}",
+              "Panduan 3 langkah mudah untuk {subject}",
+              "Ini cara kami uruskan {subject}"
+            ],
+            "howTo": [
+              "Tunjuk, jangan cakap saja. Rakam tangan anda buat setiap langkah.",
+              "Nomborkan setiap langkah di skrin.",
+              "Setiap langkah bawah 10 saat."
+            ],
+            "example": "Barista tunjuk cara bancuh kopi sedap di rumah dalam 3 langkah."
+          }
         },
         {
           "id": "myth-fact",
           "label": "Myth vs Fact",
-          "parents": ["educate"],
           "description": "Bust a common belief in your industry: say the myth, then reveal the truth.",
           "brief": "Bust a common myth and replace it with the truth.",
           "structure": [
@@ -220,12 +438,33 @@
             "Use a clear visual for MYTH and FACT (colours, stamps, sounds).",
             "Back the fact with proof or experience."
           ],
-          "example": "A personal trainer busts the myth that you can't eat rice if you want to lose weight."
+          "example": "A personal trainer busts the myth that you can't eat rice if you want to lose weight.",
+          "ms": {
+            "description": "Patahkan kepercayaan biasa dalam industri anda: sebut mitosnya, kemudian dedahkan kebenarannya.",
+            "brief": "Patahkan satu mitos biasa dan gantikan dengan kebenaran.",
+            "structure": [
+              "Hook: sebut mitos seolah-olah ia benar.",
+              "Cop \"MITOS\" besar atau bunyi buzzer.",
+              "Dedahkan fakta, dengan bukti.",
+              "Ulang untuk satu atau dua mitos lagi.",
+              "CTA: \"Mitos apa lagi yang anda pernah dengar?\""
+            ],
+            "hooks": [
+              "Berhenti percaya mitos ini tentang {subject}",
+              "Mitos atau fakta? Jom uji apa yang anda tahu tentang {subject}",
+              "Selama ini anda diberitahu benda yang salah tentang {subject}"
+            ],
+            "howTo": [
+              "Pilih mitos yang pelanggan anda betul-betul percaya. Semak komen dan DM.",
+              "Guna visual yang jelas untuk MITOS dan FAKTA (warna, cop, bunyi).",
+              "Sokong fakta dengan bukti atau pengalaman."
+            ],
+            "example": "Jurulatih peribadi patahkan mitos bahawa anda tak boleh makan nasi kalau nak kurus."
+          }
         },
         {
           "id": "quiz-reward",
           "label": "Quiz + Reward",
-          "parents": ["traffic"],
           "description": "Ask a question and give a prize for the correct (or a random) answer. Rewards drive a huge number of comments.",
           "brief": "Ask a question and reward the winners. The prize is what drives the comments.",
           "structure": [
@@ -245,12 +484,33 @@
             "Always announce winners publicly. It builds trust for the next one.",
             "Check the platform's promotion rules before running a giveaway."
           ],
-          "example": "A burger shop asks people to guess how many patties it sold last weekend. The closest answer wins a free meal."
+          "example": "A burger shop asks people to guess how many patties it sold last weekend. The closest answer wins a free meal.",
+          "ms": {
+            "description": "Tanya soalan dan beri hadiah kepada jawapan betul (atau pemenang rawak). Hadiah menarik banyak komen.",
+            "brief": "Tanya soalan dan beri hadiah kepada pemenang. Hadiah itulah yang menarik komen.",
+            "structure": [
+              "Hook: \"Jawab soalan ni dan menang ...\".",
+              "Tunjuk soalan (dan pilihan jawapan).",
+              "Terangkan cara menyertai: komen, follow, tag kawan.",
+              "Nyatakan tarikh tutup dan bila pemenang diumumkan.",
+              "Susuli dengan video pengumuman pemenang."
+            ],
+            "hooks": [
+              "Jawab soalan ini tentang {subject} dan menang hadiah!",
+              "Giveaway: jawab betul soalan tentang {subject} dan menang"
+            ],
+            "howTo": [
+              "Pilih hadiah yang berkaitan dengan bisnes anda supaya yang datang ialah pembeli, bukan pemburu barang percuma.",
+              "Peraturan mudah. Komen dan follow sudah cukup.",
+              "Sentiasa umumkan pemenang secara terbuka. Ia bina kepercayaan untuk giveaway seterusnya.",
+              "Semak peraturan promosi platform sebelum buat giveaway."
+            ],
+            "example": "Kedai burger minta orang teka berapa patty yang terjual hujung minggu lepas. Jawapan paling dekat menang makan percuma."
+          }
         },
         {
           "id": "a-or-b",
           "label": "A or B",
-          "parents": ["traffic"],
           "description": "Give two choices and ask people to pick one. The lowest-effort way to get comments.",
           "brief": "Give two clear options and ask viewers to pick one in the comments.",
           "structure": [
@@ -268,13 +528,32 @@
             "Label them clearly: A on the left, B on the right.",
             "Reply to comments and pick a side yourself."
           ],
-          "example": "A nasi lemak stall: sambal manis or sambal pedas? Comment A or B."
+          "example": "A nasi lemak stall: sambal manis or sambal pedas? Comment A or B.",
+          "ms": {
+            "description": "Beri dua pilihan dan minta orang pilih satu. Cara paling mudah untuk dapat komen.",
+            "brief": "Beri dua pilihan yang jelas dan minta penonton pilih satu di ruangan komen.",
+            "structure": [
+              "Hook: \"A atau B?\" dengan kedua-dua pilihan di skrin.",
+              "Tunjuk pilihan A.",
+              "Tunjuk pilihan B.",
+              "CTA: \"Komen A atau B.\""
+            ],
+            "hooks": [
+              "A atau B: mana satu menang bila melibatkan {subject}?",
+              "Pilih satu saja. Jom selesaikan perdebatan tentang {subject}"
+            ],
+            "howTo": [
+              "Buat kedua-dua pilihan sama menarik. Pilihan berat sebelah tak akan jadi perdebatan.",
+              "Labelkan dengan jelas: A di kiri, B di kanan.",
+              "Balas komen dan pilih satu pihak sendiri."
+            ],
+            "example": "Gerai nasi lemak: sambal manis atau sambal pedas? Komen A atau B."
+          }
         },
         {
           "id": "a-or-b-opinion",
           "label": "A or B + Pendapat",
           "altLabel": "A or B + Opinion",
-          "parents": ["traffic"],
           "description": "Like A or B, but viewers also have to explain why. Longer comments mean more engagement and real insight into your audience.",
           "brief": "Give two options and ask viewers to pick one and explain why (pendapat).",
           "structure": [
@@ -292,12 +571,32 @@
             "Read the best comments in a follow-up video.",
             "Use what people say as research for your next content."
           ],
-          "example": "A car dealer: new car or recond? Tell us which and why."
+          "example": "A car dealer: new car or recond? Tell us which and why.",
+          "ms": {
+            "description": "Macam A atau B, tetapi penonton juga perlu beri sebab. Komen lebih panjang bermakna lebih engagement dan anda kenal audiens dengan lebih dalam.",
+            "brief": "Beri dua pilihan dan minta penonton pilih satu serta beri pendapat kenapa.",
+            "structure": [
+              "Hook: pilihan itu, dibingkaikan sebagai perdebatan.",
+              "Tunjuk kedua-dua pilihan.",
+              "Beri pilihan anda sendiri dan satu sebab.",
+              "CTA: \"Mana satu, dan kenapa? Komen di bawah.\""
+            ],
+            "hooks": [
+              "Mana satu pilihan anda bila melibatkan {subject}? Pertahankan jawapan anda",
+              "Pendapat tak popular tentang {subject}. Setuju atau tidak?"
+            ],
+            "howTo": [
+              "Pilih satu pihak sendiri. Ia jemput orang untuk tak setuju.",
+              "Baca komen terbaik dalam video susulan.",
+              "Guna apa yang orang cakap sebagai kajian untuk content seterusnya."
+            ],
+            "example": "Pengedar kereta: kereta baru atau recond? Beritahu pilihan dan sebabnya.",
+            "altLabel": ""
+          }
         },
         {
           "id": "quiz",
           "label": "Quiz",
-          "parents": ["traffic"],
           "description": "A quick question or test that viewers answer in their head or in the comments. People love proving they know the answer.",
           "brief": "Ask a quick quiz question and make viewers want to prove they know the answer.",
           "structure": [
@@ -316,36 +615,32 @@
             "Put a countdown on screen to build tension.",
             "Reveal the answer at the end, or in the comments."
           ],
-          "example": "A clinic asks: which drink has more sugar, teh tarik or a can of soda?"
-        },
-        {
-          "id": "biz-storytelling",
-          "label": "Storytelling",
-          "parents": ["business-ads"],
-          "description": "Sell through a story: a customer's problem and how your product solved it, or why you started the business.",
-          "brief": "Sell through a story: a real customer or the founder, the problem, and how {product} changed things.",
-          "structure": [
-            "Hook: the problem or the turning point.",
-            "The situation before (the pain).",
-            "The moment they found {product}.",
-            "The result after.",
-            "CTA: the offer and how to get it."
-          ],
-          "hooks": [
-            "The story behind {subject}",
-            "What happened when a customer asked us about {subject}"
-          ],
-          "howTo": [
-            "Make the customer the hero, not your product.",
-            "Use real names and real results (with permission).",
-            "Keep the pitch to the last 10 seconds."
-          ],
-          "example": "A tuition centre tells the story of a student who went from failing to an A in maths."
+          "example": "A clinic asks: which drink has more sugar, teh tarik or a can of soda?",
+          "ms": {
+            "description": "Soalan atau ujian pendek yang penonton jawab dalam kepala atau di ruangan komen. Orang suka buktikan mereka tahu jawapannya.",
+            "brief": "Tanya satu soalan kuiz pantas dan buat penonton nak buktikan mereka tahu jawapannya.",
+            "structure": [
+              "Hook: soalan, dengan cabaran (\"hanya 1 dalam 10 orang jawab betul\").",
+              "Tunjuk pilihan jawapan atau pemasa kira detik.",
+              "Berhenti seketika, atau suruh mereka komen sebelum jawapan didedahkan.",
+              "Dedahkan jawapan, dengan penerangan ringkas.",
+              "CTA: \"Anda jawab betul tak?\""
+            ],
+            "hooks": [
+              "Hanya 1 dalam 10 orang jawab betul tentang {subject}",
+              "Kuiz pantas: sejauh mana anda tahu tentang {subject}?"
+            ],
+            "howTo": [
+              "Cukup susah untuk menarik, cukup senang untuk diteka.",
+              "Letak pemasa kira detik di skrin untuk bina debaran.",
+              "Dedahkan jawapan di akhir video, atau dalam komen."
+            ],
+            "example": "Klinik tanya: mana lebih banyak gula, teh tarik atau setin air bergas?"
+          }
         },
         {
           "id": "hard-sell",
           "label": "Hard Sell",
-          "parents": ["business-ads"],
           "description": "A direct pitch: here's the product, here's the offer, buy now. Works best on warm audiences and with a deadline.",
           "brief": "Pitch {product} directly: the offer, the price, the deadline and how to buy.",
           "structure": [
@@ -364,12 +659,32 @@
             "Show the price. Hiding it loses buyers.",
             "Use it in about 1 in 5 posts so your feed doesn't feel like an ad."
           ],
-          "example": "A furniture shop shows its best-selling sofa with RM300 off this weekend only."
+          "example": "A furniture shop shows its best-selling sofa with RM300 off this weekend only.",
+          "ms": {
+            "description": "Pitching terus: ini produknya, ini tawarannya, beli sekarang. Paling berkesan untuk audiens yang sudah kenal anda dan bila ada tarikh tamat.",
+            "brief": "Pitch {product} secara terus: tawaran, harga, tarikh tamat dan cara membeli.",
+            "structure": [
+              "Hook: panggil pembeli (\"Kalau anda perlukan ..., berhenti scroll\").",
+              "Tunjuk produk dan manfaat utamanya.",
+              "Tawaran: harga, bonus, tarikh tamat.",
+              "Bukti: review atau hasil.",
+              "CTA: cara membeli, sekarang juga."
+            ],
+            "hooks": [
+              "Berhenti scroll kalau anda dah lama fikir tentang {subject}",
+              "Kalau anda ambil berat tentang {subject}, tawaran ini untuk anda"
+            ],
+            "howTo": [
+              "Cipta rasa terdesak dengan tarikh tamat sebenar atau stok terhad.",
+              "Tunjuk harga. Sorok harga akan buat pembeli lari.",
+              "Guna untuk lebih kurang 1 daripada 5 post supaya feed anda tak rasa macam iklan."
+            ],
+            "example": "Kedai perabot tunjuk sofa paling laris dengan potongan RM300 hujung minggu ini sahaja."
+          }
         },
         {
           "id": "feedback",
           "label": "Feedback",
-          "parents": ["business-ads"],
           "description": "Let your customers do the selling: reviews, testimonials, screenshots of messages and before/after results.",
           "brief": "Let customers sell for you: real reviews, testimonials and results for {product}.",
           "structure": [
@@ -388,12 +703,32 @@
             "Video testimonials beat screenshots; screenshots beat nothing.",
             "Choose reviews that answer a common doubt."
           ],
-          "example": "A renovation company shows WhatsApp messages from a happy client next to the finished kitchen."
+          "example": "A renovation company shows WhatsApp messages from a happy client next to the finished kitchen.",
+          "ms": {
+            "description": "Biar pelanggan yang menjual untuk anda: review, testimoni, screenshot mesej dan hasil sebelum/selepas.",
+            "brief": "Biar pelanggan menjual untuk anda: review sebenar, testimoni dan hasil {product}.",
+            "structure": [
+              "Hook: ayat paling kuat daripada review.",
+              "Siapa pelanggan itu dan apa masalahnya.",
+              "Apa kata mereka tentang {product}.",
+              "Bukti di skrin (screenshot, sebelum/selepas).",
+              "CTA: ajak penonton cuba juga."
+            ],
+            "hooks": [
+              "Apa pelanggan kami betul-betul cakap tentang {subject}",
+              "Pelanggan sebenar, pendapat jujur tentang {subject}"
+            ],
+            "howTo": [
+              "Sentiasa minta izin pelanggan dahulu.",
+              "Testimoni video lebih baik daripada screenshot; screenshot lebih baik daripada tiada.",
+              "Pilih review yang menjawab keraguan biasa."
+            ],
+            "example": "Syarikat renovasi tunjuk mesej WhatsApp daripada klien yang gembira di sebelah dapur yang siap."
+          }
         },
         {
           "id": "problem-solution",
           "label": "Problem → Solution",
-          "parents": ["business-ads"],
           "description": "Show a problem your customers know too well, then show how your product fixes it. A soft sell that doesn't feel like an ad.",
           "brief": "Show a problem {audience} know too well, then show {product} fixing it.",
           "structure": [
@@ -412,13 +747,33 @@
             "Show, don't claim. Film it working.",
             "Pair it with a before/after split screen."
           ],
-          "example": "A cleaning service shows a greasy kitchen hood, then the sparkling result."
+          "example": "A cleaning service shows a greasy kitchen hood, then the sparkling result.",
+          "ms": {
+            "description": "Tunjuk masalah yang pelanggan anda sangat kenal, kemudian tunjuk bagaimana produk anda selesaikannya. Soft sell yang tak rasa macam iklan.",
+            "brief": "Tunjuk masalah yang {audience} sangat kenal, kemudian tunjuk {product} menyelesaikannya.",
+            "structure": [
+              "Hook: tunjuk masalah itu sedang berlaku.",
+              "Tekankan: kenapa ia sangat menjengkelkan atau merugikan.",
+              "Dedahkan {product} sebagai penyelesaian.",
+              "Tunjuk ia berfungsi.",
+              "CTA: di mana nak dapatkan."
+            ],
+            "hooks": [
+              "Masalah terbesar tentang {subject}, dan cara kami selesaikannya",
+              "Masih pening bila melibatkan {subject}? Tonton ini"
+            ],
+            "howTo": [
+              "Besarkan sedikit masalahnya untuk kesan, tetapi kekalkan penyelesaian yang sebenar.",
+              "Tunjuk, jangan dakwa. Rakam ia berfungsi.",
+              "Gandingkan dengan split screen sebelum/selepas."
+            ],
+            "example": "Servis cuci tunjuk hood dapur yang berminyak, kemudian hasil yang berkilat."
+          }
         },
         {
           "id": "lakonan",
           "label": "Lakonan",
           "altLabel": "Skit / Acting",
-          "parents": ["trend"],
           "description": "A short acted skit, usually following a trending format or sound: POV scenes, 'types of customers', dramatic re-enactments.",
           "brief": "Act it out as a short skit (lakonan) using a trending format or sound.",
           "structure": [
@@ -437,12 +792,33 @@
             "Keep it under 30 seconds with a clear punchline.",
             "Costume or prop changes make multiple characters clear."
           ],
-          "example": "A bakery acts out 'types of customers when the kek lapis runs out'."
+          "example": "A bakery acts out 'types of customers when the kek lapis runs out'.",
+          "ms": {
+            "description": "Lakonan pendek, biasanya ikut format atau bunyi yang sedang trending: babak POV, \"jenis-jenis pelanggan\", lakonan semula yang dramatik.",
+            "brief": "Lakonkan dalam bentuk sketsa pendek menggunakan format atau bunyi yang trending.",
+            "structure": [
+              "Hook: sediakan babak dengan kapsyen \"POV:\" atau \"Bila...\".",
+              "Lakonkan situasi (bawa beberapa watak jika perlu).",
+              "Twist atau punchline.",
+              "Kaitkan dengan {brand} secara halus.",
+              "CTA: \"Tag kawan yang buat macam ni.\""
+            ],
+            "hooks": [
+              "POV: akhirnya anda faham tentang {subject}",
+              "Bila kawan tanya anda tentang {subject}"
+            ],
+            "howTo": [
+              "Guna bunyi atau format sketsa yang trending supaya algoritma tolak video anda.",
+              "Bawah 30 saat dengan punchline yang jelas.",
+              "Tukar kostum atau prop supaya beberapa watak jelas dibezakan."
+            ],
+            "example": "Kedai kek lakonkan \"jenis-jenis pelanggan bila kek lapis habis\".",
+            "altLabel": "Sketsa"
+          }
         },
         {
           "id": "dance",
           "label": "Dance",
-          "parents": ["trend"],
           "description": "Join a trending dance or choreography, with your team, your product or your shop as the twist.",
           "brief": "Do the trending dance, with {brand}'s team, product or shop as the twist.",
           "structure": [
@@ -460,12 +836,31 @@
             "The text overlay is what makes it about your business.",
             "It doesn't have to be perfect. Fun beats polished."
           ],
-          "example": "A clinic's nurses do a trending dance with the caption 'when the last patient of the day leaves'."
+          "example": "A clinic's nurses do a trending dance with the caption 'when the last patient of the day leaves'.",
+          "ms": {
+            "description": "Sertai tarian atau koreografi yang trending, dengan team, produk atau kedai anda sebagai twist.",
+            "brief": "Buat tarian trending, dengan team, produk atau kedai {brand} sebagai twist.",
+            "structure": [
+              "Hook: teks di skrin yang beri konteks kepada tarian.",
+              "Tarian (ikut trend dengan rapat).",
+              "Twist anda: produk, uniform, lokasi atau team.",
+              "CTA: \"Follow untuk lagi\" atau tag kawan."
+            ],
+            "hooks": [
+              "Saya selepas faham tentang {subject}",
+              "Team kami bila ada orang tanya tentang {subject}"
+            ],
+            "howTo": [
+              "Belajar trend daripada video asal dahulu.",
+              "Teks di skrin itulah yang menjadikan ia tentang bisnes anda.",
+              "Tak perlu sempurna. Seronok lebih penting daripada cantik."
+            ],
+            "example": "Jururawat klinik buat tarian trending dengan kapsyen \"bila pesakit terakhir hari ini dah balik\"."
+          }
         },
         {
           "id": "trending-sound",
           "label": "Trending Sound / Meme",
-          "parents": ["trend"],
           "description": "Use a viral sound or meme format and apply it to your business. Low effort, high reach.",
           "brief": "Use a viral sound or meme format and apply it to {brand}'s world.",
           "structure": [
@@ -483,12 +878,31 @@
             "Match the meaning of the sound to your situation.",
             "Keep it short. Most meme videos are under 15 seconds."
           ],
-          "example": "A property agent lip-syncs to a trending sound: 'when the buyer says the loan is approved'."
+          "example": "A property agent lip-syncs to a trending sound: 'when the buyer says the loan is approved'.",
+          "ms": {
+            "description": "Guna bunyi viral atau format meme dan kaitkan dengan bisnes anda. Usaha rendah, reach tinggi.",
+            "brief": "Guna bunyi viral atau format meme dan kaitkan dengan dunia {brand}.",
+            "structure": [
+              "Hook: teks di skrin yang menyediakan meme.",
+              "Lip-sync atau berlakon mengikut bunyi.",
+              "Punchline, dikaitkan dengan bisnes anda.",
+              "CTA: tag orang yang relate."
+            ],
+            "hooks": [
+              "Saya terangkan tentang {subject} kepada kawan-kawan",
+              "Tiada siapa: ... Saya bila ada orang sebut tentang {subject}:"
+            ],
+            "howTo": [
+              "Guna bunyi itu ketika ia sedang naik, bukan bila semua orang dah guna.",
+              "Padankan maksud bunyi dengan situasi anda.",
+              "Pendekkan. Kebanyakan video meme bawah 15 saat."
+            ],
+            "example": "Ejen hartanah lip-sync bunyi trending: \"bila pembeli cakap loan dah lulus\"."
+          }
         },
         {
           "id": "transformation",
           "label": "Before & After",
-          "parents": ["inspire"],
           "description": "Show a transformation: a person, a space, a product or a business, from before to after.",
           "brief": "Show the transformation, before and after, and let the result speak.",
           "structure": [
@@ -507,12 +921,32 @@
             "Use a transition (snap, whip pan, cover the lens) for the reveal.",
             "Time-lapse the middle."
           ],
-          "example": "A landscaper shows an overgrown garden turned into a family-friendly backyard."
+          "example": "A landscaper shows an overgrown garden turned into a family-friendly backyard.",
+          "ms": {
+            "description": "Tunjuk transformasi: orang, ruang, produk atau bisnes, dari sebelum ke selepas.",
+            "brief": "Tunjuk transformasi, sebelum dan selepas, dan biar hasilnya bercakap.",
+            "structure": [
+              "Hook: imbas hasil \"selepas\" sekejap.",
+              "Keadaan \"sebelum\", jujur dan tanpa solekan.",
+              "Proses (dipercepatkan).",
+              "Pendedahan besar.",
+              "CTA: \"Nak hasil yang sama? ...\""
+            ],
+            "hooks": [
+              "Dari kosong ke tahap ini: perjalanan kami dengan {subject}",
+              "Sebelum dan selepas: tengok apa yang berubah dengan {subject}"
+            ],
+            "howTo": [
+              "Rakam sebelum dan selepas dari sudut yang sama.",
+              "Guna transisi (petik jari, whip pan, tutup lensa) untuk pendedahan.",
+              "Time-lapse bahagian tengah."
+            ],
+            "example": "Landskap tunjuk laman yang semak bertukar menjadi halaman mesra keluarga."
+          }
         },
         {
           "id": "struggle-success",
           "label": "Struggle to Success",
-          "parents": ["inspire"],
           "description": "Share an honest journey from hard times to where you are now. Vulnerability builds loyal fans.",
           "brief": "Share the honest journey from struggle to where {brand} is today.",
           "structure": [
@@ -531,12 +965,32 @@
             "Don't brag at the end; share the lesson.",
             "Talk to camera for the emotional parts."
           ],
-          "example": "A caterer shares starting from a home kitchen during the pandemic and now running a central kitchen."
+          "example": "A caterer shares starting from a home kitchen during the pandemic and now running a central kitchen.",
+          "ms": {
+            "description": "Kongsi perjalanan jujur dari masa susah ke tahap sekarang. Kejujuran membina peminat setia.",
+            "brief": "Kongsi perjalanan jujur dari susah ke tahap {brand} hari ini.",
+            "structure": [
+              "Hook: titik paling rendah.",
+              "Apa yang tak kena ketika itu.",
+              "Titik perubahan.",
+              "Di mana anda sekarang (dengan bukti).",
+              "Pengajaran untuk {audience}."
+            ],
+            "hooks": [
+              "Saya hampir putus asa dengan {subject}",
+              "Dari bergelut dengan {subject} sampai ke tahap ini"
+            ],
+            "howTo": [
+              "Guna gambar dan video lama. Ia buat cerita lebih nyata.",
+              "Jangan berlagak di akhir; kongsi pengajarannya.",
+              "Bercakap terus ke kamera untuk bahagian yang emosional."
+            ],
+            "example": "Katerer kongsi bermula dari dapur rumah semasa pandemik dan kini menguruskan dapur pusat."
+          }
         },
         {
           "id": "motivational",
           "label": "Motivational Talk",
-          "parents": ["inspire"],
           "description": "A short, heartfelt message that encourages your audience. Shareable and great for building a personal brand.",
           "brief": "Give {audience} a short, heartfelt message of encouragement.",
           "structure": [
@@ -555,12 +1009,32 @@
             "Soft background music, captions on.",
             "Keep it under 45 seconds."
           ],
-          "example": "A business coach reminds new entrepreneurs that the first year is supposed to be hard."
+          "example": "A business coach reminds new entrepreneurs that the first year is supposed to be hard.",
+          "ms": {
+            "description": "Mesej pendek dari hati yang memberi semangat kepada audiens. Senang dikongsi dan bagus untuk membina personal brand.",
+            "brief": "Beri {audience} mesej pendek dari hati untuk memberi semangat.",
+            "structure": [
+              "Hook: sentuh satu perasaan (\"Kalau anda rasa buntu ...\").",
+              "Mesej atau pengajaran dalam 2–3 ayat.",
+              "Contoh peribadi.",
+              "Ayat yang orang akan screenshot.",
+              "CTA: \"Hantar video ni kepada orang yang perlukannya.\""
+            ],
+            "hooks": [
+              "Kalau anda risau tentang {subject}, tonton ini",
+              "Peringatan untuk sesiapa yang sedang fikir tentang {subject}"
+            ],
+            "howTo": [
+              "Bercakap perlahan dan pandang lensa.",
+              "Muzik latar lembut, kapsyen dihidupkan.",
+              "Bawah 45 saat."
+            ],
+            "example": "Business coach ingatkan usahawan baru bahawa tahun pertama memang sepatutnya susah."
+          }
         },
         {
           "id": "day-in-life",
           "label": "Day in the Life",
-          "parents": ["bts"],
           "description": "Follow a day at your business from open to close. People love seeing how things really run.",
           "brief": "Follow a real day at {brand} from open to close.",
           "structure": [
@@ -579,12 +1053,32 @@
             "Film many short clips, 2–3 seconds each.",
             "Voiceover or captions tell the story."
           ],
-          "example": "A florist shows a full day before Valentine's, from 6am delivery to the last bouquet."
+          "example": "A florist shows a full day before Valentine's, from 6am delivery to the last bouquet.",
+          "ms": {
+            "description": "Ikut sehari di bisnes anda dari buka sampai tutup. Orang suka tengok bagaimana sesuatu itu benar-benar berjalan.",
+            "brief": "Ikut satu hari sebenar di {brand} dari buka sampai tutup.",
+            "structure": [
+              "Hook: masa dan tugas pertama (\"5:30 pagi, batch pertama hari ini\").",
+              "Klip pantas sepanjang hari, dengan cap masa.",
+              "Satu cabaran atau saat mengejutkan.",
+              "Penghujung hari, dengan hasilnya.",
+              "CTA: \"Nak tengok lagi hari macam ni?\""
+            ],
+            "hooks": [
+              "Sehari di {brand}: {subject}",
+              "Jom luangkan sehari bersama kami dan tengok {subject} dari dekat"
+            ],
+            "howTo": [
+              "Letak masa di skrin untuk setiap klip.",
+              "Rakam banyak klip pendek, 2–3 saat setiap satu.",
+              "Voiceover atau kapsyen yang bercerita."
+            ],
+            "example": "Kedai bunga tunjuk sehari penuh sebelum Hari Valentine, dari penghantaran 6 pagi hingga jambak terakhir."
+          }
         },
         {
           "id": "how-its-made",
           "label": "How It's Made",
-          "parents": ["bts"],
           "description": "Show the process of making or delivering your product or service. Satisfying to watch and builds perceived value.",
           "brief": "Show how {product} is made or delivered, step by step.",
           "structure": [
@@ -603,12 +1097,32 @@
             "Speed up the boring parts.",
             "Show the care and quality checks."
           ],
-          "example": "A batik maker shows the canting, dyeing and drying process."
+          "example": "A batik maker shows the canting, dyeing and drying process.",
+          "ms": {
+            "description": "Tunjuk proses membuat atau menyampaikan produk atau servis anda. Puas ditonton dan menaikkan nilai di mata pelanggan.",
+            "brief": "Tunjuk bagaimana {product} dibuat atau disampaikan, langkah demi langkah.",
+            "structure": [
+              "Hook: saat paling memuaskan dalam proses.",
+              "Bahan mentah atau titik permulaan.",
+              "Setiap langkah, dipercepatkan.",
+              "Produk siap.",
+              "CTA: cara membuat tempahan."
+            ],
+            "hooks": [
+              "Macam mana ia dibuat: {subject}",
+              "Apa sebenarnya berlaku di sebalik {subject}"
+            ],
+            "howTo": [
+              "Close-up dan bunyi yang memuaskan paling berkesan.",
+              "Percepatkan bahagian yang membosankan.",
+              "Tunjuk teliti dan pemeriksaan kualiti."
+            ],
+            "example": "Pembuat batik tunjuk proses canting, celup dan jemur."
+          }
         },
         {
           "id": "meet-team",
           "label": "Meet the Team",
-          "parents": ["bts"],
           "description": "Introduce the people behind your business: their roles, personalities and fun facts.",
           "brief": "Introduce the people behind {brand}, their roles and personalities.",
           "structure": [
@@ -627,9 +1141,35 @@
             "Let them be themselves. Don't over-script.",
             "Get their consent before posting."
           ],
-          "example": "A clinic introduces its receptionist, who remembers every patient's name."
+          "example": "A clinic introduces its receptionist, who remembers every patient's name.",
+          "ms": {
+            "description": "Perkenalkan orang di sebalik bisnes anda: peranan, personaliti dan fakta menarik tentang mereka.",
+            "brief": "Perkenalkan orang di sebalik {brand}, peranan dan personaliti mereka.",
+            "structure": [
+              "Hook: \"Kenali orang yang ...\".",
+              "Nama, peranan, berapa lama bersama anda.",
+              "Fakta menarik atau soalan pantas.",
+              "Mereka sedang bekerja.",
+              "CTA: \"Say hi di ruangan komen!\""
+            ],
+            "hooks": [
+              "Kenali orang di sebalik {subject}",
+              "Team yang uruskan {subject}"
+            ],
+            "howTo": [
+              "Tanya semua orang soalan seronok yang sama supaya ia jadi siri.",
+              "Biar mereka jadi diri sendiri. Jangan terlalu berskrip.",
+              "Dapatkan persetujuan mereka sebelum post."
+            ],
+            "example": "Klinik perkenalkan penyambut tetamu yang ingat nama setiap pesakit."
+          }
         }
-      ]
+      ],
+      "ms": {
+        "question": "Bagaimana anda akan sampaikan?",
+        "description": "Format video. Pilihan di sini bergantung pada jenis content yang anda pilih.",
+        "briefLabel": "Cara sampaikan"
+      }
     },
     {
       "id": "shooting",
@@ -650,7 +1190,18 @@
             "Cut the two clips in the middle of the blur so it looks like one move.",
             "Keep the swing speed and direction consistent across the video."
           ],
-          "example": "Each point of a Top 3 list is revealed with a whip pan to a new spot in the shop."
+          "example": "Each point of a Top 3 list is revealed with a whip pan to a new spot in the shop.",
+          "ms": {
+            "description": "Hayunan kamera yang sangat laju ke kiri atau kanan sehingga gambar kabur, digunakan sebagai transisi antara babak. Ia menambah tenaga dan buat potongan nampak lancar.",
+            "brief": "Guna whip pan yang laju untuk lompat antara babak atau poin. Ia kekalkan tenaga video.",
+            "howTo": [
+              "Hayun telefon dengan laju ke satu arah di hujung shot A.",
+              "Mulakan shot B dengan hayunan ke arah yang sama, kemudian berhenti pada subjek.",
+              "Potong kedua-dua klip di tengah kekaburan supaya nampak macam satu gerakan.",
+              "Kekalkan kelajuan dan arah hayunan yang sama sepanjang video."
+            ],
+            "example": "Setiap poin dalam senarai Top 3 didedahkan dengan whip pan ke sudut lain di kedai."
+          }
         },
         {
           "id": "reaction",
@@ -663,7 +1214,18 @@
             "Use picture-in-picture or split screen when reacting to another video.",
             "Keep the reaction short and cut to the best moment."
           ],
-          "example": "Customers taste the new menu item for the first time on camera."
+          "example": "Customers taste the new menu item for the first time on camera.",
+          "ms": {
+            "description": "Rakam reaksi sebenar (anda atau orang lain) terhadap produk, rasa, pendedahan atau video lain. Muka manusia buat orang berhenti scroll.",
+            "brief": "Rakam reaksi sebenar di depan kamera. Muka dan tanggapan pertama yang menjual.",
+            "howTo": [
+              "Rakam reaksi secara close-up dengan muka yang cukup cahaya.",
+              "Jangan terlalu berskrip; terkejut yang ikhlas paling berkesan.",
+              "Guna picture-in-picture atau split screen bila bereaksi kepada video lain.",
+              "Pendekkan reaksi dan potong ke saat terbaik."
+            ],
+            "example": "Pelanggan rasa menu baharu buat kali pertama di depan kamera."
+          }
         },
         {
           "id": "outdoor",
@@ -676,7 +1238,18 @@
             "Pick a background that tells viewers where you are.",
             "Check who and what is in frame; get permission when needed."
           ],
-          "example": "A property agent films a talk in front of the new development."
+          "example": "A property agent films a talk in front of the new development.",
+          "ms": {
+            "description": "Rakam di luar: di lokasi, di jalan, di tapak. Cahaya semula jadi dan suasana sebenar buat content terasa asli.",
+            "brief": "Rakam di luar, di lokasi sebenar, untuk cahaya semula jadi dan suasana dunia nyata.",
+            "howTo": [
+              "Rakam waktu pagi atau lewat petang untuk cahaya lembut; elak matahari terik tengah hari.",
+              "Guna mikrofon klip. Angin dan trafik merosakkan audio.",
+              "Pilih latar belakang yang beritahu penonton di mana anda berada.",
+              "Semak siapa dan apa yang masuk dalam frame; minta izin bila perlu."
+            ],
+            "example": "Ejen hartanah bercakap di depan projek perumahan baharu."
+          }
         },
         {
           "id": "indoor",
@@ -689,7 +1262,18 @@
             "Turn off fans and air-cond during takes for clean audio.",
             "Keep the camera at eye level."
           ],
-          "example": "A consultant films a talking-head tip at a desk with the logo on the wall behind."
+          "example": "A consultant films a talking-head tip at a desk with the logo on the wall behind.",
+          "ms": {
+            "description": "Rakam di dalam ruang yang anda kawal: kedai, pejabat, studio atau rumah. Anda kawal cahaya, bunyi dan latar belakang.",
+            "brief": "Rakam di dalam ruang terkawal supaya cahaya, bunyi dan latar belakang kekal kemas.",
+            "howTo": [
+              "Hadap tingkap, atau letak ring light atau softbox di depan anda.",
+              "Kemaskan latar belakang dan tambah satu elemen yang tunjuk jenama anda.",
+              "Tutup kipas dan aircond semasa rakaman untuk audio yang bersih.",
+              "Letak kamera paras mata."
+            ],
+            "example": "Perunding rakam tip talking head di meja dengan logo di dinding belakang."
+          }
         },
         {
           "id": "moving",
@@ -702,7 +1286,18 @@
             "Plan your route so you don't stop mid-sentence.",
             "Turn on stabilisation in your camera settings."
           ],
-          "example": "An owner walks through the shop explaining each section while the camera follows."
+          "example": "An owner walks through the shop explaining each section while the camera follows.",
+          "ms": {
+            "description": "Kamera atau penyampai sedang bergerak: berjalan sambil bercakap, mengikut subjek, atau merakam dari kereta. Pergerakan kekalkan perhatian mata.",
+            "brief": "Kekalkan kamera bergerak (jalan sambil bercakap, atau ikut aksi) supaya setiap frame terasa hidup.",
+            "howTo": [
+              "Pegang telefon dengan dua tangan rapat ke badan, atau guna gimbal.",
+              "Berjalan tumit-ke-jari untuk kurangkan goyangan.",
+              "Rancang laluan supaya anda tak berhenti di tengah ayat.",
+              "Hidupkan stabilisation dalam tetapan kamera."
+            ],
+            "example": "Pemilik berjalan di dalam kedai menerangkan setiap bahagian sambil kamera mengikut."
+          }
         },
         {
           "id": "highlight",
@@ -715,7 +1310,18 @@
             "Open with your strongest clip.",
             "Keep the whole thing under 30 seconds."
           ],
-          "example": "An event company's 20-second recap of a wedding, cut to a trending song."
+          "example": "An event company's 20-second recap of a wedding, cut to a trending song.",
+          "ms": {
+            "description": "Montaj pantas saat-saat terbaik (majlis, sehari, projek) dipotong mengikut muzik. Banyak yang ditunjuk dalam beberapa saat.",
+            "brief": "Potong saat-saat terbaik menjadi highlight reel yang pantas, selari dengan muzik.",
+            "howTo": [
+              "Rakam banyak klip pendek 2–3 saat dari sudut berbeza.",
+              "Potong mengikut rentak muzik.",
+              "Buka dengan klip paling kuat.",
+              "Keseluruhan video bawah 30 saat."
+            ],
+            "example": "Recap 20 saat syarikat event untuk majlis perkahwinan, dipotong mengikut lagu trending."
+          }
         },
         {
           "id": "foodie",
@@ -738,7 +1344,18 @@
               "note": "Study how they open the video, frame the food and deliver the verdict."
             }
           ],
-          "example": "A restaurant owner reviews their own signature dish like a food critic."
+          "example": "A restaurant owner reviews their own signature dish like a food critic.",
+          "ms": {
+            "description": "Gaya review makanan: close-up makanan, suapan pertama, reaksi jujur dan info ringkas tentang harga dan lokasi.",
+            "brief": "Rakam gaya review makanan: close-up, suapan pertama, reaksi jujur dan info penting.",
+            "howTo": [
+              "Ambil close-up yang rapat: tarikan, tuangan, wap, bunyi rangup.",
+              "Rakam suapan pertama dan beri reaksi jujur.",
+              "Letak harga, lokasi dan waktu operasi di skrin.",
+              "Rakam dekat cahaya semula jadi supaya warna makanan nampak menyelerakan."
+            ],
+            "example": "Pemilik restoran review hidangan istimewa sendiri macam pengkritik makanan."
+          }
         },
         {
           "id": "talking-head",
@@ -751,7 +1368,18 @@
             "Add captions. Most people watch on mute.",
             "Change the angle or zoom every few seconds to reset attention."
           ],
-          "example": "A lawyer answers one common question about wills in 45 seconds."
+          "example": "A lawyer answers one common question about wills in 45 seconds.",
+          "ms": {
+            "description": "Anda bercakap terus ke kamera, frame dari paras dada ke atas. Mudah, peribadi dan cara paling cepat membina kepercayaan.",
+            "brief": "Bercakap terus ke kamera, frame paras dada, macam berbual dengan seorang kawan.",
+            "howTo": [
+              "Letak lensa paras mata dan pandang lensa, bukan skrin.",
+              "Buang jeda dengan jump cut untuk kekalkan rentak.",
+              "Tambah kapsyen. Ramai orang tonton tanpa bunyi.",
+              "Tukar sudut atau zoom setiap beberapa saat untuk segarkan perhatian."
+            ],
+            "example": "Peguam jawab satu soalan biasa tentang wasiat dalam 45 saat."
+          }
         },
         {
           "id": "pov",
@@ -764,7 +1392,18 @@
             "Add a 'POV:' caption to set the scene.",
             "Move slowly. POV shots get shaky fast."
           ],
-          "example": "POV: you're the barista during the lunch rush."
+          "example": "POV: you're the barista during the lunch rush.",
+          "ms": {
+            "description": "Dirakam dari sudut pandang penonton, seolah-olah mereka yang sedang melakukannya. Sangat mengasyikkan dan sesuai untuk content \"macam mana rasanya\".",
+            "brief": "Rakam dari sudut pandang orang pertama supaya penonton rasa mereka yang sedang buat.",
+            "howTo": [
+              "Pegang telefon paras mata atau dada, menghala ke arah mata anda memandang.",
+              "Tunjuk tangan dalam frame supaya terasa nyata.",
+              "Tambah kapsyen \"POV:\" untuk sediakan babak.",
+              "Bergerak perlahan. Shot POV cepat goyang."
+            ],
+            "example": "POV: anda barista masa waktu puncak makan tengah hari."
+          }
         },
         {
           "id": "green-screen",
@@ -777,7 +1416,18 @@
             "Point to what you're talking about on screen.",
             "Swap the background for each point."
           ],
-          "example": "An accountant reacts to a news headline about new tax rules."
+          "example": "An accountant reacts to a news headline about new tax rules.",
+          "ms": {
+            "description": "Anda muncul di depan gambar, artikel, laman web atau video. Sesuai untuk bereaksi kepada berita, review atau screenshot.",
+            "brief": "Guna kesan green screen untuk bercakap di depan screenshot, artikel atau gambar.",
+            "howTo": [
+              "Guna kesan green screen dalam app. Tak perlu green screen sebenar.",
+              "Pilih gambar latar yang jelas dan mudah dibaca.",
+              "Tunjuk ke arah apa yang anda bincangkan di skrin.",
+              "Tukar latar belakang untuk setiap poin."
+            ],
+            "example": "Akauntan bereaksi kepada tajuk berita tentang peraturan cukai baharu."
+          }
         },
         {
           "id": "street-interview",
@@ -790,7 +1440,18 @@
             "Always ask permission before filming and posting.",
             "Keep only the best 3–5 answers."
           ],
-          "example": "A fitness brand asks people in a mall: how many push-ups can you do?"
+          "example": "A fitness brand asks people in a mall: how many push-ups can you do?",
+          "ms": {
+            "description": "Tanya orang ramai satu soalan dan rakam jawapan mereka. Orang sebenar, pendapat sebenar, sangat mudah dikongsi.",
+            "brief": "Tanya orang ramai satu soalan di jalan dan rakam jawapan jujur mereka.",
+            "howTo": [
+              "Guna mikrofon wayarles pegang tangan atau klip.",
+              "Tanya soalan pendek dan seronok yang mudah dijawab.",
+              "Sentiasa minta izin sebelum rakam dan post.",
+              "Simpan 3–5 jawapan terbaik sahaja."
+            ],
+            "example": "Jenama kecergasan tanya orang di mall: berapa push-up anda boleh buat?"
+          }
         },
         {
           "id": "voiceover-broll",
@@ -803,7 +1464,18 @@
             "Change shots every 2–3 seconds.",
             "Build a B-roll library of your shop, product and team to reuse."
           ],
-          "example": "A candle brand narrates its story over clips of pouring and packing."
+          "example": "A candle brand narrates its story over clips of pouring and packing.",
+          "ms": {
+            "description": "Rakam suara anda berasingan dan letak di atas footage sokongan (B-roll). Sesuai kalau anda malu di depan kamera.",
+            "brief": "Rakam voiceover dan tutup dengan footage B-roll. Tak perlu tunjuk muka.",
+            "howTo": [
+              "Tulis dan rakam voiceover dahulu, kemudian rakam footage yang sepadan.",
+              "Rakam dalam bilik senyap dengan telefon dekat dengan mulut.",
+              "Tukar shot setiap 2–3 saat.",
+              "Bina koleksi B-roll kedai, produk dan team untuk digunakan semula."
+            ],
+            "example": "Jenama lilin bercerita tentang jenamanya di atas klip menuang dan membungkus."
+          }
         },
         {
           "id": "close-up-asmr",
@@ -816,7 +1488,18 @@
             "Use slow, deliberate movements.",
             "Skip the music, or keep it very low."
           ],
-          "example": "An online shop films orders being packed, with every crinkle and tape sound."
+          "example": "An online shop films orders being packed, with every crinkle and tape sound.",
+          "ms": {
+            "description": "Close-up yang sangat dekat dengan bunyi yang memuaskan: menuang, memotong, membungkus, unboxing. Content yang \"satisfying\" ditonton sampai habis dan diulang.",
+            "brief": "Rakam close-up yang sangat dekat dan biar bunyi yang memuaskan bercakap.",
+            "howTo": [
+              "Dekatkan telefon sedekat yang ia boleh fokus.",
+              "Rakam dalam bilik senyap; bunyi ialah separuh daripada content.",
+              "Guna pergerakan yang perlahan dan teratur.",
+              "Tak perlu muzik, atau kecilkan sangat."
+            ],
+            "example": "Kedai online rakam order dibungkus, dengan setiap bunyi plastik dan pita pelekat."
+          }
         },
         {
           "id": "split-screen",
@@ -829,9 +1512,25 @@
             "Label each side clearly.",
             "Works great with the Reaction and A or B styles."
           ],
-          "example": "A tailor duets a viral 'fashion fail' video, showing how to fix it."
+          "example": "A tailor duets a viral 'fashion fail' video, showing how to fix it.",
+          "ms": {
+            "description": "Dua video bersebelahan: sebelum/selepas, A vs B, atau anda bereaksi kepada video creator lain dengan Duet atau Remix.",
+            "brief": "Guna split screen untuk bandingkan dua perkara, atau duet video lain.",
+            "howTo": [
+              "Guna ciri Duet, Remix atau Collab di TikTok, Reels atau Shorts.",
+              "Selaraskan kedua-dua belah supaya aksi berlaku serentak.",
+              "Labelkan setiap belah dengan jelas.",
+              "Sangat sesuai dengan gaya Reaction dan A or B."
+            ],
+            "example": "Tukang jahit duet video \"fashion fail\" yang viral dan tunjuk cara membaikinya."
+          }
         }
-      ]
+      ],
+      "ms": {
+        "question": "Bagaimana anda akan rakam?",
+        "description": "Cara kamera merakam content: teknik, lokasi atau pergerakan.",
+        "briefLabel": "Cara rakam"
+      }
     },
     {
       "id": "topic",
@@ -857,7 +1556,33 @@
             "Show the product in use, not just sitting on a table.",
             "Answer the viewer's question: what's in it for me?"
           ],
-          "example": "Why our kuih is made fresh every morning, never frozen."
+          "example": "Why our kuih is made fresh every morning, never frozen.",
+          "hooks": [
+            "What makes {subject} different",
+            "Why our customers choose {subject}",
+            "Everything you get with {subject}"
+          ],
+          "ms": {
+            "description": "Bercakap tentang apa yang anda jual: ciri, manfaat, cara ia dibuat dan cara menggunakannya.",
+            "brief": "Fokus pada {product}: apa ia, kenapa ia lebih baik, dan cara menggunakannya.",
+            "subjects": [
+              "{product}",
+              "cara memilih {product} yang sesuai",
+              "cara kami menghasilkan {product}",
+              "cara dapatkan hasil terbaik daripada {product}"
+            ],
+            "howTo": [
+              "Fokus pada satu ciri atau manfaat untuk satu video.",
+              "Tunjuk produk sedang digunakan, bukan sekadar terletak di atas meja.",
+              "Jawab soalan penonton: apa untungnya untuk saya?"
+            ],
+            "example": "Kenapa kuih kami dibuat segar setiap pagi, tak pernah dibekukan.",
+            "hooks": [
+              "Apa yang buat {subject} berbeza",
+              "Kenapa pelanggan kami pilih {subject}",
+              "Semua yang anda dapat dengan {subject}"
+            ]
+          }
         },
         {
           "id": "target-market",
@@ -874,7 +1599,32 @@
             "Call them out in the first line.",
             "Show you understand the problem before offering a solution."
           ],
-          "example": "3 things every first-time home buyer worries about."
+          "example": "3 things every first-time home buyer worries about.",
+          "hooks": [
+            "{audience}, this one is about {subject}",
+            "What {audience} should know about {subject}",
+            "Made for {audience}: {subject}"
+          ],
+          "ms": {
+            "description": "Bercakap tentang pelanggan ideal anda (masalah, kehendak dan kehidupan harian mereka) supaya mereka rasa difahami.",
+            "brief": "Bercakap terus kepada {audience}: masalah, kehendak dan kehidupan harian mereka, supaya mereka rasa difahami.",
+            "subjects": [
+              "masalah yang {audience} hadapi",
+              "apa yang {audience} betul-betul mahu",
+              "soalan yang {audience} selalu tanya"
+            ],
+            "howTo": [
+              "Guna perkataan mereka. Baca komen dan DM untuk frasa yang mereka guna.",
+              "Panggil mereka dalam ayat pertama.",
+              "Tunjuk anda faham masalahnya sebelum tawarkan penyelesaian."
+            ],
+            "example": "3 perkara yang setiap pembeli rumah pertama risaukan.",
+            "hooks": [
+              "{audience}, video ini tentang {subject}",
+              "Apa yang {audience} perlu tahu tentang {subject}",
+              "Khas untuk {audience}: {subject}"
+            ]
+          }
         },
         {
           "id": "leads-generation",
@@ -893,7 +1643,34 @@
             "Follow up every lead within 24 hours.",
             "Track how many leads each video brings in."
           ],
-          "example": "Comment 'RUMAH' and we'll send you our free first-home buyer checklist."
+          "example": "Comment 'RUMAH' and we'll send you our free first-home buyer checklist.",
+          "hooks": [
+            "Comment 'NAK' and I'll send you everything about {subject}",
+            "Want the full guide to {subject}? Comment below",
+            "DM us for the details on {subject}"
+          ],
+          "ms": {
+            "description": "Content untuk kumpul kenalan atau pertanyaan: orang yang komen, DM atau daftar untuk dapatkan sesuatu daripada anda.",
+            "brief": "Beri {audience} sebab untuk hubungi anda: barang percuma, sebut harga atau percubaan sebagai ganti komen, DM atau pendaftaran.",
+            "subjects": [
+              "sebut harga percuma",
+              "panduan percuma kami",
+              "percubaan percuma {product}",
+              "senarai harga kami"
+            ],
+            "howTo": [
+              "Tawarkan sesuatu yang bernilai dan spesifik (senarai harga, senarai semak, konsultasi percuma).",
+              "Guna CTA kata kunci: \"Komen NAK dan kami DM anda.\"",
+              "Susuli setiap lead dalam 24 jam.",
+              "Jejak berapa lead yang setiap video bawa."
+            ],
+            "example": "Komen \"RUMAH\" dan kami hantar senarai semak percuma untuk pembeli rumah pertama.",
+            "hooks": [
+              "Komen 'NAK' dan saya hantar semua info tentang {subject}",
+              "Nak panduan penuh tentang {subject}? Komen di bawah",
+              "DM kami untuk dapatkan info tentang {subject}"
+            ]
+          }
         },
         {
           "id": "demographic",
@@ -911,7 +1688,33 @@
             "Name the group in the hook.",
             "Use examples and situations that group recognises."
           ],
-          "example": "Skincare in your 20s vs your 40s: what should change?"
+          "example": "Skincare in your 20s vs your 40s: what should change?",
+          "hooks": [
+            "Gen Z vs millennials on {subject}",
+            "Students vs working adults: {subject}",
+            "New to this? Here's your guide to {subject}"
+          ],
+          "ms": {
+            "description": "Sesuaikan content dengan satu kumpulan spesifik (umur, jantina, lokasi, pendapatan atau peringkat hidup) supaya ia terasa dibuat untuk mereka.",
+            "brief": "Buat untuk satu kumpulan spesifik dalam {audience} (umur, peringkat hidup atau lokasi) supaya ia terasa peribadi.",
+            "subjects": [
+              "{product} untuk yang baru mula",
+              "{product} untuk pelajar vs orang bekerja",
+              "{product} untuk semua peringkat umur",
+              "{product} untuk keluarga"
+            ],
+            "howTo": [
+              "Satu kumpulan untuk satu video. \"Semua orang\" bermaksud tiada siapa.",
+              "Sebut kumpulan itu dalam hook.",
+              "Guna contoh dan situasi yang kumpulan itu kenal."
+            ],
+            "example": "Skincare umur 20-an vs 40-an: apa yang patut berubah?",
+            "hooks": [
+              "Gen Z vs milenial tentang {subject}",
+              "Pelajar vs orang bekerja: {subject}",
+              "Baru nak cuba? Ini panduan anda untuk {subject}"
+            ]
+          }
         },
         {
           "id": "current-issues",
@@ -929,7 +1732,33 @@
             "Add your expert view; don't just repeat the news.",
             "Stay away from sensitive topics (race, religion, royalty) unless you're sure it's appropriate."
           ],
-          "example": "What the new electricity tariff means for small restaurant owners."
+          "example": "What the new electricity tariff means for small restaurant owners.",
+          "hooks": [
+            "Everyone's talking about this, so let's talk about {subject}",
+            "What this week's news means for {subject}",
+            "Prices are going up. Here's what it means for {subject}"
+          ],
+          "ms": {
+            "description": "Kaitkan bisnes anda dengan apa yang orang sedang bualkan: berita, saat viral, perubahan polisi, kenaikan harga.",
+            "brief": "Kaitkan {brand} dengan apa yang orang sedang bualkan supaya content terasa semasa.",
+            "subjects": [
+              "berita viral minggu ini",
+              "kenaikan harga barang",
+              "perubahan terkini dalam industri {niche}",
+              "trend terkini dalam {niche}"
+            ],
+            "howTo": [
+              "Bergerak cepat. Isu semasa luput dalam beberapa hari.",
+              "Tambah pandangan pakar anda; jangan sekadar ulang berita.",
+              "Jauhi topik sensitif (3R: kaum, agama, raja) kecuali anda pasti ia sesuai."
+            ],
+            "example": "Apa maksud tarif elektrik baharu untuk pemilik restoran kecil.",
+            "hooks": [
+              "Semua orang tengah bercakap tentang ini, jadi jom cakap tentang {subject}",
+              "Apa maksud berita minggu ini untuk {subject}",
+              "Harga barang naik. Ini kesannya pada {subject}"
+            ]
+          }
         },
         {
           "id": "general-knowledge",
@@ -947,7 +1776,33 @@
             "Tie the fact back to your business in one line.",
             "Double-check your sources."
           ],
-          "example": "The real reason nasi lemak is wrapped in banana leaf."
+          "example": "The real reason nasi lemak is wrapped in banana leaf.",
+          "hooks": [
+            "A fun fact about {subject}",
+            "The history behind {subject} in 30 seconds",
+            "Did you know this about {subject}?"
+          ],
+          "ms": {
+            "description": "Fakta menarik, sejarah dan trivia tentang industri anda yang orang suka belajar dan kongsi.",
+            "brief": "Kongsi pengetahuan menarik tentang {niche} yang orang suka belajar dan kongsi.",
+            "subjects": [
+              "sejarah {product}",
+              "mitos biasa dalam {niche}",
+              "sains di sebalik {product}",
+              "asas {niche}"
+            ],
+            "howTo": [
+              "Pilih fakta yang buat orang kata \"wow\" atau \"tak tahu pun\".",
+              "Kaitkan fakta dengan bisnes anda dalam satu ayat.",
+              "Semak semula sumber anda."
+            ],
+            "example": "Sebab sebenar nasi lemak dibungkus dengan daun pisang.",
+            "hooks": [
+              "Fakta menarik tentang {subject}",
+              "Sejarah di sebalik {subject} dalam 30 saat",
+              "Tahukah anda ini tentang {subject}?"
+            ]
+          }
         },
         {
           "id": "faq",
@@ -955,7 +1810,7 @@
           "description": "Answer the questions customers ask you again and again: in DMs, on WhatsApp, at the counter.",
           "brief": "Answer one question {audience} ask you again and again.",
           "subjects": [
-            "our most asked question",
+            "ordering {product}",
             "the price of {product}",
             "delivery and after-sales",
             "how long {product} lasts"
@@ -965,7 +1820,33 @@
             "One question per video.",
             "Reply to a comment with a video answer."
           ],
-          "example": "Do you deliver to Sabah and Sarawak? Here's how it works."
+          "example": "Do you deliver to Sabah and Sarawak? Here's how it works.",
+          "hooks": [
+            "You asked, we answered: {subject}",
+            "The question we get every day about {subject}",
+            "Answering your top questions about {subject}"
+          ],
+          "ms": {
+            "description": "Jawab soalan yang pelanggan tanya berulang kali: dalam DM, di WhatsApp, di kaunter.",
+            "brief": "Jawab satu soalan yang {audience} tanya berulang kali.",
+            "subjects": [
+              "cara tempah {product}",
+              "harga {product}",
+              "penghantaran dan servis selepas jualan",
+              "berapa lama {product} boleh tahan"
+            ],
+            "howTo": [
+              "Simpan senarai soalan daripada DM dan WhatsApp. Setiap satu ialah video.",
+              "Satu soalan untuk satu video.",
+              "Balas komen dengan jawapan dalam bentuk video."
+            ],
+            "example": "Ada hantar ke Sabah dan Sarawak? Ini caranya.",
+            "hooks": [
+              "Anda tanya, kami jawab: {subject}",
+              "Soalan yang kami dapat setiap hari tentang {subject}",
+              "Jawapan kepada soalan popular tentang {subject}"
+            ]
+          }
         },
         {
           "id": "behind-brand",
@@ -983,7 +1864,33 @@
             "Share the values that affect how you serve customers.",
             "Turn it into a series (Episode 1, 2, 3...)."
           ],
-          "example": "Why we still hand-pack every order even though we could automate it."
+          "example": "Why we still hand-pack every order even though we could automate it.",
+          "hooks": [
+            "Why we care so much about {subject}",
+            "The story you haven't heard about {subject}",
+            "What {brand} believes about {subject}"
+          ],
+          "ms": {
+            "description": "Kisah pengasas, nilai, team dan misi anda: orang dan \"kenapa\" di sebalik bisnes ini.",
+            "brief": "Tunjuk orang dan \"kenapa\" di sebalik {brand}.",
+            "subjects": [
+              "kisah di sebalik {brand}",
+              "team di sebalik {brand}",
+              "kenapa kami mulakan {brand}",
+              "kesilapan terbesar kami"
+            ],
+            "howTo": [
+              "Jadi peribadi dan jujur. Itu yang buat orang rasa dekat.",
+              "Kongsi nilai yang mempengaruhi cara anda layan pelanggan.",
+              "Jadikan siri (Episod 1, 2, 3...)."
+            ],
+            "example": "Kenapa kami masih bungkus setiap order dengan tangan walaupun boleh guna mesin.",
+            "hooks": [
+              "Kenapa kami sangat ambil berat tentang {subject}",
+              "Cerita yang anda belum dengar tentang {subject}",
+              "Apa yang {brand} percaya tentang {subject}"
+            ]
+          }
         },
         {
           "id": "festive",
@@ -1001,7 +1908,33 @@
             "Respect the culture and traditions of each festival.",
             "Pair it with a festive offer or limited edition."
           ],
-          "example": "5 Raya open house menu ideas you can order from us."
+          "example": "5 Raya open house menu ideas you can order from us.",
+          "hooks": [
+            "Getting ready for the festive season with {subject}",
+            "Raya is coming. Have you sorted out {subject}?",
+            "Holiday plans? Don't forget {subject}"
+          ],
+          "ms": {
+            "description": "Kaitkan content dengan kalendar: Raya, Tahun Baru Cina, Deepavali, Krismas, Merdeka, cuti sekolah, hari gaji, jualan akhir tahun.",
+            "brief": "Kaitkan dengan musim (perayaan, cuti atau hari gaji) supaya ia relevan minggu ini.",
+            "subjects": [
+              "persiapan Raya",
+              "musim perayaan",
+              "cuti sekolah",
+              "hujung minggu gaji"
+            ],
+            "howTo": [
+              "Rancang content perayaan 3–4 minggu lebih awal.",
+              "Hormati budaya dan tradisi setiap perayaan.",
+              "Gandingkan dengan tawaran perayaan atau edisi terhad."
+            ],
+            "example": "5 idea menu rumah terbuka Raya yang anda boleh tempah daripada kami.",
+            "hooks": [
+              "Bersiap untuk musim perayaan dengan {subject}",
+              "Raya dah dekat. Dah settle {subject}?",
+              "Ada plan cuti? Jangan lupa {subject}"
+            ]
+          }
         },
         {
           "id": "tips-hacks",
@@ -1018,9 +1951,39 @@
             "Put the result at the start.",
             "Ask them to save it."
           ],
-          "example": "The trick to keeping your kek lapis moist for two weeks."
+          "example": "The trick to keeping your kek lapis moist for two weeks.",
+          "hooks": [
+            "The hack nobody told you about {subject}",
+            "Try this trick with {subject}",
+            "Save this tip for {subject}"
+          ],
+          "ms": {
+            "description": "Tips praktikal yang pantas untuk jimat masa, duit atau tenaga. Terus berguna dan orang suka save.",
+            "brief": "Beri satu tip praktikal yang jimatkan masa, duit atau tenaga {audience}.",
+            "subjects": [
+              "cara jimat duit untuk {product}",
+              "cara buat {product} tahan lebih lama",
+              "tips pantas untuk {product}"
+            ],
+            "howTo": [
+              "Satu tip untuk satu video, ditunjuk secara langsung.",
+              "Letak hasilnya di awal.",
+              "Minta mereka save video."
+            ],
+            "example": "Rahsia kekalkan kek lapis lembap selama dua minggu.",
+            "hooks": [
+              "Hack yang tiada siapa beritahu tentang {subject}",
+              "Cuba trick ini dengan {subject}",
+              "Save tip ini untuk {subject}"
+            ]
+          }
         }
-      ]
+      ],
+      "ms": {
+        "question": "Apa yang anda akan bincangkan?",
+        "description": "Subjek content: video ini tentang apa.",
+        "briefLabel": "Topik"
+      }
     },
     {
       "id": "hook",
@@ -1044,7 +2007,20 @@
             "Ask something your audience has actually wondered.",
             "Put the question on screen as text too.",
             "Answer it by the end. Don't bait and switch."
-          ]
+          ],
+          "ms": {
+            "description": "Buka dengan soalan yang penonton nak tahu jawapannya, supaya mereka terus tonton.",
+            "brief": "Buka dengan soalan yang penonton perlu tahu jawapannya.",
+            "hooks": [
+              "Pernah tak anda terfikir tentang {subject}?",
+              "Kenapa tiada siapa bercakap tentang {subject}?"
+            ],
+            "howTo": [
+              "Tanya sesuatu yang audiens anda memang pernah tertanya-tanya.",
+              "Letak soalan sebagai teks di skrin juga.",
+              "Jawab sebelum video habis. Jangan umpan kosong."
+            ]
+          }
         },
         {
           "id": "bold-statement",
@@ -1059,7 +2035,20 @@
             "Say it with confidence, straight to camera.",
             "Back it up in the video, or you lose trust.",
             "Controversial is fine; offensive is not."
-          ]
+          ],
+          "ms": {
+            "description": "Buka dengan kenyataan yang kuat dan sedikit kontroversi supaya orang nak berdebat atau tahu lebih lanjut.",
+            "brief": "Buka dengan kenyataan berani yang sedikit kontroversi.",
+            "hooks": [
+              "Semua yang anda tahu tentang {subject} adalah salah.",
+              "Ini akan ubah cara anda fikir tentang {subject}."
+            ],
+            "howTo": [
+              "Cakap dengan yakin, terus ke kamera.",
+              "Buktikan dalam video, atau anda hilang kepercayaan.",
+              "Kontroversi tak apa; menyinggung tidak."
+            ]
+          }
         },
         {
           "id": "pov-setup",
@@ -1074,7 +2063,20 @@
             "The POV line must be readable in under 2 seconds.",
             "Make it relatable to your target audience.",
             "Pairs well with the POV shooting style and Lakonan."
-          ]
+          ],
+          "ms": {
+            "description": "Sediakan babak dengan kapsyen \"POV:\" supaya penonton terus bayangkan diri mereka di situ.",
+            "brief": "Buka dengan kapsyen \"POV:\" yang letak penonton dalam babak.",
+            "hooks": [
+              "POV: anda baru tahu kebenaran tentang {subject}",
+              "POV: kawan anda tak berhenti cakap tentang {subject}"
+            ],
+            "howTo": [
+              "Ayat POV mesti boleh dibaca bawah 2 saat.",
+              "Buat ia relate dengan audiens sasaran.",
+              "Sesuai dengan gaya rakaman POV dan Lakonan."
+            ]
+          }
         },
         {
           "id": "call-out",
@@ -1088,7 +2090,19 @@
           "howTo": [
             "Be specific: 'first-time home buyers', not 'everyone'.",
             "Say it and show it as text in the first second."
-          ]
+          ],
+          "ms": {
+            "description": "Panggil satu kumpulan spesifik supaya mereka rasa video ini dibuat khas untuk mereka.",
+            "brief": "Buka dengan memanggil {audience} secara terus.",
+            "hooks": [
+              "Untuk semua {audience}: jom cakap tentang {subject}.",
+              "{audience}, video ini untuk anda. Ia tentang {subject}."
+            ],
+            "howTo": [
+              "Spesifik: \"pembeli rumah pertama\", bukan \"semua orang\".",
+              "Sebut dan tunjuk sebagai teks dalam saat pertama."
+            ]
+          }
         },
         {
           "id": "shocking-number",
@@ -1102,7 +2116,19 @@
           "howTo": [
             "Use real numbers. Make sure the statistic is true.",
             "Show the number big on screen."
-          ]
+          ],
+          "ms": {
+            "description": "Buka dengan statistik atau angka yang mengejutkan.",
+            "brief": "Buka dengan angka atau statistik yang mengejutkan.",
+            "hooks": [
+              "9 daripada 10 orang tak tahu ini tentang {subject}.",
+              "Hanya 1% orang tahu ini tentang {subject}."
+            ],
+            "howTo": [
+              "Guna angka sebenar. Pastikan statistik itu benar.",
+              "Tunjuk angka besar di skrin."
+            ]
+          }
         },
         {
           "id": "mistake-warning",
@@ -1116,7 +2142,19 @@
           "howTo": [
             "Name the mistake fast, then explain the fix.",
             "Use a red cross or buzzer sound for emphasis."
-          ]
+          ],
+          "ms": {
+            "description": "Beri amaran tentang kesilapan yang mungkin penonton sedang buat. Tiada siapa nak jadi orang yang buat silap.",
+            "brief": "Buka dengan amaran tentang kesilapan biasa.",
+            "hooks": [
+              "Berhenti buat kesilapan ini bila melibatkan {subject}.",
+              "Kesilapan #1 yang orang buat bila melibatkan {subject}."
+            ],
+            "howTo": [
+              "Sebut kesilapan dengan cepat, kemudian terangkan cara betulkan.",
+              "Guna pangkah merah atau bunyi buzzer untuk penekanan."
+            ]
+          }
         },
         {
           "id": "result-first",
@@ -1130,7 +2168,19 @@
           "howTo": [
             "The result must be visually impressive.",
             "Works great with Before & After and How-To."
-          ]
+          ],
+          "ms": {
+            "description": "Tunjuk hasil akhir dalam saat pertama, kemudian terangkan bagaimana anda sampai ke situ.",
+            "brief": "Buka dengan hasil akhir, kemudian tunjuk cara anda sampai ke situ.",
+            "hooks": [
+              "Ini hasil akhirnya. Sekarang saya tunjukkan {subject}.",
+              "Tonton sampai habis untuk tengok apa jadi dengan {subject}."
+            ],
+            "howTo": [
+              "Hasil mesti nampak hebat secara visual.",
+              "Sangat sesuai dengan Before & After dan How-To."
+            ]
+          }
         },
         {
           "id": "challenge",
@@ -1144,9 +2194,27 @@
           "howTo": [
             "Make the reveal worth waiting for.",
             "Tell them to comment their guess before the reveal."
-          ]
+          ],
+          "ms": {
+            "description": "Cabar penonton untuk teka, cari atau jawab sesuatu sebelum anda dedahkan.",
+            "brief": "Buka dengan mencabar penonton meneka sebelum didedahkan.",
+            "hooks": [
+              "Saya berani kata anda tak dapat teka ini tentang {subject}.",
+              "Cuba jangan terkejut dengan fakta ini tentang {subject}."
+            ],
+            "howTo": [
+              "Pastikan pendedahan berbaloi ditunggu.",
+              "Suruh mereka komen tekaan sebelum jawapan didedahkan."
+            ]
+          }
         }
-      ]
+      ],
+      "hooksOverride": true,
+      "ms": {
+        "question": "Bagaimana nak tarik perhatian dalam 3 saat pertama?",
+        "description": "3 saat pertama menentukan sama ada orang terus menonton. Pilih teknik pembukaan.",
+        "briefLabel": "Buka dengan"
+      }
     },
     {
       "id": "talent",
@@ -1165,7 +2233,15 @@
           "howTo": [
             "Be consistent. Show up regularly so people recognise you.",
             "Share opinions and personality, not just information."
-          ]
+          ],
+          "ms": {
+            "description": "Wajah bisnes. Orang beli daripada orang, dan pengasas membina kepercayaan paling tinggi.",
+            "brief": "Letak pemilik atau pengasas {brand} di depan kamera. Orang beli daripada orang.",
+            "howTo": [
+              "Konsisten. Muncul selalu supaya orang kenal anda.",
+              "Kongsi pendapat dan personaliti, bukan maklumat sahaja."
+            ]
+          }
         },
         {
           "id": "staff",
@@ -1175,7 +2251,15 @@
           "howTo": [
             "Find the team members who enjoy being on camera.",
             "Get written consent to feature staff."
-          ]
+          ],
+          "ms": {
+            "description": "Ahli team anda di depan kamera. Ia tunjuk budaya kerja dan kongsi beban menjadi wajah jenama.",
+            "brief": "Tampilkan staf atau team anda. Ia tunjuk budaya di sebalik {brand}.",
+            "howTo": [
+              "Cari ahli team yang seronok di depan kamera.",
+              "Dapatkan persetujuan bertulis untuk tampilkan staf."
+            ]
+          }
         },
         {
           "id": "customer",
@@ -1186,7 +2270,16 @@
             "Ask right after a great experience, when they're happiest.",
             "Always get permission to post.",
             "A small thank-you gift makes people more willing."
-          ]
+          ],
+          "ms": {
+            "description": "Pelanggan sebenar di depan kamera: review, reaksi, sebelum/selepas. Bukti yang paling dipercayai.",
+            "brief": "Letak pelanggan sebenar di depan kamera. Tiada yang lebih dipercayai.",
+            "howTo": [
+              "Tanya sejurus selepas pengalaman yang hebat, ketika mereka paling gembira.",
+              "Sentiasa minta izin untuk post.",
+              "Hadiah terima kasih yang kecil buat orang lebih sudi."
+            ]
+          }
         },
         {
           "id": "influencer",
@@ -1197,7 +2290,16 @@
             "Pick creators whose audience matches yours, not just the biggest follower count.",
             "Give them a brief, but let them do it in their own style.",
             "Agree on usage rights so you can repost."
-          ]
+          ],
+          "ms": {
+            "description": "Creator atau KOL dengan audiens sendiri yang menampilkan jenama anda.",
+            "brief": "Bawa masuk influencer atau KOL untuk pinjam audiens dan kredibiliti mereka.",
+            "howTo": [
+              "Pilih creator yang audiensnya sepadan dengan anda, bukan sekadar follower paling ramai.",
+              "Beri brief, tetapi biar mereka buat dengan gaya sendiri.",
+              "Setuju tentang hak penggunaan supaya anda boleh repost."
+            ]
+          }
         },
         {
           "id": "faceless",
@@ -1207,7 +2309,15 @@
           "howTo": [
             "Pairs well with Voiceover + B-roll, POV and Close-up.",
             "Use a consistent voice or text style so people recognise you."
-          ]
+          ],
+          "ms": {
+            "description": "Tak perlu muka: tangan, produk, voiceover atau teks sahaja. Sesuai untuk pemilik yang malu kamera.",
+            "brief": "Tanpa muka: tangan, produk, voiceover atau teks sahaja.",
+            "howTo": [
+              "Sesuai dengan Voiceover + B-roll, POV dan Close-up.",
+              "Guna suara atau gaya teks yang konsisten supaya orang kenal anda."
+            ]
+          }
         },
         {
           "id": "character",
@@ -1218,9 +2328,23 @@
             "Give the character a signature look, line or prop.",
             "Put them in a series of situations from your business.",
             "Keep it light and never mock real customers."
-          ]
+          ],
+          "ms": {
+            "description": "Watak berulang yang anda atau team lakonkan (mak cik, bos garang, pelanggan blur). Audiens kembali kerana watak.",
+            "brief": "Guna watak atau persona berulang yang audiens kenal dan tunggu.",
+            "howTo": [
+              "Beri watak itu rupa, ayat atau prop yang tersendiri.",
+              "Letak watak dalam siri situasi daripada bisnes anda.",
+              "Kekalkan santai dan jangan sesekali perlekehkan pelanggan sebenar."
+            ]
+          }
         }
-      ]
+      ],
+      "ms": {
+        "question": "Siapa di depan kamera?",
+        "description": "Wajah (atau tangan, atau suara) content ini.",
+        "briefLabel": "Di depan kamera"
+      }
     },
     {
       "id": "tone",
@@ -1235,39 +2359,68 @@
           "id": "funny",
           "label": "Funny",
           "description": "Make them laugh. Humour gets shared more than anything else.",
-          "brief": "Make it funny. Humour gets shared."
+          "brief": "Make it funny. Humour gets shared.",
+          "ms": {
+            "description": "Buat mereka ketawa. Humor paling banyak dikongsi.",
+            "brief": "Buat ia lawak. Humor dikongsi."
+          }
         },
         {
           "id": "emotional",
           "label": "Emotional",
           "description": "Make them feel something: pride, nostalgia, empathy, happiness.",
-          "brief": "Make it emotional so it's remembered and shared."
+          "brief": "Make it emotional so it's remembered and shared.",
+          "ms": {
+            "description": "Buat mereka rasa sesuatu: bangga, nostalgia, empati, gembira.",
+            "brief": "Buat ia emosional supaya diingati dan dikongsi."
+          }
         },
         {
           "id": "authority",
           "label": "Serious / Expert",
           "description": "Calm, confident and factual. Positions you as the authority.",
-          "brief": "Keep it serious and expert. Speak with authority."
+          "brief": "Keep it serious and expert. Speak with authority.",
+          "ms": {
+            "description": "Tenang, yakin dan berfakta. Menjadikan anda pihak berautoriti.",
+            "brief": "Serius dan pakar. Bercakap dengan autoriti."
+          }
         },
         {
           "id": "hype",
           "label": "Hype / Energetic",
           "description": "Fast, loud and exciting. Great for launches, promos and events.",
-          "brief": "Make it high-energy: fast cuts, big voice, upbeat music."
+          "brief": "Make it high-energy: fast cuts, big voice, upbeat music.",
+          "ms": {
+            "description": "Pantas, kuat dan mengujakan. Sesuai untuk pelancaran, promosi dan event.",
+            "brief": "Penuh tenaga: potongan pantas, suara lantang, muzik rancak."
+          }
         },
         {
           "id": "calm",
           "label": "Calm / Aesthetic",
           "description": "Slow, beautiful and satisfying. Soft music and clean visuals.",
-          "brief": "Keep it calm and aesthetic: slow shots, soft music, clean visuals."
+          "brief": "Keep it calm and aesthetic: slow shots, soft music, clean visuals.",
+          "ms": {
+            "description": "Perlahan, cantik dan memuaskan. Muzik lembut dan visual yang kemas.",
+            "brief": "Tenang dan estetik: shot perlahan, muzik lembut, visual kemas."
+          }
         },
         {
           "id": "relatable",
           "label": "Relatable / Casual",
           "description": "Like talking to a friend. Everyday language and situations people recognise.",
-          "brief": "Keep it casual and relatable, like talking to a friend."
+          "brief": "Keep it casual and relatable, like talking to a friend.",
+          "ms": {
+            "description": "Macam berbual dengan kawan. Bahasa harian dan situasi yang orang kenal.",
+            "brief": "Santai dan relate, macam berbual dengan kawan."
+          }
         }
-      ]
+      ],
+      "ms": {
+        "question": "Apa mood-nya?",
+        "description": "Bagaimana content ini patut dirasai oleh penonton.",
+        "briefLabel": "Nada"
+      }
     },
     {
       "id": "cta",
@@ -1282,51 +2435,88 @@
           "id": "comment",
           "label": "Comment",
           "description": "Ask viewers to comment: one word, one emoji or their opinion. Comments boost reach.",
-          "brief": "Ask viewers to comment: one word, one emoji or their opinion."
+          "brief": "Ask viewers to comment: one word, one emoji or their opinion.",
+          "ms": {
+            "description": "Minta penonton komen: satu perkataan, satu emoji atau pendapat mereka. Komen menaikkan reach.",
+            "brief": "Minta penonton komen: satu perkataan, satu emoji atau pendapat mereka."
+          }
         },
         {
           "id": "share",
           "label": "Tag / Share",
           "description": "Ask viewers to tag or send it to a friend. Shares are the strongest signal for reach.",
-          "brief": "Ask viewers to tag or share it with a friend who needs to see it."
+          "brief": "Ask viewers to tag or share it with a friend who needs to see it.",
+          "ms": {
+            "description": "Minta penonton tag atau hantar kepada kawan. Share ialah isyarat paling kuat untuk reach.",
+            "brief": "Minta penonton tag atau share kepada kawan yang perlu tengok."
+          }
         },
         {
           "id": "save",
           "label": "Save",
           "description": "Ask viewers to save the video for later. Best for Educate and Tips content.",
-          "brief": "Ask viewers to save it for later."
+          "brief": "Ask viewers to save it for later.",
+          "ms": {
+            "description": "Minta penonton save video untuk rujukan. Paling sesuai untuk content Educate dan Tips.",
+            "brief": "Minta penonton save video untuk rujukan."
+          }
         },
         {
           "id": "follow",
           "label": "Follow for Part 2",
           "description": "Tease a part 2 and ask viewers to follow so they don't miss it.",
-          "brief": "Tease a part 2 and ask viewers to follow so they don't miss it."
+          "brief": "Tease a part 2 and ask viewers to follow so they don't miss it.",
+          "ms": {
+            "description": "Bayangkan part 2 dan minta penonton follow supaya tak terlepas.",
+            "brief": "Bayangkan part 2 dan minta penonton follow supaya tak terlepas."
+          }
         },
         {
           "id": "keyword",
           "label": "Comment / DM Keyword",
           "description": "Ask viewers to comment or DM a keyword to receive something: a price list, link or freebie. Great for leads.",
-          "brief": "Ask viewers to comment or DM a keyword (e.g. 'NAK') to receive something."
+          "brief": "Ask viewers to comment or DM a keyword (e.g. 'NAK') to receive something.",
+          "ms": {
+            "description": "Minta penonton komen atau DM kata kunci untuk dapatkan sesuatu: senarai harga, link atau barang percuma. Bagus untuk lead.",
+            "brief": "Minta penonton komen atau DM kata kunci (contoh \"NAK\") untuk dapatkan sesuatu."
+          }
         },
         {
           "id": "whatsapp",
           "label": "WhatsApp Us",
           "description": "Send viewers to WhatsApp to enquire or order.",
-          "brief": "Send viewers to WhatsApp {brand} to enquire or order."
+          "brief": "Send viewers to WhatsApp {brand} to enquire or order.",
+          "ms": {
+            "description": "Hantar penonton ke WhatsApp untuk bertanya atau membuat tempahan.",
+            "brief": "Hantar penonton ke WhatsApp {brand} untuk bertanya atau membuat tempahan."
+          }
         },
         {
           "id": "link",
           "label": "Link in Bio",
           "description": "Send viewers to the link in your bio to buy, book or sign up.",
-          "brief": "Send viewers to the link in bio to buy, book or sign up."
+          "brief": "Send viewers to the link in bio to buy, book or sign up.",
+          "ms": {
+            "description": "Hantar penonton ke link di bio untuk membeli, menempah atau mendaftar.",
+            "brief": "Hantar penonton ke link di bio untuk membeli, menempah atau mendaftar."
+          }
         },
         {
           "id": "visit",
           "label": "Visit Us",
           "description": "Invite viewers to come to your shop or location.",
-          "brief": "Invite viewers to visit {brand} in person."
+          "brief": "Invite viewers to visit {brand} in person.",
+          "ms": {
+            "description": "Jemput penonton datang ke kedai atau lokasi anda.",
+            "brief": "Jemput penonton datang ke {brand}."
+          }
         }
-      ]
+      ],
+      "ms": {
+        "question": "Apa yang penonton patut buat seterusnya?",
+        "description": "Satu tindakan yang anda mahu penonton buat di akhir video.",
+        "briefLabel": "Call to action"
+      }
     },
     {
       "id": "length",
@@ -1341,33 +2531,63 @@
           "id": "loop",
           "label": "7–15 sec (Loop)",
           "description": "Ultra short and built to loop. Best for trends, reactions and one-liners.",
-          "brief": "Keep it 7–15 seconds, built to loop."
+          "brief": "Keep it 7–15 seconds, built to loop.",
+          "ms": {
+            "label": "7–15 saat (Loop)",
+            "description": "Sangat pendek dan dibina untuk berulang. Paling sesuai untuk trend, reaksi dan one-liner.",
+            "brief": "7–15 saat, dibina untuk berulang."
+          }
         },
         {
           "id": "short",
           "label": "15–30 sec",
           "description": "The sweet spot for most short-form content.",
-          "brief": "Aim for 15–30 seconds."
+          "brief": "Aim for 15–30 seconds.",
+          "ms": {
+            "label": "15–30 saat",
+            "description": "Tempoh paling sesuai untuk kebanyakan content pendek.",
+            "brief": "Sasarkan 15–30 saat."
+          }
         },
         {
           "id": "medium",
           "label": "30–60 sec",
           "description": "Room for a list, a quick tutorial or a short story.",
-          "brief": "Aim for 30–60 seconds."
+          "brief": "Aim for 30–60 seconds.",
+          "ms": {
+            "label": "30–60 saat",
+            "description": "Cukup ruang untuk senarai, tutorial ringkas atau cerita pendek.",
+            "brief": "Sasarkan 30–60 saat."
+          }
         },
         {
           "id": "long",
           "label": "60–90 sec",
           "description": "For storytelling and deeper explanations. Needs a strong hook and tight editing.",
-          "brief": "Aim for 60–90 seconds with tight editing."
+          "brief": "Aim for 60–90 seconds with tight editing.",
+          "ms": {
+            "label": "60–90 saat",
+            "description": "Untuk storytelling dan penerangan lebih mendalam. Perlukan hook kuat dan suntingan ketat.",
+            "brief": "Sasarkan 60–90 saat dengan suntingan ketat."
+          }
         },
         {
           "id": "extended",
           "label": "2–3 min",
           "description": "Longer videos for stories, reviews and tutorials with real depth.",
-          "brief": "Go for 2–3 minutes and keep a hook every 20–30 seconds."
+          "brief": "Go for 2–3 minutes and keep a hook every 20–30 seconds.",
+          "ms": {
+            "label": "2–3 minit",
+            "description": "Video lebih panjang untuk cerita, review dan tutorial yang mendalam.",
+            "brief": "Pilih 2–3 minit dan letak hook baru setiap 20–30 saat."
+          }
         }
-      ]
+      ],
+      "ms": {
+        "question": "Berapa panjang video ini?",
+        "description": "Tempoh sasaran video.",
+        "briefLabel": "Durasi"
+      }
     }
   ]
 }

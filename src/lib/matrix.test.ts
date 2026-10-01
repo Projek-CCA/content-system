@@ -193,10 +193,10 @@ describe('default matrix', () => {
     expect(countCombinations(buildBoard(matrix, core))).toBeGreaterThan(500);
   });
 
-  it('gives every content type at least two present styles', () => {
-    const present = matrix.categories.find((c) => c.id === 'present')!;
-    for (const type of matrix.categories.find((c) => c.id === 'type')!.items) {
-      expect(present.items.filter((i) => i.parents?.includes(type.id)).length).toBeGreaterThanOrEqual(2);
-    }
+  it('lets any content type pair with any present style', () => {
+    const board = buildBoard(matrix, ['type', 'present']);
+    const size = (id: string) => matrix.categories.find((c) => c.id === id)!.items.length;
+    expect(countCombinations(board)).toBe(size('type') * size('present'));
+    expect(applySelect(board, { type: 'business-ads' }, 'present', 'lakonan')).toEqual({ type: 'business-ads', present: 'lakonan' });
   });
 });

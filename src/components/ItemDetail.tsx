@@ -1,12 +1,14 @@
 import { type CSSProperties, useEffect, useRef } from 'react';
 import { useAppState } from '../state/AppState';
+import { strings } from '../lib/localize';
 import { Filled } from './Filled';
 import { Icon } from './Icon';
 import { MediaSlot } from './MediaSlot';
 
 /** Info panel for one matrix item: what it is, how it looks, how to do it. */
 export function ItemDetail() {
-  const { detail, closeDetail, matrix, board, selection, select, setView, profile } = useAppState();
+  const { detail, closeDetail, contentMatrix: matrix, board, selection, select, setView, profile } = useAppState();
+  const t = strings(profile.language);
   const closeRef = useRef<HTMLButtonElement>(null);
 
   const category = detail ? matrix.categories.find((c) => c.id === detail.categoryId) : undefined;
@@ -52,14 +54,14 @@ export function ItemDetail() {
           </h2>
           {parentLabels.length > 0 && (
             <p className="detail__parents">
-              Works with {parentCategory?.label}: <strong>{parentLabels.join(', ')}</strong>
+              {t.worksWith} {parentCategory?.label}: <strong>{parentLabels.join(', ')}</strong>
             </p>
           )}
           <p className="detail__description">{item.description}</p>
 
           {item.howTo?.length ? (
             <section>
-              <h3>How to do it</h3>
+              <h3>{t.howToDoIt}</h3>
               <ul className="ticks">
                 {item.howTo.map((tip) => (
                   <li key={tip}>
@@ -72,7 +74,7 @@ export function ItemDetail() {
 
           {item.structure?.length ? (
             <section>
-              <h3>Structure</h3>
+              <h3>{t.structure}</h3>
               <ol className="steps">
                 {item.structure.map((step) => (
                   <li key={step}>
@@ -85,14 +87,14 @@ export function ItemDetail() {
 
           {item.example && (
             <section>
-              <h3>Example</h3>
+              <h3>{t.example}</h3>
               <p className="detail__example">{item.example}</p>
             </section>
           )}
 
           {item.references?.length ? (
             <section>
-              <h3>Style references</h3>
+              <h3>{t.styleRefs}</h3>
               <ul className="refs">
                 {item.references.map((ref) => (
                   <li key={ref.label}>

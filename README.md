@@ -5,9 +5,9 @@ Each column answers one question about a piece of content (what should it do, ho
 present it, how will you shoot it, what will you talk about). Pick one item from each column,
 or hit **Randomise**, and CIM turns the combination into a ready-to-shoot content brief.
 
-The four columns from the first draft alone make **504** unique combinations. With the extra
-items in the built-in matrix it's **3,080**, and every optional column you switch on multiplies
-that again.
+The four core columns (Content Type, Present Style, Shooting Style, Topic) make **17,640**
+unique combinations, and every optional column you switch on multiplies that again. Any content
+type works with any present style, e.g. Business Ads × Lakonan.
 
 ## What users can do
 
@@ -87,10 +87,12 @@ the export. `npm test` validates the file (unique ids, valid parents, known plac
 
 - `optional: true` columns start switched off. Users add them from the **Columns** bar
   (Hook, On Camera, Tone, Call to Action and Length ship this way).
-- `dependsOn: "<column id>"` makes a column depend on another, like **Present Style** depends
-  on **Content Type**. Each item then lists the parent items it belongs to in `parents`.
-  Picking "Dance" automatically selects "Trend", and changing the type clears a present style
-  that no longer fits.
+- `dependsOn: "<column id>"` (not used by the built-in matrix right now) makes a column depend
+  on another. Each item then lists the parent items it belongs to in `parents`, the board
+  groups the column under its parent, picking a child selects its parent, and changing the
+  parent clears a child that no longer fits.
+- `hooksOverride: true` (set on the Hook column) means a picked item's hooks decide the opening
+  on their own instead of joining the pool.
 
 ### Items
 
@@ -115,11 +117,24 @@ ideas refer to it.
 Placeholders you can use in `brief`, `structure`, `hooks` and `subjects`:
 `{brand}` `{product}` `{audience}` `{niche}`. They're filled from "Your business".
 
-**Hooks.** A hook starter is built from the `hooks` of the right-most selected item that has
-any (so an active Hook column overrides the Present Style hooks). `{subject}` in a hook is
-filled from the `subjects` of the other picks, usually the Topic, e.g. Topic
-"Product & Service" has `"choosing the right {product}"`. Write subjects so they read
-naturally after "about". "Another hook" cycles through every hook × subject pairing.
+**Hooks.** Hook templates are pooled from every pick that has `hooks` (Content Type, Present
+Style and Topic each carry some), unless the Hook column is used. `{subject}` in a hook is the
+user's "What is this content about?" when they typed one, otherwise the `subjects` of the picks,
+usually the Topic, e.g. Topic "Product & Service" has `"choosing the right {product}"`. Write
+subjects so they read naturally after "about". "Another hook" cycles through every
+hook × subject pairing.
+
+**Bahasa Melayu.** Every column and item has an `ms` object with the BM version of its text
+(`question`, `briefLabel`, `description`, `brief`, `howTo`, `structure`, `example`, `hooks`,
+`subjects`, and optionally `label`). The **Output language** setting picks what the brief,
+library and info panel show:
+
+- *English*: the English text.
+- *Bahasa Melayu*: the `ms` text, falling back to English for anything not translated.
+- *Mixed (BM + English)*: hooks in BM, instructions in English.
+
+When you change an item's English text, update its `ms` text too. The Customise screen edits
+the English text only.
 
 ## Adding visuals
 

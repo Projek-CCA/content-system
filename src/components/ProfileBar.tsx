@@ -41,7 +41,7 @@ export function ProfileBar() {
             </label>
           ))}
           <label className="field">
-            <span>Script language</span>
+            <span>Output language</span>
             <select value={profile.language} onChange={(e) => setProfile({ language: e.target.value as Profile['language'] })}>
               {LANGUAGES.map((l) => (
                 <option key={l}>{l}</option>

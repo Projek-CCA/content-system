@@ -12,6 +12,7 @@ import {
   selectionKey,
 } from '../lib/matrix';
 import { applyOverlay, diffMatrix, EMPTY_OVERLAY, isEmptyOverlay, type MatrixOverlay } from '../lib/overlay';
+import { localizeMatrix } from '../lib/localize';
 import { validateMatrix } from '../lib/validate';
 import { usePersistentState } from './usePersistentState';
 
@@ -54,7 +55,10 @@ export const EMPTY_PROFILE: Profile = { brand: '', product: '', audience: '', ni
 
 interface AppStateValue {
   baseMatrix: Matrix;
+  /** The matrix as stored (English). Edit this one. */
   matrix: Matrix;
+  /** The matrix in the chosen output language. Display this one. */
+  contentMatrix: Matrix;
   isCustomised: boolean;
   updateMatrix: (update: (matrix: Matrix) => Matrix) => void;
   resetMatrix: () => void;
@@ -148,14 +152,16 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     [matrix, toggles],
   );
 
+  const profile = useMemo(() => ({ ...EMPTY_PROFILE, ...storedProfile }), [storedProfile]);
+  const contentMatrix = useMemo(() => localizeMatrix(matrix, profile.language), [matrix, profile.language]);
+
   const board = useMemo(
-    () => buildBoard(matrix, matrix.categories.filter((c) => toggles[c.id] ?? !c.optional).map((c) => c.id)),
-    [matrix, toggles],
+    () => buildBoard(contentMatrix, contentMatrix.categories.filter((c) => toggles[c.id] ?? !c.optional).map((c) => c.id)),
+    [contentMatrix, toggles],
   );
 
   const selection = useMemo(() => pruneSelection(board, rawSelection), [board, rawSelection]);
   const locks = useMemo(() => lockMap(selection, locked), [selection, locked]);
-  const profile = useMemo(() => ({ ...EMPTY_PROFILE, ...storedProfile }), [storedProfile]);
 
   /** Keep choices for columns that are switched off, so they come back when re-enabled. */
   const commitSelection = useCallback(
@@ -181,6 +187,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const value: AppStateValue = {
     baseMatrix: BASE_MATRIX,
     matrix,
+    contentMatrix,
     isCustomised: !isEmptyOverlay(overlay),
     updateMatrix: (update) => setOverlay(diffMatrix(BASE_MATRIX, update(structuredClone(matrix)))),
     resetMatrix: () => setOverlay(EMPTY_OVERLAY),
