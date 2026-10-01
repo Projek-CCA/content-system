@@ -23,6 +23,11 @@ that again.
 optional. When it's filled in, every hook and brief line is written for that business; when
 it's empty, blanks like `[product]` are highlighted instead.
 
+**This content** is per video: *what is this content about?* (a recipe, a new product, a promo)
+becomes the subject of the hook, e.g. "Top 3 things to know about cooking rendang with Adabi
+rendang paste", and *key points or USPs* (one per line) show up as a "Must include" checklist in
+the brief, the copied text and the AI script prompt.
+
 Everything is saved in the browser (localStorage), so there's no login and no server.
 
 ## Running it

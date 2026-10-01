@@ -5,7 +5,7 @@ import { CustomiseView } from './components/CustomiseView';
 import { Icon, type IconName } from './components/Icon';
 import { ItemDetail } from './components/ItemDetail';
 import { LibraryView } from './components/LibraryView';
-import { ProfileBar } from './components/ProfileBar';
+import { ContentFocus, ProfileBar } from './components/ProfileBar';
 import { SavedView } from './components/SavedView';
 import { type View, useAppState } from './state/AppState';
 
@@ -51,7 +51,12 @@ export function App() {
 
       <main className="page">
         <p className="page__intro">{tab.intro}</p>
-        {(view === 'build' || view === 'batch') && <ProfileBar />}
+        {(view === 'build' || view === 'batch') && (
+          <>
+            <ProfileBar />
+            <ContentFocus />
+          </>
+        )}
         {view === 'build' && <BuildView />}
         {view === 'batch' && <BatchView />}
         {view === 'saved' && <SavedView />}

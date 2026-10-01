@@ -12,11 +12,12 @@ export function SavedView() {
   const exportCsv = () => {
     const categories: string[] = [];
     for (const idea of visible) for (const p of idea.picks) if (!categories.includes(p.categoryLabel)) categories.push(p.categoryLabel);
-    const header = ['Saved on', 'Status', ...categories, 'Hook starter', 'Notes'];
+    const header = ['Saved on', 'Status', ...categories, 'About', 'Hook starter', 'Notes'];
     const rows = visible.map((idea) => [
       new Date(idea.createdAt).toLocaleDateString(),
       STATUSES.find((s) => s.id === idea.status)?.label ?? idea.status,
       ...categories.map((label) => idea.picks.find((p) => p.categoryLabel === label)?.itemLabel ?? ''),
+      idea.focus ?? '',
       idea.hook,
       idea.notes,
     ]);
@@ -71,6 +72,11 @@ export function SavedView() {
               </div>
               <span className="muted small">{new Date(idea.createdAt).toLocaleDateString()}</span>
             </div>
+            {idea.focus && (
+              <p className="small muted">
+                <strong>About:</strong> {idea.focus}
+              </p>
+            )}
             {idea.hook && <p className="saved__hook">“{idea.hook}”</p>}
             <textarea
               className="saved__notes"

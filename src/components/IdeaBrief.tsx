@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { briefToAiPrompt, briefToText, buildBrief, hookParts } from '../lib/brief';
+import { briefToAiPrompt, briefToText, buildBrief, hookParts, parsePoints } from '../lib/brief';
 import { copyText } from '../lib/export';
 import { lockMap, randomSelection } from '../lib/matrix';
 import { useAppState } from '../state/AppState';
@@ -9,7 +9,7 @@ import { Icon } from './Icon';
 /** The output: a ready-to-shoot content brief for the current combination. */
 export function IdeaBrief() {
   const { board, selection, variant, nextVariant, profile, randomise, loadSelection, saveIdea, isSaved, notify, openDetail } = useAppState();
-  const brief = buildBrief(board, selection, variant);
+  const brief = buildBrief(board, selection, variant, profile.focus);
 
   if (brief.picks.length === 0) {
     return (
@@ -28,6 +28,8 @@ export function IdeaBrief() {
   }
 
   const saved = isSaved(selection);
+  const focus = profile.focus.trim();
+  const points = parsePoints(profile.points);
   const parts = hookParts(brief, profile);
   const completeRest = () => {
     // Keep everything picked so far and randomise only the empty columns.
@@ -64,6 +66,12 @@ export function IdeaBrief() {
         </div>
       )}
 
+      {focus && (
+        <p className="brief__focus">
+          <span className="eyebrow">About</span> {focus}
+        </p>
+      )}
+
       {parts.length > 0 && (
         <div className="hook">
           <div className="hook__label">
@@ -92,6 +100,17 @@ export function IdeaBrief() {
           </div>
         ))}
       </dl>
+
+      {points.length > 0 && (
+        <section className="brief__section">
+          <h3>Must include</h3>
+          <ul className="ticks">
+            {points.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {brief.structure.map((block) => (
         <section key={block.item.id} className="brief__section">

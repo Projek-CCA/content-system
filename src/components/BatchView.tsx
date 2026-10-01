@@ -30,7 +30,7 @@ export function BatchView() {
     return `${cat?.label}: ${cat?.items.find((i) => i.id === itemId)?.label}`;
   });
 
-  const rows = ideas.map((idea) => ({ ...idea, brief: buildBrief(board, idea.selection, idea.variant) }));
+  const rows = ideas.map((idea) => ({ ...idea, brief: buildBrief(board, idea.selection, idea.variant, profile.focus) }));
 
   const generate = () => {
     const batch = generateBatch(board, { count: Math.min(Math.max(1, count), MAX), locks });

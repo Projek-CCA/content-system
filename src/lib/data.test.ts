@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import defaultMatrix from '../data/cim-matrix.json';
 import type { Matrix, Profile } from '../data/types';
-import { briefToAiPrompt, briefToText, buildBrief, hookText } from './brief';
+import { briefToAiPrompt, briefToText, buildBrief, hookText, parsePoints } from './brief';
 import { buildBoard, generateBatch, seededRng } from './matrix';
 import { applyOverlay, diffMatrix, isEmptyOverlay } from './overlay';
 import { fill, fillParts } from './template';
@@ -14,6 +14,8 @@ const profile: Profile = {
   product: 'kek lapis',
   audience: 'working mums',
   niche: 'home baking',
+  focus: '',
+  points: '',
   language: 'English',
 };
 
@@ -86,6 +88,30 @@ describe('buildBrief', () => {
     expect(first.hookVariations).toBe(3 * 4);
     const hooks = new Set(Array.from({ length: first.hookVariations }, (_, v) => buildBrief(core, selection, v).hook));
     expect(hooks.size).toBe(first.hookVariations);
+  });
+
+  it('uses the content focus as the hook subject', () => {
+    const core = buildBoard(matrix, ['type', 'present', 'shooting', 'topic']);
+    const selection = { type: 'educate', present: 'top-list', shooting: 'whip-pan', topic: 'product-service' };
+    const focus = 'cooking rendang with Adabi rendang paste';
+    const brief = buildBrief(core, selection, 0, focus);
+    expect(brief.hook).toContain(focus);
+    expect(brief.hookVariations).toBe(3);
+  });
+
+  it('puts the focus and key points in the text and AI prompt', () => {
+    const core = buildBoard(matrix, ['type', 'present', 'shooting', 'topic']);
+    const selection = { type: 'business-ads', present: 'hard-sell', shooting: 'foodie', topic: 'product-service' };
+    const withInput = { ...profile, focus: 'our new sambal tumis paste', points: '- Halal certified\n\n• Ready in 15 minutes\n2) No MSG' };
+    const brief = buildBrief(core, selection, 0, withInput.focus);
+    expect(parsePoints(withInput.points)).toEqual(['Halal certified', 'Ready in 15 minutes', 'No MSG']);
+    const text = briefToText(brief, withInput);
+    expect(text).toContain('About: our new sambal tumis paste');
+    expect(text).toContain('- Ready in 15 minutes');
+    const prompt = briefToAiPrompt(brief, withInput);
+    expect(prompt).toContain('This video is about: our new sambal tumis paste');
+    expect(prompt).toContain('- No MSG');
+    expect(prompt).toContain('Work every key point');
   });
 
   it('lists what is still missing', () => {

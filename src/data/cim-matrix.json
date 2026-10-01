@@ -23,9 +23,9 @@
           "example": "A dentist explains the 3 foods that stain your teeth the most."
         },
         {
-          "id": "social",
-          "label": "Social Content",
-          "description": "Content made to start a conversation. Its job is comments, shares and tags, which push your reach to new people.",
+          "id": "traffic",
+          "label": "Traffic Content",
+          "description": "Content made to pull in traffic. Its job is comments, shares and tags, which push your reach to new people and bring them to your page.",
           "brief": "Get {audience} commenting, sharing and tagging friends so the post reaches new people.",
           "howTo": [
             "Make it easy to answer in one word or one emoji.",
@@ -36,15 +36,15 @@
           "example": "A kopitiam asks: teh tarik or kopi O? Comment your order."
         },
         {
-          "id": "bizness",
-          "label": "Bizness",
-          "description": "Content that sells. It turns viewers into buyers by showing the offer, the proof and the next step.",
+          "id": "business-ads",
+          "label": "Business Ads",
+          "description": "Ad-style content that sells. It turns viewers into buyers by showing the offer, the proof and the next step.",
           "brief": "Turn viewers into buyers of {product}: show the offer, the proof and exactly what to do next.",
           "howTo": [
             "Be clear about the offer: what it is, the price or promo, and the deadline.",
             "Show proof: results, reviews, numbers.",
             "Give one clear next step (WhatsApp, link, visit).",
-            "Don't post only this type. Balance it with Educate and Social."
+            "Don't post only this type. Balance it with Educate and Traffic Content."
           ],
           "example": "A tudung brand shows its new Raya collection with a 48-hour early-bird price."
         },
@@ -225,7 +225,7 @@
         {
           "id": "quiz-reward",
           "label": "Quiz + Reward",
-          "parents": ["social"],
+          "parents": ["traffic"],
           "description": "Ask a question and give a prize for the correct (or a random) answer. Rewards drive a huge number of comments.",
           "brief": "Ask a question and reward the winners. The prize is what drives the comments.",
           "structure": [
@@ -250,7 +250,7 @@
         {
           "id": "a-or-b",
           "label": "A or B",
-          "parents": ["social"],
+          "parents": ["traffic"],
           "description": "Give two choices and ask people to pick one. The lowest-effort way to get comments.",
           "brief": "Give two clear options and ask viewers to pick one in the comments.",
           "structure": [
@@ -274,7 +274,7 @@
           "id": "a-or-b-opinion",
           "label": "A or B + Pendapat",
           "altLabel": "A or B + Opinion",
-          "parents": ["social"],
+          "parents": ["traffic"],
           "description": "Like A or B, but viewers also have to explain why. Longer comments mean more engagement and real insight into your audience.",
           "brief": "Give two options and ask viewers to pick one and explain why (pendapat).",
           "structure": [
@@ -297,7 +297,7 @@
         {
           "id": "quiz",
           "label": "Quiz",
-          "parents": ["social"],
+          "parents": ["traffic"],
           "description": "A quick question or test that viewers answer in their head or in the comments. People love proving they know the answer.",
           "brief": "Ask a quick quiz question and make viewers want to prove they know the answer.",
           "structure": [
@@ -321,7 +321,7 @@
         {
           "id": "biz-storytelling",
           "label": "Storytelling",
-          "parents": ["bizness"],
+          "parents": ["business-ads"],
           "description": "Sell through a story: a customer's problem and how your product solved it, or why you started the business.",
           "brief": "Sell through a story: a real customer or the founder, the problem, and how {product} changed things.",
           "structure": [
@@ -345,7 +345,7 @@
         {
           "id": "hard-sell",
           "label": "Hard Sell",
-          "parents": ["bizness"],
+          "parents": ["business-ads"],
           "description": "A direct pitch: here's the product, here's the offer, buy now. Works best on warm audiences and with a deadline.",
           "brief": "Pitch {product} directly: the offer, the price, the deadline and how to buy.",
           "structure": [
@@ -369,7 +369,7 @@
         {
           "id": "feedback",
           "label": "Feedback",
-          "parents": ["bizness"],
+          "parents": ["business-ads"],
           "description": "Let your customers do the selling: reviews, testimonials, screenshots of messages and before/after results.",
           "brief": "Let customers sell for you: real reviews, testimonials and results for {product}.",
           "structure": [
@@ -393,7 +393,7 @@
         {
           "id": "problem-solution",
           "label": "Problem → Solution",
-          "parents": ["bizness"],
+          "parents": ["business-ads"],
           "description": "Show a problem your customers know too well, then show how your product fixes it. A soft sell that doesn't feel like an ad.",
           "brief": "Show a problem {audience} know too well, then show {product} fixing it.",
           "structure": [

@@ -94,5 +94,9 @@ export interface Profile {
   product: string;
   audience: string;
   niche: string;
+  /** What this piece of content is about, e.g. "cooking rendang with Adabi paste". Fills {subject} in hooks. */
+  focus: string;
+  /** Key points or USPs that must appear in the content, one per line. */
+  points: string;
   language: 'English' | 'Bahasa Melayu' | 'Mixed (BM + English)';
 }

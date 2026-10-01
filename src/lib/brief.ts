@@ -40,10 +40,11 @@ const DEFAULT_SUBJECT = '{product}';
  *
  * The hook comes from the right-most selected item that has `hooks` (so an
  * active Hook column overrides the Present Style hooks). {subject} is filled
- * from the `subjects` of all selected items. `variant` cycles through every
+ * with the user's own content focus when they gave one, otherwise from the
+ * `subjects` of the selected items. `variant` cycles through every
  * hook × subject pairing.
  */
-export function buildBrief(board: Board, selection: Selection, variant = 0): IdeaBrief {
+export function buildBrief(board: Board, selection: Selection, variant = 0, focus = ''): IdeaBrief {
   const picks: Pick[] = [];
   const missing: MatrixCategory[] = [];
   for (const category of board.categories) {
@@ -54,7 +55,7 @@ export function buildBrief(board: Board, selection: Selection, variant = 0): Ide
 
   const hookSource = [...picks].reverse().find((p) => p.item.hooks?.length);
   const hooks = hookSource?.item.hooks ?? [];
-  const subjects = picks.flatMap((p) => p.item.subjects ?? []);
+  const subjects = focus.trim() ? [focus.trim()] : picks.flatMap((p) => p.item.subjects ?? []);
   const subjectPool = subjects.length ? subjects : [DEFAULT_SUBJECT];
   const key = selectionKey(board, selection);
 
@@ -98,6 +99,14 @@ export function hookText(brief: IdeaBrief, profile: Partial<Profile>): string {
   return brief.hook ? capitalise(fill(brief.hook, profile)) : '';
 }
 
+/** Key points typed one per line; bullets and blank lines are ignored. */
+export function parsePoints(text: string | undefined): string[] {
+  return (text ?? '')
+    .split('\n')
+    .map((line) => line.replace(/^\s*(?:[-*•·]|\d+[.)])\s*/, '').trim())
+    .filter(Boolean);
+}
+
 export function briefTitle(brief: IdeaBrief): string {
   return brief.picks.map((p) => p.item.label).join(' × ');
 }
@@ -107,6 +116,10 @@ export function briefToText(brief: IdeaBrief, profile: Partial<Profile>): string
   const out: string[] = [];
   out.push(`CONTENT IDEA: ${briefTitle(brief)}`);
   out.push('');
+  if (profile.focus?.trim()) {
+    out.push(`About: ${profile.focus.trim()}`);
+    out.push('');
+  }
   const hook = hookText(brief, profile);
   if (hook) {
     out.push(`Hook starter: "${hook}"`);
@@ -114,6 +127,12 @@ export function briefToText(brief: IdeaBrief, profile: Partial<Profile>): string
   }
   for (const line of brief.lines) {
     out.push(`${line.label} (${line.item.label}): ${fill(line.text, profile)}`);
+  }
+  const points = parsePoints(profile.points);
+  if (points.length) {
+    out.push('');
+    out.push('Must include:');
+    points.forEach((point) => out.push(`- ${point}`));
   }
   for (const block of brief.structure) {
     out.push('');
@@ -151,6 +170,16 @@ export function briefToAiPrompt(brief: IdeaBrief, profile: Profile): string {
   out.push(`- What they sell: ${profile.product.trim() || '(not specified)'}`);
   out.push(`- Target audience: ${profile.audience.trim() || '(not specified)'}`);
   out.push(`- Industry / niche: ${profile.niche.trim() || '(not specified)'}`);
+  if (profile.focus?.trim()) {
+    out.push('');
+    out.push(`This video is about: ${profile.focus.trim()}`);
+  }
+  const points = parsePoints(profile.points);
+  if (points.length) {
+    out.push('');
+    out.push('Key points / USPs the script must include:');
+    points.forEach((point) => out.push(`- ${point}`));
+  }
   out.push('');
   out.push('Follow this content formula from our Content Idea Matrix:');
   for (const { category, item } of brief.picks) {
@@ -174,6 +203,7 @@ export function briefToAiPrompt(brief: IdeaBrief, profile: Profile): string {
   out.push('3. A shot list: what the camera sees in each scene, following the shooting style above.');
   out.push('4. On-screen text for each scene.');
   out.push('5. A post caption with a clear call to action and 5 relevant hashtags.');
+  if (points.length) out.push('6. Work every key point listed above into the script naturally.');
   out.push('');
   out.push(LANGUAGE_NOTES[profile.language] ?? LANGUAGE_NOTES.English);
   return out.join('\n');

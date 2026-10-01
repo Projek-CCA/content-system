@@ -43,12 +43,14 @@ export interface SavedIdea {
   /** Snapshot of the labels, so saved ideas stay readable if the matrix changes. */
   picks: SavedPick[];
   hook: string;
+  /** What the content was about when it was saved. */
+  focus?: string;
   variant: number;
   status: IdeaStatus;
   notes: string;
 }
 
-export const EMPTY_PROFILE: Profile = { brand: '', product: '', audience: '', niche: '', language: 'English' };
+export const EMPTY_PROFILE: Profile = { brand: '', product: '', audience: '', niche: '', focus: '', points: '', language: 'English' };
 
 interface AppStateValue {
   baseMatrix: Matrix;
@@ -248,7 +250,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
 
     saved,
     saveIdea: (sel, v) => {
-      const brief = buildBrief(board, sel, v);
+      const brief = buildBrief(board, sel, v, profile.focus);
       const idea: SavedIdea = {
         id: `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
         key: brief.key,
@@ -262,6 +264,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
           color: category.color,
         })),
         hook: hookText(brief, profile),
+        focus: profile.focus.trim() || undefined,
         variant: v,
         status: 'idea',
         notes: '',

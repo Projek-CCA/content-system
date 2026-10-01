@@ -3,7 +3,7 @@ import type { Profile } from '../data/types';
 import { useAppState } from '../state/AppState';
 import { Icon } from './Icon';
 
-const FIELDS: { key: keyof Omit<Profile, 'language'>; label: string; placeholder: string }[] = [
+const FIELDS: { key: 'brand' | 'product' | 'audience' | 'niche'; label: string; placeholder: string }[] = [
   { key: 'brand', label: 'Brand', placeholder: 'e.g. Kek Mama' },
   { key: 'product', label: 'What you sell', placeholder: 'e.g. kek lapis' },
   { key: 'audience', label: 'Who you sell to', placeholder: 'e.g. working mums' },
@@ -50,6 +50,42 @@ export function ProfileBar() {
           </label>
         </div>
       )}
+    </section>
+  );
+}
+
+/** Per-video input: what this piece is about and the points it has to land. */
+export function ContentFocus() {
+  const { profile, setProfile } = useAppState();
+  return (
+    <section className="focus-card" aria-label="This content">
+      <div className="focus-card__head">
+        <Icon name="edit" />
+        <span className="profile__title">This content</span>
+        <span className="muted small">Optional. Changes from video to video.</span>
+      </div>
+      <div className="focus-card__fields">
+        <label className="field">
+          <span>What is this content about?</span>
+          <input
+            id="profile-focus"
+            value={profile.focus}
+            placeholder="e.g. cooking rendang with Adabi rendang paste"
+            onChange={(e) => setProfile({ focus: e.target.value })}
+          />
+          <small className="muted">A recipe, a new product, a promo, an event. It becomes the subject of your hook.</small>
+        </label>
+        <label className="field">
+          <span>Key points or USPs to include (one per line)</span>
+          <textarea
+            id="profile-points"
+            rows={3}
+            value={profile.points}
+            placeholder={'e.g. Halal certified\nReady in 15 minutes\nNo MSG'}
+            onChange={(e) => setProfile({ points: e.target.value })}
+          />
+        </label>
+      </div>
     </section>
   );
 }
