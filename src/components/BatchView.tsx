@@ -1,6 +1,6 @@
 import { type CSSProperties, useState } from 'react';
 import type { Selection } from '../data/types';
-import { briefTitle, buildBrief, hookParts, hookText } from '../lib/brief';
+import { briefTitle, buildBrief, focusReading, hookParts, hookText } from '../lib/brief';
 import { copyText, dateStamp, downloadFile, toCsv } from '../lib/export';
 import { countCombinations, generateBatch, randomSelection, selectionKey } from '../lib/matrix';
 import { useAppState } from '../state/AppState';
@@ -30,7 +30,8 @@ export function BatchView() {
     return `${cat?.label}: ${cat?.items.find((i) => i.id === itemId)?.label}`;
   });
 
-  const rows = ideas.map((idea) => ({ ...idea, brief: buildBrief(board, idea.selection, idea.variant, profile.focus) }));
+  const reading = focusReading(profile);
+  const rows = ideas.map((idea) => ({ ...idea, brief: buildBrief(board, idea.selection, idea.variant, reading) }));
 
   const generate = () => {
     const batch = generateBatch(board, { count: Math.min(Math.max(1, count), MAX), locks });

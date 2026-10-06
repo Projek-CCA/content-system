@@ -998,6 +998,10 @@ button.chip:hover {
   flex-wrap: wrap;
 }
 
+.brief__focus .badge {
+  margin-left: 0;
+}
+
 .notice {
   display: flex;
   align-items: center;

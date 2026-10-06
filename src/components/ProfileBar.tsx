@@ -73,7 +73,10 @@ export function ContentFocus() {
             placeholder="e.g. cooking rendang with Adabi rendang paste"
             onChange={(e) => setProfile({ focus: e.target.value })}
           />
-          <small className="muted">A recipe, a new product, a promo, an event. It becomes the subject of your hook.</small>
+          <small className="muted">
+            A subject (cooking rendang with Adabi paste) or the kind of content (Product USP, new product, Raya promo, customer
+            reviews, event, tips). The hooks are written to match.
+          </small>
         </label>
         <label className="field">
           <span>Key points or USPs to include (one per line)</span>

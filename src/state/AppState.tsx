@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useMemo, useRef, useState, type ReactNode } from 'react';
 import defaultMatrixJson from '../data/cim-matrix.json';
 import type { Matrix, Profile, Selection } from '../data/types';
-import { buildBrief, hookText } from '../lib/brief';
+import { buildBrief, focusReading, hookText } from '../lib/brief';
 import {
   applySelect,
   type Board,
@@ -257,7 +257,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
 
     saved,
     saveIdea: (sel, v) => {
-      const brief = buildBrief(board, sel, v, profile.focus);
+      const brief = buildBrief(board, sel, v, focusReading(profile));
       const idea: SavedIdea = {
         id: `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
         key: brief.key,

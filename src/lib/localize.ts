@@ -36,6 +36,7 @@ export function localizeMatrix(matrix: Matrix, language: Language): Matrix {
 const EN = {
   yourIdea: 'Your content idea',
   about: 'About',
+  readAs: 'read as',
   stillToPick: 'Still to pick',
   fillRest: 'Fill the rest',
   hookStarter: 'Hook starter',
@@ -54,6 +55,7 @@ const EN = {
 const MS: typeof EN = {
   yourIdea: 'Idea content anda',
   about: 'Tentang',
+  readAs: 'dibaca sebagai',
   stillToPick: 'Belum dipilih',
   fillRest: 'Isi selebihnya',
   hookStarter: 'Hook pembuka',

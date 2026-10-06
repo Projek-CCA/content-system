@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { briefToAiPrompt, briefToText, buildBrief, hookParts, parsePoints } from '../lib/brief';
+import { briefToAiPrompt, briefToText, buildBrief, focusReading, hookParts, parsePoints } from '../lib/brief';
 import { copyText } from '../lib/export';
 import { strings } from '../lib/localize';
 import { lockMap, randomSelection } from '../lib/matrix';
@@ -10,7 +10,7 @@ import { Icon } from './Icon';
 /** The output: a ready-to-shoot content brief for the current combination. */
 export function IdeaBrief() {
   const { board, selection, variant, nextVariant, profile, randomise, loadSelection, saveIdea, isSaved, notify, openDetail } = useAppState();
-  const brief = buildBrief(board, selection, variant, profile.focus);
+  const brief = buildBrief(board, selection, variant, focusReading(profile));
   const t = strings(profile.language);
 
   if (brief.picks.length === 0) {
@@ -71,6 +71,11 @@ export function IdeaBrief() {
       {focus && (
         <p className="brief__focus">
           <span className="eyebrow">{t.about}</span> {focus}
+          {brief.angle && (
+            <span className="badge" title="The hooks are written for this kind of content">
+              {t.readAs}: {brief.angle.label}
+            </span>
+          )}
         </p>
       )}
 

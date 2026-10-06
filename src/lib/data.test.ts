@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import defaultMatrix from '../data/cim-matrix.json';
 import type { Matrix, Profile } from '../data/types';
-import { briefToAiPrompt, briefToText, buildBrief, hookText, parsePoints } from './brief';
+import { briefToAiPrompt, briefToText, buildBrief, focusReading, hookText, parsePoints } from './brief';
+import { readFocus } from './angles';
 import { buildBoard, generateBatch, seededRng } from './matrix';
 import { applyOverlay, diffMatrix, isEmptyOverlay } from './overlay';
 import { fill, fillParts } from './template';
@@ -92,20 +93,48 @@ describe('buildBrief', () => {
     expect(hooks.size).toBe(first.hookVariations);
   });
 
-  it('uses the content focus as the hook subject', () => {
+  it('uses a plain subject as typed', () => {
     const core = buildBoard(matrix, ['type', 'present', 'shooting', 'topic']);
     const selection = { type: 'educate', present: 'top-list', shooting: 'whip-pan', topic: 'product-service' };
-    const focus = 'cooking rendang with Adabi rendang paste';
-    const brief = buildBrief(core, selection, 0, focus);
+    const focus = 'Hari Raya table etiquette';
+    const brief = buildBrief(core, selection, 0, readFocus(focus, [], 'English'));
+    expect(brief.angle).toBeUndefined();
     expect(brief.hook).toContain(focus);
     expect(brief.hookVariations).toBe(9);
+  });
+
+  it('reads an intent instead of pasting it into the hook', () => {
+    const core = buildBoard(matrix, ['type', 'present', 'shooting', 'topic']);
+    const selection = { type: 'business-ads', present: 'top-list', shooting: 'whip-pan', topic: 'product-service' };
+    const usp = { ...profile, brand: 'Adabi', product: 'Adabi spices', focus: 'Product USP', points: 'Halal certified\nReady in 15 minutes\nNo MSG' };
+    const reading = focusReading(usp)!;
+    expect(reading.angle?.id).toBe('usp');
+    const first = buildBrief(core, selection, 0, reading);
+    expect(reading.hooks).toContain(first.hook);
+    const hooks = Array.from({ length: first.hookVariations }, (_, v) => hookText(buildBrief(core, selection, v, reading), usp));
+    expect(hooks.join('\n')).not.toMatch(/Product USP/);
+    expect(hooks).toContain('Halal certified ✓ Ready in 15 minutes ✓ No MSG ✓ That\'s Adabi spices.');
+    expect(hooks).toContain('3 reasons working mums choose Adabi spices: Halal certified, Ready in 15 minutes and No MSG');
+    expect(hooks.some((h) => h.includes('what makes Adabi spices different'))).toBe(true);
+  });
+
+  it('pulls the subject out of the intent words', () => {
+    const subject = (focus: string, lang: Profile['language'] = 'English') => readFocus(focus, [], lang)!.subjects[0];
+    expect(subject('cooking rendang with Adabi rendang paste')).toBe('cooking rendang with Adabi rendang paste');
+    expect(subject('How to cook nasi lemak')).toBe('cooking nasi lemak');
+    expect(subject('New product: sambal tumis paste')).toBe('our new sambal tumis paste');
+    expect(subject('USP produk Adabi', 'Bahasa Melayu')).toBe('apa yang buat Adabi berbeza');
+    expect(subject('Raya promo')).toBe('our Raya promo');
+    expect(subject('Customer testimonials')).toBe('what customers really think of {product}');
+    expect(subject('masak rendang dengan pes rendang Adabi', 'Bahasa Melayu')).toBe('masak rendang dengan pes rendang Adabi');
+    expect(readFocus('Adabi vs other brands', [], 'English')!.hooks[0]).toBe('Adabi vs other brands: which one wins?');
   });
 
   it('puts the focus and key points in the text and AI prompt', () => {
     const core = buildBoard(matrix, ['type', 'present', 'shooting', 'topic']);
     const selection = { type: 'business-ads', present: 'hard-sell', shooting: 'foodie', topic: 'product-service' };
     const withInput = { ...profile, focus: 'our new sambal tumis paste', points: '- Halal certified\n\n• Ready in 15 minutes\n2) No MSG' };
-    const brief = buildBrief(core, selection, 0, withInput.focus);
+    const brief = buildBrief(core, selection, 0, focusReading(withInput));
     expect(parsePoints(withInput.points)).toEqual(['Halal certified', 'Ready in 15 minutes', 'No MSG']);
     const text = briefToText(brief, withInput);
     expect(text).toContain('About: our new sambal tumis paste');
@@ -159,7 +188,7 @@ describe('Bahasa Melayu output', () => {
   it('writes the whole brief in BM, and only the hooks in Mixed', () => {
     const selection = { type: 'business-ads', present: 'lakonan', shooting: 'foodie', topic: 'product-service' };
     const ids = ['type', 'present', 'shooting', 'topic'];
-    const bm = buildBrief(buildBoard(ms, ids), selection, 0, 'masak rendang dengan pes rendang Adabi');
+    const bm = buildBrief(buildBoard(ms, ids), selection, 0, readFocus('masak rendang dengan pes rendang Adabi', [], 'Bahasa Melayu'));
     expect(bm.hook).toMatch(/masak rendang/);
     expect(bm.lines[0].label).toBe('Matlamat');
     expect(bm.lines[0].text).toContain('Tukar penonton');

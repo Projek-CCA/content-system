@@ -1,5 +1,6 @@
 import type { MatrixCategory, MatrixItem, Profile, Reference, Selection } from '../data/types';
 import { type Board, findItem, hashString, selectionKey } from './matrix';
+import { type FocusReading, readFocus } from './angles';
 import { strings } from './localize';
 import { capitalise, capitaliseParts, fill, fillParts, type TextPart } from './template';
 
@@ -26,8 +27,10 @@ export interface IdeaBrief {
   complete: boolean;
   /** Hook template with {subject} already substituted. Profile placeholders remain. */
   hook?: string;
-  /** How many hook × subject variations exist for this combination. */
+  /** How many distinct hooks exist for this combination. */
   hookVariations: number;
+  /** How "What is this content about?" was read, when an intent was recognised. */
+  angle?: FocusReading['angle'];
   lines: BriefLine[];
   structure: { item: MatrixItem; steps: string[] }[];
   tips: { category: MatrixCategory; item: MatrixItem; tips: string[] }[];
@@ -41,12 +44,12 @@ const DEFAULT_SUBJECT = '{product}';
  *
  * Hook templates are pooled from every selected item (content type, present
  * style, topic...), unless a picked item's column has `hooksOverride` (the
- * Hook column), whose hooks then decide the opening alone. {subject} is filled
- * with the user's own content focus when they gave one, otherwise from the
- * `subjects` of the selected items. `variant` cycles through every
- * hook × subject pairing.
+ * Hook column), whose hooks then decide the opening alone. When the user said
+ * what the content is about, `reading` (see readFocus) supplies the subjects
+ * and adds hooks for the recognised intent; otherwise {subject} comes from the
+ * `subjects` of the selected items. `variant` cycles through every distinct hook.
  */
-export function buildBrief(board: Board, selection: Selection, variant = 0, focus = ''): IdeaBrief {
+export function buildBrief(board: Board, selection: Selection, variant = 0, reading?: FocusReading): IdeaBrief {
   const picks: Pick[] = [];
   const missing: MatrixCategory[] = [];
   for (const category of board.categories) {
@@ -56,19 +59,29 @@ export function buildBrief(board: Board, selection: Selection, variant = 0, focu
   }
 
   const override = [...picks].reverse().find((p) => p.category.hooksOverride && p.item.hooks?.length);
-  const hooks = [...new Set(override ? override.item.hooks : picks.flatMap((p) => p.item.hooks ?? []))];
-  const subjects = focus.trim() ? [focus.trim()] : picks.flatMap((p) => p.item.subjects ?? []);
+  const angleHooks = override ? [] : (reading?.hooks ?? []);
+  const templates = override ? override.item.hooks! : picks.flatMap((p) => p.item.hooks ?? []);
+  const subjects = reading?.subjects.length ? reading.subjects : picks.flatMap((p) => p.item.subjects ?? []);
   const subjectPool = subjects.length ? subjects : [DEFAULT_SUBJECT];
   const key = selectionKey(board, selection);
 
-  let hook: string | undefined;
-  if (hooks.length) {
-    const n = (hashString(key) + variant) % (hooks.length * subjectPool.length);
-    const template = hooks[n % hooks.length];
-    const subject = subjectPool[Math.floor(n / hooks.length) % subjectPool.length];
-    hook = template.replaceAll('{subject}', subject);
-  }
-  const usesSubject = hooks.some((h) => h.includes('{subject}'));
+  // Every distinct hook: templates cycle fastest, then subjects. A template
+  // without {subject} appears once. Hooks written for the recognised intent
+  // come first, and the first hook shown is always one of them.
+  const expand = (list: string[]) => {
+    const out: string[] = [];
+    subjectPool.forEach((subject, i) => {
+      for (const template of list) {
+        if (template.includes('{subject}')) out.push(template.replaceAll('{subject}', subject));
+        else if (i === 0) out.push(template);
+      }
+    });
+    return out;
+  };
+  const intentFirst = [...new Set(expand(angleHooks))];
+  const unique = [...new Set([...intentFirst, ...expand(templates)])];
+  const start = hashString(key) % (intentFirst.length || unique.length || 1);
+  const hook = unique.length ? unique[(start + variant) % unique.length] : undefined;
 
   return {
     key,
@@ -76,7 +89,8 @@ export function buildBrief(board: Board, selection: Selection, variant = 0, focu
     missing,
     complete: picks.length > 0 && missing.length === 0,
     hook,
-    hookVariations: hooks.length * (usesSubject ? subjectPool.length : 1),
+    hookVariations: unique.length,
+    angle: reading?.angle,
     lines: picks.map(({ category, item }) => ({
       category,
       item,
@@ -99,6 +113,11 @@ export function hookParts(brief: IdeaBrief, profile: Partial<Profile>): TextPart
 
 export function hookText(brief: IdeaBrief, profile: Partial<Profile>): string {
   return brief.hook ? capitalise(fill(brief.hook, profile)) : '';
+}
+
+/** How the profile's "What is this content about?" and key points shape the hooks. */
+export function focusReading(profile: { focus?: string; points?: string; language: Profile['language'] }): FocusReading | undefined {
+  return readFocus(profile.focus ?? '', parsePoints(profile.points), profile.language);
 }
 
 /** Key points typed one per line; bullets and blank lines are ignored. */
@@ -175,7 +194,8 @@ export function briefToAiPrompt(brief: IdeaBrief, profile: Profile): string {
   out.push(`- Industry / niche: ${profile.niche.trim() || '(not specified)'}`);
   if (profile.focus?.trim()) {
     out.push('');
-    out.push(`This video is about: ${profile.focus.trim()}`);
+    const angle = focusReading(profile)?.angle;
+    out.push(`This video is about: ${profile.focus.trim()}${angle ? ` (type of content: ${angle.label})` : ''}`);
   }
   const points = parsePoints(profile.points);
   if (points.length) {
