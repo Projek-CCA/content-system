@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { listModels, pickDefaultModel, PROVIDER_ORDER, PROVIDERS, type ProviderId, startOpenRouterSignIn } from '../lib/ai';
 import { useAiState } from '../state/AiState';
+import { usePersistentState } from '../state/usePersistentState';
 import { Icon } from './Icon';
 import { Modal } from './Modal';
 
@@ -165,14 +166,40 @@ function ProviderPanel({ provider }: { provider: ProviderId }) {
   );
 }
 
-/** Header button showing whether AI is connected. */
+/** Header button showing whether AI is connected. Loud until it is. */
 export function AiButton() {
   const ai = useAiState();
   const info = PROVIDERS[ai.provider];
   return (
-    <button className={`ai-chip ${ai.ready ? 'is-on' : ''}`} onClick={ai.openSettings} title="Connect your own AI account">
-      <Icon name="sparkle" size={16} />
+    <button className={`ai-chip ${ai.ready ? 'is-on' : 'is-cta'}`} onClick={ai.openSettings} title="Connect your own AI account">
+      {ai.ready ? <span className="ai-chip__dot" aria-hidden="true" /> : <Icon name="sparkle" size={18} />}
       <span>{ai.ready ? `AI: ${info.label}` : 'Connect AI'}</span>
     </button>
+  );
+}
+
+/** Invitation to connect AI, shown on Build and Batch until connected (or dismissed). */
+export function AiCallout() {
+  const ai = useAiState();
+  const [dismissed, setDismissed] = usePersistentState('ai.calloutDismissed', false);
+  if (ai.ready || dismissed) return null;
+  return (
+    <section className="ai-callout" aria-label="Write scripts with AI">
+      <span className="ai-callout__icon" aria-hidden="true">
+        <Icon name="sparkle" size={22} />
+      </span>
+      <div className="ai-callout__text">
+        <strong>Turn any idea into a full script with AI</strong>
+        <span>Hooks, scenes, shot list and caption in your language. Connect your Claude, ChatGPT, Gemini or OpenRouter account.</span>
+      </div>
+      <div className="ai-callout__actions">
+        <button className="btn btn--primary" onClick={ai.openSettings}>
+          <Icon name="sparkle" /> Connect AI
+        </button>
+        <button className="btn btn--ghost btn--small" onClick={() => setDismissed(true)}>
+          Not now
+        </button>
+      </div>
+    </section>
   );
 }

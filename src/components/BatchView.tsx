@@ -1,10 +1,11 @@
-import { type CSSProperties, useState } from 'react';
+import { type CSSProperties, useMemo, useState } from 'react';
 import type { Selection } from '../data/types';
 import { briefTitle, buildBrief, focusReading, hookParts, hookText } from '../lib/brief';
 import { copyText, dateStamp, downloadFile, toCsv } from '../lib/export';
-import { countCombinations, generateBatch, randomSelection, selectionKey } from '../lib/matrix';
+import { buildBoard, countCombinations, generateBatch, randomSelection, restrictMatrix, selectionKey } from '../lib/matrix';
 import { useAppState } from '../state/AppState';
 import { usePersistentState } from '../state/usePersistentState';
+import { ColumnPicker } from './BuildView';
 import { Parts } from './Filled';
 import { Icon } from './Icon';
 
@@ -18,31 +19,31 @@ const MAX = 500;
 
 /** Generate many unique ideas at once, e.g. a 30-day content plan. */
 export function BatchView() {
-  const { board, locks, matrix, profile, saveIdea, isSaved, loadSelection, setView, notify } = useAppState();
+  const { board, contentMatrix, profile, saveIdea, isSaved, loadSelection, setView, notify } = useAppState();
   const [count, setCount] = usePersistentState('batch.count', 30);
   const [asDays, setAsDays] = usePersistentState('batch.days', true);
   const [ideas, setIdeas] = usePersistentState<BatchIdea[]>('batch.ideas', [], Array.isArray);
   const [justSaved, setJustSaved] = useState(false);
+  /** Per column, the options a batch may use. Empty means any option. Independent of the Build tab. */
+  const [filters, setFilters] = usePersistentState<Record<string, string[]>>('batch.filters', {}, (v) => typeof v === 'object' && v !== null);
 
-  const total = countCombinations(board, locks);
-  const lockedLabels = Object.entries(locks).map(([catId, itemId]) => {
-    const cat = matrix.categories.find((c) => c.id === catId);
-    return `${cat?.label}: ${cat?.items.find((i) => i.id === itemId)?.label}`;
-  });
+  const activeIds = board.categories.map((c) => c.id);
+  const mixBoard = useMemo(() => buildBoard(restrictMatrix(contentMatrix, filters), activeIds), [contentMatrix, filters, activeIds.join('|')]);
+  const total = countCombinations(mixBoard);
 
   const reading = focusReading(profile);
   const rows = ideas.map((idea) => ({ ...idea, brief: buildBrief(board, idea.selection, idea.variant, reading) }));
 
   const generate = () => {
-    const batch = generateBatch(board, { count: Math.min(Math.max(1, count), MAX), locks });
+    const batch = generateBatch(mixBoard, { count: Math.min(Math.max(1, count), MAX) });
     setIdeas(batch.map((selection) => ({ selection, variant: Math.floor(Math.random() * 1000) })));
     setJustSaved(false);
   };
 
   const reroll = (index: number) => {
     const taken = new Set(ideas.map((i) => selectionKey(board, i.selection)));
-    let selection = randomSelection(board, locks);
-    for (let n = 0; n < 30 && taken.has(selectionKey(board, selection)); n++) selection = randomSelection(board, locks);
+    let selection = randomSelection(mixBoard, {});
+    for (let n = 0; n < 30 && taken.has(selectionKey(board, selection)); n++) selection = randomSelection(mixBoard, {});
     setIdeas(ideas.map((idea, i) => (i === index ? { selection, variant: Math.floor(Math.random() * 1000) } : idea)));
   };
 
@@ -80,15 +81,10 @@ export function BatchView() {
         <div>
           <h2>Generate a batch of ideas</h2>
           <p className="muted">
-            Plan a week or a month in one click. Every idea is a unique combination from the columns on your board
-            {lockedLabels.length ? ', and your locked picks stay fixed.' : '.'}
+            Plan a week or a month in one click. Choose the mix below, then generate. Every idea is a unique combination.
           </p>
-          {lockedLabels.length > 0 && (
-            <p className="small">
-              <Icon name="lock" size={14} /> Locked: {lockedLabels.join(' · ')}
-            </p>
-          )}
         </div>
+        <BatchMix filters={filters} setFilters={setFilters} />
         <div className="batch-controls__row">
           <div className="segmented" role="group" aria-label="How many ideas">
             {COUNTS.map((n) => (
@@ -113,8 +109,9 @@ export function BatchView() {
           </button>
         </div>
         <p className="small muted">
-          {total.toLocaleString()} unique ideas possible with the current board
-          {count > total ? `, so you'll get all ${total.toLocaleString()} of them.` : '.'} Add more columns or items to get more.
+          {total.toLocaleString()} unique ideas possible with this mix
+          {count > total ? `, so you'll get all ${total.toLocaleString()} of them.` : '.'}{' '}
+          {count > total ? 'Allow more options or switch on more columns to get more.' : ''}
         </p>
       </section>
 
@@ -185,5 +182,61 @@ export function BatchView() {
         </section>
       )}
     </>
+  );
+}
+
+/** Choose the mix for a batch: which columns to use and which options each may draw from. */
+function BatchMix({ filters, setFilters }: { filters: Record<string, string[]>; setFilters: (f: Record<string, string[]>) => void }) {
+  const { board } = useAppState();
+  const toggle = (catId: string, itemId: string) => {
+    const current = filters[catId] ?? [];
+    const next = current.includes(itemId) ? current.filter((id) => id !== itemId) : [...current, itemId];
+    setFilters({ ...filters, [catId]: next });
+  };
+  const picked = board.categories.filter((c) => (filters[c.id] ?? []).some((id) => c.items.some((i) => i.id === id)));
+
+  return (
+    <div className="batch-mix">
+      <div className="batch-mix__head">
+        <h3>Choose the mix</h3>
+        {picked.length > 0 && (
+          <button className="link-btn" onClick={() => setFilters({})}>
+            Reset to any
+          </button>
+        )}
+      </div>
+      <ColumnPicker />
+      <div className="batch-mix__columns">
+        {board.categories.map((category) => {
+          const allowed = (filters[category.id] ?? []).filter((id) => category.items.some((i) => i.id === id));
+          const summary = allowed.length
+            ? allowed.map((id) => category.items.find((i) => i.id === id)!.label).join(', ')
+            : `Any of ${category.items.length}`;
+          return (
+            <details key={category.id} className="batch-mix__column" style={{ '--c': category.color } as CSSProperties}>
+              <summary>
+                <span className="dot" />
+                <strong>{category.label}</strong>
+                <span className={`batch-mix__summary ${allowed.length ? 'is-limited' : ''}`}>{summary}</span>
+              </summary>
+              <div className="batch-mix__chips">
+                <button className={`toggle-chip ${allowed.length === 0 ? 'is-on' : ''}`} onClick={() => setFilters({ ...filters, [category.id]: [] })}>
+                  Any
+                </button>
+                {category.items.map((item) => {
+                  const on = allowed.includes(item.id);
+                  return (
+                    <button key={item.id} className={`toggle-chip ${on ? 'is-on' : ''}`} aria-pressed={on} onClick={() => toggle(category.id, item.id)}>
+                      {on && <Icon name="check" size={14} />}
+                      {item.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </details>
+          );
+        })}
+      </div>
+    </div>
   );
 }

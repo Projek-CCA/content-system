@@ -14,7 +14,7 @@ type works with any present style, e.g. Business Ads × Lakonan.
 | Screen | What it's for |
 | --- | --- |
 | **Build** | The matrix. Pick one item per column, or press **Randomise** (or the <kbd>R</kbd> key). Lock the columns you like and roll the rest, or roll a single column with its dice button. The brief updates live: a hook starter, the goal, how to present, shoot and talk about it, the step-by-step structure and tips. Copy it as text, or copy a ready-made prompt that turns it into a full script in Claude or ChatGPT. |
-| **Batch** | Generate 10, 30, 50, 100 (up to 500) unique ideas in one click, e.g. a 30-day plan. Locked columns stay fixed. Save them all, export to CSV or copy them. |
+| **Batch** | Generate 10, 30, 50, 100 (up to 500) unique ideas in one click, e.g. a 30-day plan. Choose the mix right there: switch columns on or off and limit any column to the options you want (e.g. only Business Ads and Educate, any Present Style). Independent of the Build tab. Save them all, export to CSV or copy them. |
 | **Saved** | Shortlisted ideas with notes and a status (Idea → Scripted → Filmed → Posted). Export to CSV. |
 | **Library** | Every item in the matrix with its description and visual example: "what is a whip pan and what does it look like?" |
 | **Customise** | Add or edit columns and items, set descriptions and plug in visual examples. Export/import the whole matrix as JSON. |

@@ -64,6 +64,22 @@ export function buildBoard(matrix: Matrix, activeIds: Iterable<string>): Board {
   return { categories, ordered, parentOf, childrenOf, roots };
 }
 
+/**
+ * Limit each category to the allowed item ids (e.g. "only Educate and Business
+ * Ads"). A missing or empty list, or one that matches nothing, allows every item.
+ */
+export function restrictMatrix(matrix: Matrix, allowed: Record<string, string[]>): Matrix {
+  return {
+    ...matrix,
+    categories: matrix.categories.map((category) => {
+      const ids = allowed[category.id];
+      if (!ids?.length) return category;
+      const items = category.items.filter((i) => ids.includes(i.id));
+      return items.length ? { ...category, items } : category;
+    }),
+  };
+}
+
 export function findItem(category: MatrixCategory | undefined, itemId: string | undefined): MatrixItem | undefined {
   if (!category || !itemId) return undefined;
   return category.items.find((i) => i.id === itemId);

@@ -1949,29 +1949,155 @@ button.chip:hover {
 .ai-chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 12px;
+  gap: 7px;
+  padding: 9px 16px;
   border-radius: 99px;
-  border: 1px dashed var(--line-2);
-  background: transparent;
-  color: var(--ink-2);
-  font-weight: 600;
-  font-size: 0.85rem;
+  border: 1px solid var(--line-2);
+  background: var(--card);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.92rem;
   white-space: nowrap;
   margin-left: auto;
   flex: none;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .ai-chip:hover {
-  border-color: var(--ink-3);
-  color: var(--ink);
+  transform: translateY(-1px);
 }
 
-.ai-chip.is-on {
-  border-style: solid;
-  border-color: color-mix(in srgb, var(--highlight) 70%, transparent);
-  background: color-mix(in srgb, var(--highlight) 22%, var(--card));
+.ai-chip.is-cta {
+  background: var(--highlight);
+  border-color: color-mix(in srgb, var(--highlight) 70%, #000);
+  color: #1b1a17;
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--highlight) 60%, transparent), 0 4px 14px color-mix(in srgb, var(--highlight) 45%, transparent);
+  animation: ai-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes ai-glow {
+  50% {
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--highlight) 0%, transparent), 0 4px 18px color-mix(in srgb, var(--highlight) 60%, transparent);
+  }
+}
+
+.ai-chip__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #16a34a;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #16a34a 25%, transparent);
+}
+
+.ai-callout {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  border: 1px solid color-mix(in srgb, var(--highlight) 70%, transparent);
+  background: color-mix(in srgb, var(--highlight) 20%, var(--card));
+  box-shadow: var(--shadow);
+}
+
+.ai-callout__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--highlight);
+  color: #1b1a17;
+  flex: none;
+}
+
+.ai-callout__text {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  min-width: min(100%, 260px);
+}
+
+.ai-callout__text strong {
+  font-size: 1.02rem;
+}
+
+.ai-callout__text span {
+  color: var(--ink-2);
+  font-size: 0.9rem;
+}
+
+.ai-callout__actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* ---------- Batch mix ---------- */
+
+.batch-mix {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card-2);
+}
+
+.batch-mix__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.batch-mix__head h3 {
+  font-size: 0.95rem;
+}
+
+.batch-mix__columns {
+  display: grid;
+  gap: 6px;
+}
+
+.batch-mix__column {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--c);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+}
+
+.batch-mix__column summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  min-width: 0;
+}
+
+.batch-mix__summary {
+  margin-left: auto;
+  color: var(--ink-3);
+  font-size: 0.84rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 60%;
+}
+
+.batch-mix__summary.is-limited {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.batch-mix__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 12px 12px;
 }
 
 .app-header__inner .ai-chip + .tabs {
@@ -2148,8 +2274,10 @@ button.chip:hover {
 @media (max-width: 720px) {
   .ai-chip {
     position: absolute;
-    top: 14px;
+    top: 12px;
     right: 16px;
+    padding: 8px 13px;
+    font-size: 0.86rem;
   }
 
   .app-header__inner {

@@ -1,4 +1,4 @@
-import { AiButton, AiSettings } from './components/AiSettings';
+import { AiButton, AiCallout, AiSettings } from './components/AiSettings';
 import { BatchView } from './components/BatchView';
 import { BuildView } from './components/BuildView';
 import { ConfirmDialog } from './components/ConfirmDialog';
@@ -57,6 +57,7 @@ export function App() {
           <>
             <ProfileBar />
             <ContentFocus />
+            <AiCallout />
           </>
         )}
         {view === 'build' && <BuildView />}

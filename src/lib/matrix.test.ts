@@ -8,6 +8,7 @@ import {
   enumerateSelections,
   generateBatch,
   pruneSelection,
+  restrictMatrix,
   randomSelection,
   seededRng,
   selectionKey,
@@ -174,6 +175,16 @@ describe('applySelect', () => {
       type: 'bizness',
       present: 'storytelling',
     });
+  });
+});
+
+describe('restrictMatrix', () => {
+  it('limits columns to the picked items and leaves the rest open', () => {
+    const limited = restrictMatrix(draft, { type: ['educate', 'bizness'], shooting: [], topic: ['gone'] });
+    const board = buildBoard(limited, allIds);
+    // educate (3 styles) + bizness (3 styles) × all 7 shooting × all 6 topics (unknown id ignored)
+    expect(countCombinations(board)).toBe(6 * 7 * 6);
+    for (const s of generateBatch(board, { count: 50, rng: seededRng(4) })) expect(['educate', 'bizness']).toContain(s.type);
   });
 });
 
