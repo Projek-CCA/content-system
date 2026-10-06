@@ -127,6 +127,20 @@ usually the Topic, e.g. Topic "Product & Service" has `"choosing the right {prod
 subjects so they read naturally after "about". "Another hook" cycles through every
 hook × subject pairing.
 
+**Hook library.** The optional Hook column has 23 opening techniques with 6–8 English and BM
+lines each, and a reference for where the technique comes from:
+
+- the hook types from the storytelling knowledge base (Betrayal, Paradox, Absurd Stakes,
+  Vicarious Access, Thesis Bomb, Injustice, Authority Admits, Outsider Wins, Knowledge Gap),
+  with the creator examples behind them;
+- common short-form formulas (Question, Bold Statement, POV, Call-out, Shocking Number,
+  Mistake Warning, Result First, Challenge, Curiosity Gap, Confession, Experiment, Versus);
+- film techniques (Cold Open / in medias res, Movie Tagline).
+
+Lines with `___` are for the creator to fill with a real number; never ship an invented
+figure. Intent subjects in `src/lib/angles.ts` must be noun phrases so they read naturally in
+every hook ("They copied {subject}", "I tried {subject} for 7 days").
+
 **Bahasa Melayu.** Every column and item has an `ms` object with the BM version of its text
 (`question`, `briefLabel`, `description`, `brief`, `howTo`, `structure`, `example`, `hooks`,
 `subjects`, and optionally `label`). The **Output language** setting picks what the brief,

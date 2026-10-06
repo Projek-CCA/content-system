@@ -24,7 +24,9 @@
           "hooks": [
             "Here's what nobody tells you about {subject}",
             "Save this if you want to understand {subject}",
-            "The one thing you need to know about {subject}"
+            "The one thing you need to know about {subject}",
+            "Learn {subject} in 30 seconds",
+            "The beginner's guide to {subject}"
           ],
           "ms": {
             "description": "Content yang mengajar sesuatu yang berguna kepada penonton. Ia membina kepercayaan dan menjadikan anda pakar yang orang rujuk.",
@@ -37,9 +39,11 @@
             ],
             "example": "Doktor gigi terangkan 3 makanan yang paling cepat menyebabkan gigi kuning.",
             "hooks": [
-              "Ini yang tiada siapa beritahu anda tentang {subject}",
-              "Save video ni kalau anda nak faham tentang {subject}",
-              "Satu perkara yang anda perlu tahu tentang {subject}"
+              "Ini yang takde siapa beritahu korang tentang {subject}",
+              "Save video ni kalau korang nak faham tentang {subject}",
+              "Satu perkara yang korang perlu tahu tentang {subject}",
+              "Belajar {subject} dalam 30 saat",
+              "Panduan pemula untuk {subject}"
             ]
           }
         },
@@ -58,7 +62,9 @@
           "hooks": [
             "Be honest: what do you think about {subject}?",
             "Tag someone who needs to hear this about {subject}",
-            "Let's settle this once and for all: {subject}"
+            "Let's settle this once and for all: {subject}",
+            "Comment if you agree about {subject}",
+            "Send this to a friend who needs {subject}"
           ],
           "ms": {
             "description": "Content untuk tarik trafik. Tugasnya ialah dapatkan komen, share dan tag, yang membawa reach anda kepada orang baru dan ke page anda.",
@@ -71,9 +77,11 @@
             ],
             "example": "Kopitiam tanya: teh tarik atau kopi O? Komen order anda.",
             "hooks": [
-              "Jujur: apa pendapat anda tentang {subject}?",
+              "Jujur: apa pendapat korang tentang {subject}?",
               "Tag kawan yang perlu dengar ini tentang {subject}",
-              "Jom selesaikan sekali untuk semua: {subject}"
+              "Jom selesaikan sekali untuk semua: {subject}",
+              "Komen kalau setuju pasal {subject}",
+              "Hantar ni kat kawan yang perlukan {subject}"
             ]
           }
         },
@@ -92,7 +100,9 @@
           "hooks": [
             "Don't scroll past this if you care about {subject}",
             "Here's why everyone's talking about {subject}",
-            "The deal you've been waiting for: {subject}"
+            "The deal you've been waiting for: {subject}",
+            "Stop overthinking. Get {subject}",
+            "Why {audience} are switching to {subject}"
           ],
           "ms": {
             "description": "Content gaya iklan yang menjual. Ia menukar penonton kepada pembeli dengan menunjukkan tawaran, bukti dan langkah seterusnya.",
@@ -105,9 +115,11 @@
             ],
             "example": "Jenama tudung tunjuk koleksi Raya baharu dengan harga early-bird selama 48 jam.",
             "hooks": [
-              "Jangan scroll dulu kalau anda ambil berat tentang {subject}",
+              "Jangan scroll dulu kalau korang ambil berat tentang {subject}",
               "Ini sebab semua orang bercakap tentang {subject}",
-              "Tawaran yang anda tunggu-tunggu: {subject}"
+              "Tawaran yang korang tunggu-tunggu: {subject}",
+              "Jangan fikir panjang. Dapatkan {subject}",
+              "Kenapa {audience} beralih ke {subject}"
             ]
           }
         },
@@ -126,7 +138,9 @@
           "hooks": [
             "Everyone's doing this trend, so here's {subject}",
             "Trend check: {subject} edition",
-            "Tell me you know {subject} without telling me"
+            "Tell me you know {subject} without telling me",
+            "Everyone is talking about {subject}. Here's my version",
+            "Jumping on the trend, {subject} style"
           ],
           "ms": {
             "description": "Content yang menunggang trend semasa (bunyi, meme, format lakonan atau tarian) dan memasukkan jenama anda ke dalamnya.",
@@ -141,7 +155,9 @@
             "hooks": [
               "Semua orang buat trend ni, jadi ini versi {subject}",
               "Trend check: edisi {subject}",
-              "Cakap anda tahu tentang {subject} tanpa cakap"
+              "Cakap korang tahu tentang {subject} tanpa cakap",
+              "Semua orang cakap pasal {subject}. Ni versi aku",
+              "Ikut trend, gaya {subject}"
             ]
           }
         },
@@ -160,7 +176,9 @@
           "hooks": [
             "This changed how I see {subject}",
             "If {subject} feels hard right now, watch this",
-            "Nobody saw this coming: our story with {subject}"
+            "Nobody saw this coming: our story with {subject}",
+            "This is for anyone who almost gave up on {subject}",
+            "Small steps, big change: {subject}"
           ],
           "ms": {
             "description": "Content yang menyentuh perasaan: transformasi, perjalanan dan motivasi. Ia membina pengikut setia yang menyokong anda.",
@@ -175,7 +193,9 @@
             "hooks": [
               "Ini yang ubah cara saya lihat {subject}",
               "Kalau {subject} rasa susah sekarang, tonton ini",
-              "Tiada siapa sangka: kisah kami dengan {subject}"
+              "Takde siapa sangka: kisah kami dengan {subject}",
+              "Ni untuk sesiapa yang hampir putus asa dengan {subject}",
+              "Langkah kecil, perubahan besar: {subject}"
             ]
           }
         },
@@ -194,7 +214,9 @@
           "hooks": [
             "What really happens behind {subject}",
             "You've never seen this side of {subject}",
-            "Come behind the scenes of {subject}"
+            "Come behind the scenes of {subject}",
+            "The unfiltered truth about {subject}",
+            "No script, no filter: {subject}"
           ],
           "ms": {
             "description": "Content yang tunjuk apa yang biasanya berlaku di belakang kamera: proses, orang dan rutin harian. Ia buat jenama anda lebih manusiawi dan dipercayai.",
@@ -208,8 +230,10 @@
             "example": "Kedai kek tunjuk persiapan jam 4 pagi sebelum tempahan majlis kahwin yang besar.",
             "hooks": [
               "Apa sebenarnya berlaku di sebalik {subject}",
-              "Anda tak pernah tengok sisi ini tentang {subject}",
-              "Jom ke belakang tabir {subject}"
+              "Korang tak pernah tengok sisi ini tentang {subject}",
+              "Jom ke belakang tabir {subject}",
+              "Kebenaran tanpa filter pasal {subject}",
+              "Takde skrip, takde filter: {subject}"
             ]
           }
         }
@@ -245,7 +269,9 @@
             "Nobody warned me about {subject}",
             "A customer taught me a lesson about {subject}",
             "The story behind {subject}",
-            "What happened when a customer asked us about {subject}"
+            "What happened when a customer asked us about {subject}",
+            "It started as a normal day, until {subject}",
+            "I never planned to tell this story about {subject}"
           ],
           "howTo": [
             "Start in the middle of the action, not with 'so one day...'.",
@@ -266,10 +292,12 @@
             ],
             "hooks": [
               "Hari saya tahu kebenaran tentang {subject}",
-              "Tiada siapa beritahu saya tentang {subject}",
+              "Takde siapa beritahu saya tentang {subject}",
               "Seorang pelanggan ajar saya sesuatu tentang {subject}",
               "Kisah di sebalik {subject}",
-              "Apa jadi bila seorang pelanggan tanya kami tentang {subject}"
+              "Apa jadi bila seorang pelanggan tanya kami tentang {subject}",
+              "Hari tu macam biasa je, sampailah {subject}",
+              "Aku tak pernah rancang nak cerita pasal {subject}"
             ],
             "howTo": [
               "Mula di tengah-tengah aksi, bukan dengan \"jadi satu hari tu...\".",
@@ -295,7 +323,10 @@
           "hooks": [
             "Most people don't know this about {subject}",
             "A surprising fact about {subject}",
-            "The truth about {subject} in 30 seconds"
+            "The truth about {subject} in 30 seconds",
+            "3 facts about {subject} that sound fake but are true",
+            "You won't believe this fact about {subject}",
+            "Fact check: what is really true about {subject}?"
           ],
           "howTo": [
             "Check your facts. One wrong fact destroys trust.",
@@ -316,7 +347,10 @@
             "hooks": [
               "Ramai orang tak tahu ini tentang {subject}",
               "Satu fakta mengejutkan tentang {subject}",
-              "Kebenaran tentang {subject} dalam 30 saat"
+              "Kebenaran tentang {subject} dalam 30 saat",
+              "3 fakta pasal {subject} yang macam tipu tapi betul",
+              "Korang takkan percaya fakta ni pasal {subject}",
+              "Fact check: apa yang betul pasal {subject}?"
             ],
             "howTo": [
               "Semak fakta anda. Satu fakta salah boleh rosakkan kepercayaan.",
@@ -341,7 +375,10 @@
           "hooks": [
             "Top 3 things to know about {subject}",
             "Top 5 mistakes people make when it comes to {subject}",
-            "3 things I wish I knew earlier about {subject}"
+            "3 things I wish I knew earlier about {subject}",
+            "Ranking the top 5 things about {subject}",
+            "The top 3 reasons people love {subject}",
+            "Top 3 questions everyone asks about {subject}"
           ],
           "howTo": [
             "Put the number in the hook. It tells viewers how long to stay.",
@@ -360,9 +397,12 @@
               "CTA: tanya apa yang mereka nak tambah."
             ],
             "hooks": [
-              "3 perkara yang anda perlu tahu tentang {subject}",
+              "3 perkara yang korang perlu tahu tentang {subject}",
               "5 kesilapan yang orang selalu buat bila melibatkan {subject}",
-              "3 perkara yang saya harap saya tahu lebih awal tentang {subject}"
+              "3 perkara yang saya harap saya tahu lebih awal tentang {subject}",
+              "Ranking 5 benda terbaik pasal {subject}",
+              "3 sebab utama orang suka {subject}",
+              "3 soalan paling popular pasal {subject}"
             ],
             "howTo": [
               "Letak nombor dalam hook. Ia beritahu penonton berapa lama perlu tonton.",
@@ -386,7 +426,10 @@
           "hooks": [
             "Do this, not that, when it comes to {subject}",
             "The simple 3-step guide to {subject}",
-            "Here's exactly how we handle {subject}"
+            "Here's exactly how we handle {subject}",
+            "How to get {subject} right the first time",
+            "Beginner-friendly guide to {subject}",
+            "Copy these exact steps for {subject}"
           ],
           "howTo": [
             "Show, don't just tell. Film your hands doing each step.",
@@ -406,7 +449,10 @@
             "hooks": [
               "Buat ini, jangan buat itu, bila melibatkan {subject}",
               "Panduan 3 langkah mudah untuk {subject}",
-              "Ini cara kami uruskan {subject}"
+              "Ini cara kami uruskan {subject}",
+              "Cara buat {subject} betul dari kali pertama",
+              "Panduan mesra pemula untuk {subject}",
+              "Tiru langkah-langkah ni untuk {subject}"
             ],
             "howTo": [
               "Tunjuk, jangan cakap saja. Rakam tangan anda buat setiap langkah.",
@@ -431,7 +477,10 @@
           "hooks": [
             "Stop believing these myths about {subject}",
             "Myth or fact? Let's test what you know about {subject}",
-            "You've been told the wrong thing about {subject}"
+            "You've been told the wrong thing about {subject}",
+            "The biggest lie about {subject}",
+            "Myth: {subject} is complicated. Fact: watch this",
+            "3 myths about {subject} we need to stop believing"
           ],
           "howTo": [
             "Pick myths your customers actually believe. Check your comments and DMs.",
@@ -451,8 +500,11 @@
             ],
             "hooks": [
               "Berhenti percaya mitos ini tentang {subject}",
-              "Mitos atau fakta? Jom uji apa yang anda tahu tentang {subject}",
-              "Selama ini anda diberitahu benda yang salah tentang {subject}"
+              "Mitos atau fakta? Jom uji apa yang korang tahu tentang {subject}",
+              "Selama ini korang diberitahu benda yang salah tentang {subject}",
+              "Penipuan paling besar pasal {subject}",
+              "Mitos: {subject} susah. Fakta: tengok ni",
+              "3 mitos pasal {subject} yang kita kena berhenti percaya"
             ],
             "howTo": [
               "Pilih mitos yang pelanggan anda betul-betul percaya. Semak komen dan DM.",
@@ -476,7 +528,10 @@
           ],
           "hooks": [
             "Answer this question about {subject} and win a prize!",
-            "Giveaway: get this question about {subject} right and win"
+            "Giveaway: get this question about {subject} right and win",
+            "First 3 correct answers about {subject} win a prize",
+            "Quiz time! Win something by knowing {subject}",
+            "Prove you know {subject} and take home a gift"
           ],
           "howTo": [
             "Make the prize relevant to your business to attract buyers, not freebie hunters.",
@@ -497,7 +552,10 @@
             ],
             "hooks": [
               "Jawab soalan ini tentang {subject} dan menang hadiah!",
-              "Giveaway: jawab betul soalan tentang {subject} dan menang"
+              "Giveaway: jawab betul soalan tentang {subject} dan menang",
+              "3 jawapan betul pertama pasal {subject} menang hadiah",
+              "Masa kuiz! Menang hadiah kalau tahu pasal {subject}",
+              "Buktikan korang tahu pasal {subject} dan bawa balik hadiah"
             ],
             "howTo": [
               "Pilih hadiah yang berkaitan dengan bisnes anda supaya yang datang ialah pembeli, bukan pemburu barang percuma.",
@@ -521,7 +579,10 @@
           ],
           "hooks": [
             "A or B: which one wins when it comes to {subject}?",
-            "You can only pick one. Settle the debate about {subject}"
+            "You can only pick one. Settle the debate about {subject}",
+            "Team A or Team B? The {subject} debate",
+            "Which side are you on when it comes to {subject}?",
+            "This or that: {subject}"
           ],
           "howTo": [
             "Make both options equally tempting. A one-sided choice gets no debate.",
@@ -540,7 +601,10 @@
             ],
             "hooks": [
               "A atau B: mana satu menang bila melibatkan {subject}?",
-              "Pilih satu saja. Jom selesaikan perdebatan tentang {subject}"
+              "Pilih satu saja. Jom selesaikan perdebatan tentang {subject}",
+              "Team A ke Team B? Perdebatan pasal {subject}",
+              "Korang pihak mana bila melibatkan {subject}?",
+              "Ni ke tu: {subject}"
             ],
             "howTo": [
               "Buat kedua-dua pilihan sama menarik. Pilihan berat sebelah tak akan jadi perdebatan.",
@@ -564,7 +628,10 @@
           ],
           "hooks": [
             "Which would you pick when it comes to {subject}? Defend your answer",
-            "Unpopular opinion about {subject}. Agree or not?"
+            "Unpopular opinion about {subject}. Agree or not?",
+            "Let's argue about {subject} in the comments",
+            "Tell me I am wrong about {subject}",
+            "Your honest opinion on {subject}, go!"
           ],
           "howTo": [
             "Take a side yourself. It invites people to disagree.",
@@ -582,8 +649,11 @@
               "CTA: \"Mana satu, dan kenapa? Komen di bawah.\""
             ],
             "hooks": [
-              "Mana satu pilihan anda bila melibatkan {subject}? Pertahankan jawapan anda",
-              "Pendapat tak popular tentang {subject}. Setuju atau tidak?"
+              "Mana satu pilihan korang bila melibatkan {subject}? Pertahankan jawapan korang",
+              "Pendapat tak popular tentang {subject}. Setuju atau tidak?",
+              "Jom gaduh pasal {subject} kat ruangan komen",
+              "Cakap aku salah pasal {subject}",
+              "Pendapat jujur korang pasal {subject}, go!"
             ],
             "howTo": [
               "Pilih satu pihak sendiri. Ia jemput orang untuk tak setuju.",
@@ -608,7 +678,10 @@
           ],
           "hooks": [
             "Only 1 in 10 people get this right about {subject}",
-            "Quick quiz: how much do you really know about {subject}?"
+            "Quick quiz: how much do you really know about {subject}?",
+            "Can you pass this {subject} quiz?",
+            "Only experts get this question about {subject}",
+            "Pause the video if you know the answer about {subject}"
           ],
           "howTo": [
             "Make it hard enough to be interesting, easy enough to guess.",
@@ -628,7 +701,10 @@
             ],
             "hooks": [
               "Hanya 1 dalam 10 orang jawab betul tentang {subject}",
-              "Kuiz pantas: sejauh mana anda tahu tentang {subject}?"
+              "Kuiz pantas: sejauh mana korang tahu tentang {subject}?",
+              "Boleh lulus tak kuiz pasal {subject} ni?",
+              "Pakar je boleh jawab soalan ni pasal {subject}",
+              "Pause video kalau korang tahu jawapan pasal {subject}"
             ],
             "howTo": [
               "Cukup susah untuk menarik, cukup senang untuk diteka.",
@@ -652,7 +728,10 @@
           ],
           "hooks": [
             "Stop scrolling if you've been thinking about {subject}",
-            "If you care about {subject}, this offer is for you"
+            "If you care about {subject}, this offer is for you",
+            "This is your sign to finally try {subject}",
+            "Last call for {subject}",
+            "Everything you need, in one: {subject}"
           ],
           "howTo": [
             "Create urgency with a real deadline or limited stock.",
@@ -671,8 +750,11 @@
               "CTA: cara membeli, sekarang juga."
             ],
             "hooks": [
-              "Berhenti scroll kalau anda dah lama fikir tentang {subject}",
-              "Kalau anda ambil berat tentang {subject}, tawaran ini untuk anda"
+              "Berhenti scroll kalau korang dah lama fikir tentang {subject}",
+              "Kalau korang ambil berat tentang {subject}, tawaran ini untuk korang",
+              "Ni petanda untuk korang cuba {subject}",
+              "Panggilan terakhir untuk {subject}",
+              "Semua yang korang perlu, dalam satu: {subject}"
             ],
             "howTo": [
               "Cipta rasa terdesak dengan tarikh tamat sebenar atau stok terhad.",
@@ -696,7 +778,10 @@
           ],
           "hooks": [
             "What our customers really say about {subject}",
-            "Real customers, honest opinions on {subject}"
+            "Real customers, honest opinions on {subject}",
+            "Our customers said it better than we could: {subject}",
+            "This review about {subject} made our day",
+            "We read every comment about {subject}. Here are the best"
           ],
           "howTo": [
             "Always ask the customer for permission first.",
@@ -716,7 +801,10 @@
             ],
             "hooks": [
               "Apa pelanggan kami betul-betul cakap tentang {subject}",
-              "Pelanggan sebenar, pendapat jujur tentang {subject}"
+              "Pelanggan sebenar, pendapat jujur tentang {subject}",
+              "Pelanggan kami cakap lagi baik dari kami: {subject}",
+              "Review pasal {subject} ni buat hari kami",
+              "Kami baca setiap komen pasal {subject}. Ni yang terbaik"
             ],
             "howTo": [
               "Sentiasa minta izin pelanggan dahulu.",
@@ -740,7 +828,10 @@
           ],
           "hooks": [
             "The biggest problem with {subject}, and how we fix it",
-            "Still struggling when it comes to {subject}? Watch this"
+            "Still struggling when it comes to {subject}? Watch this",
+            "If {subject} stresses you out, watch this",
+            "The fix for {subject} is easier than you think",
+            "Tired of struggling with {subject}? We got you"
           ],
           "howTo": [
             "Exaggerate the problem a little for effect, but keep the solution real.",
@@ -760,7 +851,10 @@
             ],
             "hooks": [
               "Masalah terbesar tentang {subject}, dan cara kami selesaikannya",
-              "Masih pening bila melibatkan {subject}? Tonton ini"
+              "Masih pening bila melibatkan {subject}? Tonton ini",
+              "Kalau {subject} buat korang stres, tengok ni",
+              "Cara selesaikan {subject} lagi senang dari yang korang sangka",
+              "Penat bergelut dengan {subject}? Kami ada jalan"
             ],
             "howTo": [
               "Besarkan sedikit masalahnya untuk kesan, tetapi kekalkan penyelesaian yang sebenar.",
@@ -785,7 +879,10 @@
           ],
           "hooks": [
             "POV: you finally understand {subject}",
-            "When your friend asks you about {subject}"
+            "When your friend asks you about {subject}",
+            "Types of people when it comes to {subject}",
+            "Me pretending I understand {subject}",
+            "When your mum finds out about {subject}"
           ],
           "howTo": [
             "Use a trending sound or skit format so the algorithm pushes it.",
@@ -804,8 +901,11 @@
               "CTA: \"Tag kawan yang buat macam ni.\""
             ],
             "hooks": [
-              "POV: akhirnya anda faham tentang {subject}",
-              "Bila kawan tanya anda tentang {subject}"
+              "POV: akhirnya korang faham tentang {subject}",
+              "Bila kawan tanya korang tentang {subject}",
+              "Jenis-jenis orang bila melibatkan {subject}",
+              "Aku buat-buat faham pasal {subject}",
+              "Bila mak korang dapat tahu pasal {subject}"
             ],
             "howTo": [
               "Guna bunyi atau format sketsa yang trending supaya algoritma tolak video anda.",
@@ -829,7 +929,10 @@
           ],
           "hooks": [
             "Me after figuring out {subject}",
-            "Our team when someone asks about {subject}"
+            "Our team when someone asks about {subject}",
+            "When {subject} finally works out",
+            "Dancing because {subject} is finally here",
+            "The vibe when someone mentions {subject}"
           ],
           "howTo": [
             "Learn the trend from the original video first.",
@@ -848,7 +951,10 @@
             ],
             "hooks": [
               "Saya selepas faham tentang {subject}",
-              "Team kami bila ada orang tanya tentang {subject}"
+              "Team kami bila ada orang tanya tentang {subject}",
+              "Bila {subject} akhirnya menjadi",
+              "Menari sebab {subject} akhirnya sampai",
+              "Vibe bila ada orang sebut pasal {subject}"
             ],
             "howTo": [
               "Belajar trend daripada video asal dahulu.",
@@ -871,7 +977,10 @@
           ],
           "hooks": [
             "Me explaining {subject} to my friends",
-            "Nobody: ... Me when someone mentions {subject}:"
+            "Nobody: ... Me when someone mentions {subject}:",
+            "Tell me you love {subject} without telling me",
+            "Nobody: ... Absolutely nobody: ... Me talking about {subject}",
+            "That one friend who always brings up {subject}"
           ],
           "howTo": [
             "Use the sound while it's rising, not when it's already everywhere.",
@@ -890,7 +999,10 @@
             ],
             "hooks": [
               "Saya terangkan tentang {subject} kepada kawan-kawan",
-              "Tiada siapa: ... Saya bila ada orang sebut tentang {subject}:"
+              "Takde siapa: ... Saya bila ada orang sebut tentang {subject}:",
+              "Cakap korang suka {subject} tanpa cakap",
+              "Takde siapa: ... Langsung takde siapa: ... Aku cakap pasal {subject}",
+              "Kawan yang asyik sebut pasal {subject}"
             ],
             "howTo": [
               "Guna bunyi itu ketika ia sedang naik, bukan bila semua orang dah guna.",
@@ -914,7 +1026,10 @@
           ],
           "hooks": [
             "From zero to this: our journey with {subject}",
-            "Before and after: see what changed with {subject}"
+            "Before and after: see what changed with {subject}",
+            "Watch {subject} transform in 15 seconds",
+            "The glow-up of {subject}",
+            "You will not believe this is the same {subject}"
           ],
           "howTo": [
             "Shoot the before and after from the exact same angle.",
@@ -934,7 +1049,10 @@
             ],
             "hooks": [
               "Dari kosong ke tahap ini: perjalanan kami dengan {subject}",
-              "Sebelum dan selepas: tengok apa yang berubah dengan {subject}"
+              "Sebelum dan selepas: tengok apa yang berubah dengan {subject}",
+              "Tengok {subject} berubah dalam 15 saat",
+              "Glow-up {subject}",
+              "Korang takkan percaya ni {subject} yang sama"
             ],
             "howTo": [
               "Rakam sebelum dan selepas dari sudut yang sama.",
@@ -958,7 +1076,10 @@
           ],
           "hooks": [
             "I almost gave up on {subject}",
-            "From struggling with {subject} to this"
+            "From struggling with {subject} to this",
+            "Nobody saw how hard {subject} really was",
+            "Behind every win is a struggle. This is {subject}",
+            "We failed at {subject} so many times before this"
           ],
           "howTo": [
             "Use old photos and videos. They make it real.",
@@ -978,7 +1099,10 @@
             ],
             "hooks": [
               "Saya hampir putus asa dengan {subject}",
-              "Dari bergelut dengan {subject} sampai ke tahap ini"
+              "Dari bergelut dengan {subject} sampai ke tahap ini",
+              "Takde siapa nampak betapa susahnya {subject}",
+              "Di sebalik setiap kejayaan ada perjuangan. Ni {subject}",
+              "Kami gagal dengan {subject} banyak kali sebelum ni"
             ],
             "howTo": [
               "Guna gambar dan video lama. Ia buat cerita lebih nyata.",
@@ -1002,7 +1126,10 @@
           ],
           "hooks": [
             "If you're worried about {subject}, watch this",
-            "A reminder for anyone thinking about {subject}"
+            "A reminder for anyone thinking about {subject}",
+            "If you've been doubting {subject}, this is your sign",
+            "Don't give up on {subject}. Here's why",
+            "You are closer than you think. This is about {subject}"
           ],
           "howTo": [
             "Speak slowly and look into the lens.",
@@ -1021,8 +1148,11 @@
               "CTA: \"Hantar video ni kepada orang yang perlukannya.\""
             ],
             "hooks": [
-              "Kalau anda risau tentang {subject}, tonton ini",
-              "Peringatan untuk sesiapa yang sedang fikir tentang {subject}"
+              "Kalau korang risau tentang {subject}, tonton ini",
+              "Peringatan untuk sesiapa yang sedang fikir tentang {subject}",
+              "Kalau korang ragu-ragu pasal {subject}, ni petanda korang",
+              "Jangan putus asa dengan {subject}. Ni sebabnya",
+              "Korang lagi dekat dari yang korang sangka. Ni pasal {subject}"
             ],
             "howTo": [
               "Bercakap perlahan dan pandang lensa.",
@@ -1046,7 +1176,10 @@
           ],
           "hooks": [
             "A day in the life at {brand}: {subject}",
-            "Come spend a day with us and see {subject} up close"
+            "Come spend a day with us and see {subject} up close",
+            "5am to midnight: a real day behind {subject}",
+            "What a day of {subject} actually looks like",
+            "Follow me for a day: {subject}"
           ],
           "howTo": [
             "Put the time on screen for each clip.",
@@ -1066,7 +1199,10 @@
             ],
             "hooks": [
               "Sehari di {brand}: {subject}",
-              "Jom luangkan sehari bersama kami dan tengok {subject} dari dekat"
+              "Jom luangkan sehari bersama kami dan tengok {subject} dari dekat",
+              "5 pagi sampai tengah malam: sehari sebenar di sebalik {subject}",
+              "Macam ni rupa sehari dengan {subject}",
+              "Ikut aku sehari: {subject}"
             ],
             "howTo": [
               "Letak masa di skrin untuk setiap klip.",
@@ -1090,7 +1226,10 @@
           ],
           "hooks": [
             "How it's made: {subject}",
-            "What really goes on behind {subject}"
+            "What really goes on behind {subject}",
+            "From scratch to finish: {subject}",
+            "Oddly satisfying: the making of {subject}",
+            "This is how much work goes into {subject}"
           ],
           "howTo": [
             "Close-ups and satisfying sounds work best.",
@@ -1110,7 +1249,10 @@
             ],
             "hooks": [
               "Macam mana ia dibuat: {subject}",
-              "Apa sebenarnya berlaku di sebalik {subject}"
+              "Apa sebenarnya berlaku di sebalik {subject}",
+              "Dari mula sampai siap: {subject}",
+              "Satisfying gila: proses buat {subject}",
+              "Ni la banyaknya kerja di sebalik {subject}"
             ],
             "howTo": [
               "Close-up dan bunyi yang memuaskan paling berkesan.",
@@ -1134,7 +1276,10 @@
           ],
           "hooks": [
             "Meet the people behind {subject}",
-            "The team that handles {subject}"
+            "The team that handles {subject}",
+            "The faces behind {subject}",
+            "Meet the person who makes {subject} happen",
+            "Say hi to the team behind {subject}"
           ],
           "howTo": [
             "Ask everyone the same fun question to make it a series.",
@@ -1154,7 +1299,10 @@
             ],
             "hooks": [
               "Kenali orang di sebalik {subject}",
-              "Team yang uruskan {subject}"
+              "Team yang uruskan {subject}",
+              "Wajah-wajah di sebalik {subject}",
+              "Kenali orang yang jayakan {subject}",
+              "Say hi kat team di sebalik {subject}"
             ],
             "howTo": [
               "Tanya semua orang soalan seronok yang sama supaya ia jadi siri.",
@@ -1560,7 +1708,9 @@
           "hooks": [
             "What makes {subject} different",
             "Why our customers choose {subject}",
-            "Everything you get with {subject}"
+            "Everything you get with {subject}",
+            "The details nobody notices about {subject}",
+            "Why {subject} is worth every ringgit"
           ],
           "ms": {
             "description": "Bercakap tentang apa yang anda jual: ciri, manfaat, cara ia dibuat dan cara menggunakannya.",
@@ -1580,7 +1730,9 @@
             "hooks": [
               "Apa yang buat {subject} berbeza",
               "Kenapa pelanggan kami pilih {subject}",
-              "Semua yang anda dapat dengan {subject}"
+              "Semua yang korang dapat dengan {subject}",
+              "Detail yang orang tak perasan pasal {subject}",
+              "Kenapa {subject} berbaloi setiap ringgit"
             ]
           }
         },
@@ -1603,7 +1755,9 @@
           "hooks": [
             "{audience}, this one is about {subject}",
             "What {audience} should know about {subject}",
-            "Made for {audience}: {subject}"
+            "Made for {audience}: {subject}",
+            "If you are one of the {audience}, {subject} is for you",
+            "Real talk with {audience} about {subject}"
           ],
           "ms": {
             "description": "Bercakap tentang pelanggan ideal anda (masalah, kehendak dan kehidupan harian mereka) supaya mereka rasa difahami.",
@@ -1622,7 +1776,9 @@
             "hooks": [
               "{audience}, video ini tentang {subject}",
               "Apa yang {audience} perlu tahu tentang {subject}",
-              "Khas untuk {audience}: {subject}"
+              "Khas untuk {audience}: {subject}",
+              "Kalau korang antara {audience}, {subject} untuk korang",
+              "Borak jujur dengan {audience} pasal {subject}"
             ]
           }
         },
@@ -1647,7 +1803,9 @@
           "hooks": [
             "Comment 'NAK' and I'll send you everything about {subject}",
             "Want the full guide to {subject}? Comment below",
-            "DM us for the details on {subject}"
+            "DM us for the details on {subject}",
+            "Free for the first 20 people who comment: {subject}",
+            "Want {subject}? Drop a comment"
           ],
           "ms": {
             "description": "Content untuk kumpul kenalan atau pertanyaan: orang yang komen, DM atau daftar untuk dapatkan sesuatu daripada anda.",
@@ -1668,7 +1826,9 @@
             "hooks": [
               "Komen 'NAK' dan saya hantar semua info tentang {subject}",
               "Nak panduan penuh tentang {subject}? Komen di bawah",
-              "DM kami untuk dapatkan info tentang {subject}"
+              "DM kami untuk dapatkan info tentang {subject}",
+              "Percuma untuk 20 orang pertama yang komen: {subject}",
+              "Nak {subject}? Tinggalkan komen"
             ]
           }
         },
@@ -1692,7 +1852,9 @@
           "hooks": [
             "Gen Z vs millennials on {subject}",
             "Students vs working adults: {subject}",
-            "New to this? Here's your guide to {subject}"
+            "New to this? Here's your guide to {subject}",
+            "What every age group gets wrong about {subject}",
+            "Mums vs dads on {subject}"
           ],
           "ms": {
             "description": "Sesuaikan content dengan satu kumpulan spesifik (umur, jantina, lokasi, pendapatan atau peringkat hidup) supaya ia terasa dibuat untuk mereka.",
@@ -1712,7 +1874,9 @@
             "hooks": [
               "Gen Z vs milenial tentang {subject}",
               "Pelajar vs orang bekerja: {subject}",
-              "Baru nak cuba? Ini panduan anda untuk {subject}"
+              "Baru nak cuba? Ini panduan korang untuk {subject}",
+              "Apa yang setiap peringkat umur salah faham pasal {subject}",
+              "Mak vs ayah pasal {subject}"
             ]
           }
         },
@@ -1736,7 +1900,9 @@
           "hooks": [
             "Everyone's talking about this, so let's talk about {subject}",
             "What this week's news means for {subject}",
-            "Prices are going up. Here's what it means for {subject}"
+            "Prices are going up. Here's what it means for {subject}",
+            "Breaking: what this means for {subject}",
+            "Before you panic about the news, here's {subject}"
           ],
           "ms": {
             "description": "Kaitkan bisnes anda dengan apa yang orang sedang bualkan: berita, saat viral, perubahan polisi, kenaikan harga.",
@@ -1756,7 +1922,9 @@
             "hooks": [
               "Semua orang tengah bercakap tentang ini, jadi jom cakap tentang {subject}",
               "Apa maksud berita minggu ini untuk {subject}",
-              "Harga barang naik. Ini kesannya pada {subject}"
+              "Harga barang naik. Ini kesannya pada {subject}",
+              "Terkini: apa maksudnya untuk {subject}",
+              "Sebelum korang panik pasal berita, ni {subject}"
             ]
           }
         },
@@ -1780,7 +1948,9 @@
           "hooks": [
             "A fun fact about {subject}",
             "The history behind {subject} in 30 seconds",
-            "Did you know this about {subject}?"
+            "Did you know this about {subject}?",
+            "The surprising science behind {subject}",
+            "Trivia time: {subject}"
           ],
           "ms": {
             "description": "Fakta menarik, sejarah dan trivia tentang industri anda yang orang suka belajar dan kongsi.",
@@ -1800,7 +1970,9 @@
             "hooks": [
               "Fakta menarik tentang {subject}",
               "Sejarah di sebalik {subject} dalam 30 saat",
-              "Tahukah anda ini tentang {subject}?"
+              "Tahukah korang ini tentang {subject}?",
+              "Sains mengejutkan di sebalik {subject}",
+              "Masa trivia: {subject}"
             ]
           }
         },
@@ -1824,7 +1996,9 @@
           "hooks": [
             "You asked, we answered: {subject}",
             "The question we get every day about {subject}",
-            "Answering your top questions about {subject}"
+            "Answering your top questions about {subject}",
+            "Your most asked question about {subject}, answered",
+            "Quick answer: {subject}"
           ],
           "ms": {
             "description": "Jawab soalan yang pelanggan tanya berulang kali: dalam DM, di WhatsApp, di kaunter.",
@@ -1842,9 +2016,11 @@
             ],
             "example": "Ada hantar ke Sabah dan Sarawak? Ini caranya.",
             "hooks": [
-              "Anda tanya, kami jawab: {subject}",
+              "Korang tanya, kami jawab: {subject}",
               "Soalan yang kami dapat setiap hari tentang {subject}",
-              "Jawapan kepada soalan popular tentang {subject}"
+              "Jawapan kepada soalan popular tentang {subject}",
+              "Soalan paling banyak ditanya pasal {subject}, terjawab",
+              "Jawapan pantas: {subject}"
             ]
           }
         },
@@ -1868,7 +2044,9 @@
           "hooks": [
             "Why we care so much about {subject}",
             "The story you haven't heard about {subject}",
-            "What {brand} believes about {subject}"
+            "What {brand} believes about {subject}",
+            "Why {brand} does {subject} differently",
+            "The values behind {subject}"
           ],
           "ms": {
             "description": "Kisah pengasas, nilai, team dan misi anda: orang dan \"kenapa\" di sebalik bisnes ini.",
@@ -1887,8 +2065,10 @@
             "example": "Kenapa kami masih bungkus setiap order dengan tangan walaupun boleh guna mesin.",
             "hooks": [
               "Kenapa kami sangat ambil berat tentang {subject}",
-              "Cerita yang anda belum dengar tentang {subject}",
-              "Apa yang {brand} percaya tentang {subject}"
+              "Cerita yang korang belum dengar tentang {subject}",
+              "Apa yang {brand} percaya tentang {subject}",
+              "Kenapa {brand} buat {subject} dengan cara lain",
+              "Nilai di sebalik {subject}"
             ]
           }
         },
@@ -1912,7 +2092,9 @@
           "hooks": [
             "Getting ready for the festive season with {subject}",
             "Raya is coming. Have you sorted out {subject}?",
-            "Holiday plans? Don't forget {subject}"
+            "Holiday plans? Don't forget {subject}",
+            "Your festive checklist: {subject}",
+            "Make this Raya easier with {subject}"
           ],
           "ms": {
             "description": "Kaitkan content dengan kalendar: Raya, Tahun Baru Cina, Deepavali, Krismas, Merdeka, cuti sekolah, hari gaji, jualan akhir tahun.",
@@ -1932,7 +2114,9 @@
             "hooks": [
               "Bersiap untuk musim perayaan dengan {subject}",
               "Raya dah dekat. Dah settle {subject}?",
-              "Ada plan cuti? Jangan lupa {subject}"
+              "Ada plan cuti? Jangan lupa {subject}",
+              "Senarai semak perayaan korang: {subject}",
+              "Senangkan Raya tahun ni dengan {subject}"
             ]
           }
         },
@@ -1955,7 +2139,9 @@
           "hooks": [
             "The hack nobody told you about {subject}",
             "Try this trick with {subject}",
-            "Save this tip for {subject}"
+            "Save this tip for {subject}",
+            "A 10-second hack for {subject}",
+            "The pro tip for {subject} that changed everything"
           ],
           "ms": {
             "description": "Tips praktikal yang pantas untuk jimat masa, duit atau tenaga. Terus berguna dan orang suka save.",
@@ -1972,9 +2158,11 @@
             ],
             "example": "Rahsia kekalkan kek lapis lembap selama dua minggu.",
             "hooks": [
-              "Hack yang tiada siapa beritahu tentang {subject}",
+              "Hack yang takde siapa beritahu tentang {subject}",
               "Cuba trick ini dengan {subject}",
-              "Save tip ini untuk {subject}"
+              "Save tip ini untuk {subject}",
+              "Hack 10 saat untuk {subject}",
+              "Tip pro untuk {subject} yang ubah segalanya"
             ]
           }
         }
@@ -1989,7 +2177,7 @@
       "id": "hook",
       "label": "Hook",
       "question": "How will you grab attention in the first 3 seconds?",
-      "description": "The first 3 seconds decide whether people keep watching. Pick an opening technique.",
+      "description": "The first 3 seconds decide whether people keep watching. 23 opening techniques from proven creators, films and your storytelling knowledge base.",
       "briefLabel": "Open with",
       "optional": true,
       "color": "#db2777",
@@ -1999,26 +2187,44 @@
           "label": "Question",
           "description": "Open with a question the viewer wants answered, so they stay for the answer.",
           "brief": "Open with a question viewers need answered.",
-          "hooks": [
-            "Have you ever wondered about {subject}?",
-            "Why does nobody talk about {subject}?"
-          ],
           "howTo": [
             "Ask something your audience has actually wondered.",
-            "Put the question on screen as text too.",
+            "Say the question out loud; as on-screen text, a statement usually stops scrollers better than a question.",
             "Answer it by the end. Don't bait and switch."
+          ],
+          "hooks": [
+            "Have you ever wondered about {subject}?",
+            "Why does nobody talk about {subject}?",
+            "What if everything you knew about {subject} was wrong?",
+            "Do you actually know the truth about {subject}?",
+            "Ever noticed something strange about {subject}?",
+            "Can you guess what's special about {subject}?",
+            "Why is everyone suddenly talking about {subject}?",
+            "Want to know what nobody tells you about {subject}?"
+          ],
+          "references": [
+            {
+              "label": "Question Hook warning",
+              "note": "Your storytelling knowledge base: on-screen text hooks written as questions underperform statements (Bronze failure mode #11). Keep the question for the spoken line."
+            }
           ],
           "ms": {
             "description": "Buka dengan soalan yang penonton nak tahu jawapannya, supaya mereka terus tonton.",
             "brief": "Buka dengan soalan yang penonton perlu tahu jawapannya.",
-            "hooks": [
-              "Pernah tak anda terfikir tentang {subject}?",
-              "Kenapa tiada siapa bercakap tentang {subject}?"
-            ],
             "howTo": [
-              "Tanya sesuatu yang audiens anda memang pernah tertanya-tanya.",
-              "Letak soalan sebagai teks di skrin juga.",
+              "Tanya benda yang audiens memang pernah tertanya-tanya.",
+              "Sebut soalan tu; untuk teks di skrin, ayat penyata biasanya lebih berkesan hentikan scroll.",
               "Jawab sebelum video habis. Jangan umpan kosong."
+            ],
+            "hooks": [
+              "Pernah tak korang terfikir pasal {subject}?",
+              "Kenapa takde siapa cakap pasal {subject}?",
+              "Macam mana kalau semua yang korang tahu pasal {subject} salah?",
+              "Korang betul-betul tahu ke kebenaran pasal {subject}?",
+              "Perasan tak ada benda pelik pasal {subject}?",
+              "Boleh teka apa yang istimewa pasal {subject}?",
+              "Kenapa semua orang tiba-tiba cakap pasal {subject}?",
+              "Nak tahu apa yang orang tak pernah beritahu pasal {subject}?"
             ]
           }
         },
@@ -2027,54 +2233,84 @@
           "label": "Bold Statement",
           "description": "Open with a strong, slightly controversial claim that makes people want to argue or learn more.",
           "brief": "Open with a bold, slightly controversial statement.",
-          "hooks": [
-            "Everything you know about {subject} is wrong.",
-            "This will change how you think about {subject}."
-          ],
           "howTo": [
             "Say it with confidence, straight to camera.",
             "Back it up in the video, or you lose trust.",
             "Controversial is fine; offensive is not."
           ],
+          "hooks": [
+            "Everything you know about {subject} is wrong.",
+            "This will change how you think about {subject}.",
+            "{subject} is not what you think.",
+            "Nobody is ready for the truth about {subject}.",
+            "I'll say it: most people get {subject} completely wrong.",
+            "Hot take: {subject} matters more than you think.",
+            "This is the most underrated thing about {subject}.",
+            "Stop scrolling. You need to hear this about {subject}."
+          ],
+          "references": [
+            {
+              "label": "Contrarian formula",
+              "note": "Short-form hook guides: \"Most people think [belief]. Here's why that's wrong.\""
+            }
+          ],
           "ms": {
-            "description": "Buka dengan kenyataan yang kuat dan sedikit kontroversi supaya orang nak berdebat atau tahu lebih lanjut.",
-            "brief": "Buka dengan kenyataan berani yang sedikit kontroversi.",
-            "hooks": [
-              "Semua yang anda tahu tentang {subject} adalah salah.",
-              "Ini akan ubah cara anda fikir tentang {subject}."
-            ],
+            "description": "Buka dengan kenyataan yang kuat dan sikit kontroversi supaya orang nak berdebat atau tahu lebih.",
+            "brief": "Buka dengan kenyataan berani yang sikit kontroversi.",
             "howTo": [
               "Cakap dengan yakin, terus ke kamera.",
-              "Buktikan dalam video, atau anda hilang kepercayaan.",
-              "Kontroversi tak apa; menyinggung tidak."
+              "Buktikan dalam video, kalau tak hilang kepercayaan.",
+              "Kontroversi tak apa; menyinggung jangan."
+            ],
+            "hooks": [
+              "Semua yang korang tahu pasal {subject} salah.",
+              "Ni akan ubah cara korang fikir pasal {subject}.",
+              "{subject} bukan macam yang korang sangka.",
+              "Takde siapa bersedia dengan kebenaran pasal {subject}.",
+              "Aku cakap je lah: ramai orang salah faham pasal {subject}.",
+              "Hot take: {subject} lagi penting dari yang korang sangka.",
+              "Ni benda paling underrated pasal {subject}.",
+              "Stop scroll. Korang kena dengar ni pasal {subject}."
             ]
           }
         },
         {
           "id": "pov-setup",
           "label": "POV Setup",
-          "description": "Set a scene with a 'POV:' caption so viewers instantly imagine themselves in it.",
-          "brief": "Open with a 'POV:' caption that puts viewers in the scene.",
-          "hooks": [
-            "POV: you just found out the truth about {subject}",
-            "POV: your friend won't stop talking about {subject}"
-          ],
+          "description": "Set a scene with a \"POV:\" caption so viewers instantly imagine themselves in it.",
+          "brief": "Open with a \"POV:\" caption that puts viewers in the scene.",
           "howTo": [
             "The POV line must be readable in under 2 seconds.",
             "Make it relatable to your target audience.",
             "Pairs well with the POV shooting style and Lakonan."
           ],
+          "hooks": [
+            "POV: you just found out the truth about {subject}",
+            "POV: your friend won't stop talking about {subject}",
+            "POV: you finally tried {subject}",
+            "POV: it's 2am and you're googling {subject}",
+            "POV: you're the only one who knows about {subject}",
+            "POV: someone at work asks you about {subject}",
+            "POV: you were wrong about {subject} all along",
+            "POV: your mum sees {subject} for the first time"
+          ],
           "ms": {
-            "description": "Sediakan babak dengan kapsyen \"POV:\" supaya penonton terus bayangkan diri mereka di situ.",
+            "description": "Sediakan babak dengan kapsyen \"POV:\" supaya penonton terus bayangkan diri dorang di situ.",
             "brief": "Buka dengan kapsyen \"POV:\" yang letak penonton dalam babak.",
-            "hooks": [
-              "POV: anda baru tahu kebenaran tentang {subject}",
-              "POV: kawan anda tak berhenti cakap tentang {subject}"
-            ],
             "howTo": [
               "Ayat POV mesti boleh dibaca bawah 2 saat.",
-              "Buat ia relate dengan audiens sasaran.",
+              "Buat dia relate dengan audiens sasaran.",
               "Sesuai dengan gaya rakaman POV dan Lakonan."
+            ],
+            "hooks": [
+              "POV: korang baru tahu kebenaran pasal {subject}",
+              "POV: kawan korang tak berhenti cakap pasal {subject}",
+              "POV: korang akhirnya cuba {subject}",
+              "POV: pukul 2 pagi dan korang tengah google pasal {subject}",
+              "POV: korang sorang je yang tahu pasal {subject}",
+              "POV: orang ofis tanya korang pasal {subject}",
+              "POV: selama ni korang salah pasal {subject}",
+              "POV: mak korang nampak {subject} buat kali pertama"
             ]
           }
         },
@@ -2083,50 +2319,88 @@
           "label": "Call-out",
           "description": "Call out a specific group so they feel the video was made just for them.",
           "brief": "Open by calling out {audience} directly.",
-          "hooks": [
-            "Calling all {audience}: let's talk about {subject}.",
-            "{audience}, this one's for you. It's about {subject}."
-          ],
           "howTo": [
             "Be specific: 'first-time home buyers', not 'everyone'.",
             "Say it and show it as text in the first second."
           ],
+          "hooks": [
+            "Calling all {audience}: let's talk about {subject}.",
+            "{audience}, this one's for you. It's about {subject}.",
+            "{audience}, stop scrolling. This is about {subject}.",
+            "If you're one of the {audience} watching this, you need to see {subject}.",
+            "Only {audience} will understand {subject}.",
+            "Dear {audience}, we need to talk about {subject}.",
+            "This is for the {audience} who keep asking about {subject}.",
+            "Hey {audience}! Quick one about {subject}."
+          ],
+          "references": [
+            {
+              "label": "Direct address formula",
+              "note": "Short-form hook guides: \"If you're [audience], stop doing [problem].\" Viewers who match feel it was made for them."
+            }
+          ],
           "ms": {
-            "description": "Panggil satu kumpulan spesifik supaya mereka rasa video ini dibuat khas untuk mereka.",
+            "description": "Panggil satu kumpulan spesifik supaya dorang rasa video ni dibuat khas untuk dorang.",
             "brief": "Buka dengan memanggil {audience} secara terus.",
-            "hooks": [
-              "Untuk semua {audience}: jom cakap tentang {subject}.",
-              "{audience}, video ini untuk anda. Ia tentang {subject}."
-            ],
             "howTo": [
               "Spesifik: \"pembeli rumah pertama\", bukan \"semua orang\".",
               "Sebut dan tunjuk sebagai teks dalam saat pertama."
+            ],
+            "hooks": [
+              "Untuk semua {audience}: jom cakap pasal {subject}.",
+              "{audience}, video ni untuk korang. Pasal {subject}.",
+              "{audience}, stop scroll. Ni pasal {subject}.",
+              "Kalau korang antara {audience} yang tengok ni, korang kena tengok {subject}.",
+              "Hanya {audience} je faham {subject}.",
+              "Dear {audience}, kita kena cakap pasal {subject}.",
+              "Ni untuk {audience} yang asyik tanya pasal {subject}.",
+              "Hai {audience}! Satu benda pasal {subject}."
             ]
           }
         },
         {
           "id": "shocking-number",
           "label": "Shocking Number",
-          "description": "Open with a surprising statistic or number.",
+          "description": "Open with a surprising statistic or number. Fill the blanks (___) with your real figures.",
           "brief": "Open with a surprising number or statistic.",
-          "hooks": [
-            "9 out of 10 people don't know this about {subject}.",
-            "Only 1% of people know this about {subject}."
-          ],
           "howTo": [
-            "Use real numbers. Make sure the statistic is true.",
+            "Use real numbers only. Fill every ___ with a true figure.",
+            "The more specific, the better: \"RM140 juta\", not \"banyak duit\".",
             "Show the number big on screen."
           ],
+          "hooks": [
+            "9 out of 10 people don't know this about {subject}.",
+            "Only 1% of people know this about {subject}.",
+            "We've been asked about {subject} ___ times this month.",
+            "___ customers can't be wrong about {subject}.",
+            "It took us ___ years to get {subject} right.",
+            "One number changed how I see {subject}: ___.",
+            "RM___. That's what {subject} really costs.",
+            "___ hours of testing went into {subject}."
+          ],
+          "references": [
+            {
+              "label": "Numbers as Drama",
+              "note": "Your storytelling knowledge base (@faizrazakdesign): build tension, pause, drop the most specific number, let it breathe."
+            }
+          ],
           "ms": {
-            "description": "Buka dengan statistik atau angka yang mengejutkan.",
-            "brief": "Buka dengan angka atau statistik yang mengejutkan.",
-            "hooks": [
-              "9 daripada 10 orang tak tahu ini tentang {subject}.",
-              "Hanya 1% orang tahu ini tentang {subject}."
-            ],
+            "description": "Buka dengan statistik atau nombor yang mengejutkan. Isi ruang kosong (___) dengan angka sebenar.",
+            "brief": "Buka dengan nombor atau statistik yang mengejutkan.",
             "howTo": [
-              "Guna angka sebenar. Pastikan statistik itu benar.",
-              "Tunjuk angka besar di skrin."
+              "Guna nombor sebenar je. Isi setiap ___ dengan angka yang betul.",
+              "Makin spesifik makin bagus: \"RM140 juta\", bukan \"banyak duit\".",
+              "Tunjuk nombor tu besar di skrin."
+            ],
+            "hooks": [
+              "9 daripada 10 orang tak tahu ni pasal {subject}.",
+              "Cuma 1% orang tahu ni pasal {subject}.",
+              "Bulan ni je kami dah kena tanya pasal {subject} ___ kali.",
+              "___ pelanggan tak mungkin salah pasal {subject}.",
+              "Kami ambil ___ tahun untuk betulkan {subject}.",
+              "Satu nombor ubah cara aku tengok {subject}: ___.",
+              "RM___. Itu kos sebenar {subject}.",
+              "___ jam ujian untuk {subject}."
             ]
           }
         },
@@ -2135,24 +2409,36 @@
           "label": "Mistake Warning",
           "description": "Warn viewers about a mistake they might be making. Nobody wants to be the one getting it wrong.",
           "brief": "Open with a warning about a common mistake.",
-          "hooks": [
-            "Stop making this mistake when it comes to {subject}.",
-            "The #1 mistake people make when it comes to {subject}."
-          ],
           "howTo": [
             "Name the mistake fast, then explain the fix.",
             "Use a red cross or buzzer sound for emphasis."
           ],
+          "hooks": [
+            "Stop making this mistake when it comes to {subject}.",
+            "The #1 mistake people make when it comes to {subject}.",
+            "Don't even think about {subject} until you watch this.",
+            "You're probably getting {subject} wrong.",
+            "I wasted months on {subject} before I learned this.",
+            "Please don't make this mistake with {subject}.",
+            "Avoid this if you care about {subject}.",
+            "3 mistakes that ruin {subject}."
+          ],
           "ms": {
-            "description": "Beri amaran tentang kesilapan yang mungkin penonton sedang buat. Tiada siapa nak jadi orang yang buat silap.",
-            "brief": "Buka dengan amaran tentang kesilapan biasa.",
-            "hooks": [
-              "Berhenti buat kesilapan ini bila melibatkan {subject}.",
-              "Kesilapan #1 yang orang buat bila melibatkan {subject}."
-            ],
+            "description": "Beri amaran pasal kesilapan yang mungkin penonton sedang buat. Takde siapa nak jadi orang yang silap.",
+            "brief": "Buka dengan amaran pasal kesilapan biasa.",
             "howTo": [
-              "Sebut kesilapan dengan cepat, kemudian terangkan cara betulkan.",
+              "Sebut kesilapan cepat-cepat, lepas tu terangkan cara betulkan.",
               "Guna pangkah merah atau bunyi buzzer untuk penekanan."
+            ],
+            "hooks": [
+              "Stop buat kesilapan ni bila melibatkan {subject}.",
+              "Kesilapan #1 orang buat bila melibatkan {subject}.",
+              "Jangan fikir pasal {subject} sebelum tengok video ni.",
+              "Mesti korang salah faham pasal {subject}.",
+              "Aku bazir berbulan-bulan dengan {subject} sebelum belajar benda ni.",
+              "Tolong jangan buat silap ni dengan {subject}.",
+              "Elak benda ni kalau korang kisah pasal {subject}.",
+              "3 kesilapan yang rosakkan {subject}."
             ]
           }
         },
@@ -2161,24 +2447,42 @@
           "label": "Result First",
           "description": "Show the final result in the first second, then explain how you got there.",
           "brief": "Open with the end result, then show how you got there.",
-          "hooks": [
-            "Here's the end result. Now let me show you {subject}.",
-            "Watch till the end to see what happened with {subject}."
-          ],
           "howTo": [
             "The result must be visually impressive.",
             "Works great with Before & After and How-To."
           ],
+          "hooks": [
+            "Here's the end result. Now let me show you {subject}.",
+            "Watch till the end to see what happened with {subject}.",
+            "This is what {subject} looks like done right.",
+            "Look at this. Now let me explain {subject}.",
+            "Spoiler: {subject} works. Here's how.",
+            "Before I explain {subject}, look at this.",
+            "From this to this: {subject}.",
+            "Wait for the final result of {subject}."
+          ],
+          "references": [
+            {
+              "label": "Proof-first hook",
+              "note": "Short-form hook guides: lead with evidence or results before explaining, so viewers trust you enough to stay."
+            }
+          ],
           "ms": {
-            "description": "Tunjuk hasil akhir dalam saat pertama, kemudian terangkan bagaimana anda sampai ke situ.",
-            "brief": "Buka dengan hasil akhir, kemudian tunjuk cara anda sampai ke situ.",
-            "hooks": [
-              "Ini hasil akhirnya. Sekarang saya tunjukkan {subject}.",
-              "Tonton sampai habis untuk tengok apa jadi dengan {subject}."
-            ],
+            "description": "Tunjuk hasil akhir dalam saat pertama, lepas tu terangkan macam mana sampai ke situ.",
+            "brief": "Buka dengan hasil akhir, lepas tu tunjuk cara sampai ke situ.",
             "howTo": [
               "Hasil mesti nampak hebat secara visual.",
               "Sangat sesuai dengan Before & After dan How-To."
+            ],
+            "hooks": [
+              "Ni hasil akhir. Sekarang aku tunjuk {subject}.",
+              "Tengok sampai habis untuk tahu apa jadi dengan {subject}.",
+              "Macam ni rupanya {subject} bila buat dengan betul.",
+              "Tengok ni dulu. Lepas tu aku terangkan {subject}.",
+              "Spoiler: {subject} menjadi. Ni caranya.",
+              "Sebelum aku terangkan {subject}, tengok ni.",
+              "Dari ni jadi ni: {subject}.",
+              "Tunggu hasil akhir {subject}."
             ]
           }
         },
@@ -2187,24 +2491,656 @@
           "label": "Challenge",
           "description": "Challenge viewers to guess, spot or answer something before you reveal it.",
           "brief": "Open by challenging viewers to guess before the reveal.",
-          "hooks": [
-            "I bet you can't guess this about {subject}.",
-            "Try not to be surprised by this about {subject}."
-          ],
           "howTo": [
             "Make the reveal worth waiting for.",
             "Tell them to comment their guess before the reveal."
           ],
+          "hooks": [
+            "I bet you can't guess this about {subject}.",
+            "Try not to be surprised by this about {subject}.",
+            "Only real fans know this about {subject}.",
+            "Guess the price of {subject} before I reveal it.",
+            "You have 3 seconds to guess this about {subject}.",
+            "Comment your guess before I reveal {subject}.",
+            "I challenge you to find a flaw in {subject}.",
+            "Can you spot what's different about {subject}?"
+          ],
           "ms": {
-            "description": "Cabar penonton untuk teka, cari atau jawab sesuatu sebelum anda dedahkan.",
-            "brief": "Buka dengan mencabar penonton meneka sebelum didedahkan.",
-            "hooks": [
-              "Saya berani kata anda tak dapat teka ini tentang {subject}.",
-              "Cuba jangan terkejut dengan fakta ini tentang {subject}."
-            ],
+            "description": "Cabar penonton teka, cari atau jawab sesuatu sebelum korang dedahkan.",
+            "brief": "Buka dengan cabar penonton teka sebelum didedahkan.",
             "howTo": [
               "Pastikan pendedahan berbaloi ditunggu.",
-              "Suruh mereka komen tekaan sebelum jawapan didedahkan."
+              "Suruh dorang komen tekaan sebelum jawapan didedahkan."
+            ],
+            "hooks": [
+              "Aku berani kata korang tak boleh teka ni pasal {subject}.",
+              "Cuba jangan terkejut dengan ni pasal {subject}.",
+              "Peminat sebenar je tahu ni pasal {subject}.",
+              "Teka harga {subject} sebelum aku dedahkan.",
+              "Korang ada 3 saat untuk teka ni pasal {subject}.",
+              "Komen tekaan korang sebelum aku dedahkan {subject}.",
+              "Aku cabar korang cari kelemahan {subject}.",
+              "Boleh tak korang nampak apa yang lain pasal {subject}?"
+            ]
+          }
+        },
+        {
+          "id": "betrayal",
+          "label": "Betrayal",
+          "description": "A trusted party lets someone down, or the industry hides something. Conflict in the first sentence makes people stay.",
+          "brief": "Open with a betrayal or a hidden truth about the industry.",
+          "howTo": [
+            "Name a party the audience already has feelings about.",
+            "Only claim what you can prove. Never accuse a real company without evidence.",
+            "Conflict must land in the first sentence, not after context."
+          ],
+          "hooks": [
+            "The {niche} industry doesn't want you to know about {subject}.",
+            "Big brands have been hiding the truth about {subject}.",
+            "They copied {subject}. Here's what happened next.",
+            "We trusted them with {subject}. Big mistake.",
+            "What the industry never told you about {subject}.",
+            "Someone we trusted almost ruined {subject}."
+          ],
+          "references": [
+            {
+              "label": "Betrayal hook (@samadsaidwhaaat)",
+              "note": "Your storytelling knowledge base: \"Nintendo khianat Sony depan dunia\", 610K views, 7.44% engagement."
+            }
+          ],
+          "ms": {
+            "description": "Pihak yang dipercayai mengecewakan, atau industri sorok sesuatu. Konflik dalam ayat pertama buat orang stay.",
+            "brief": "Buka dengan pengkhianatan atau kebenaran yang disorok industri.",
+            "howTo": [
+              "Sebut pihak yang audiens memang ada perasaan terhadapnya.",
+              "Dakwa benda yang korang boleh buktikan je. Jangan tuduh syarikat sebenar tanpa bukti.",
+              "Konflik mesti sampai dalam ayat pertama, bukan lepas konteks."
+            ],
+            "hooks": [
+              "Industri {niche} tak nak korang tahu pasal {subject}.",
+              "Brand besar dah lama sorok kebenaran pasal {subject}.",
+              "Dorang tiru {subject}. Tengok apa jadi lepas tu.",
+              "Kami percaya dorang dengan {subject}. Silap besar.",
+              "Apa yang industri tak pernah beritahu korang pasal {subject}.",
+              "Orang yang kami percaya hampir musnahkan {subject}."
+            ]
+          }
+        },
+        {
+          "id": "paradox",
+          "label": "Paradox",
+          "description": "A contradiction the viewer cannot resolve yet, so they have to keep watching to understand it.",
+          "brief": "Open with a paradox the video goes on to explain.",
+          "howTo": [
+            "The two halves must genuinely contradict each other.",
+            "Open the question; never state the answer in the hook."
+          ],
+          "hooks": [
+            "The most boring thing about {subject} is actually the most genius.",
+            "{subject} shouldn't work. But it does.",
+            "The thing everyone hates about {subject} is exactly why it works.",
+            "The less we changed {subject}, the more people loved it.",
+            "The weirdest thing about {subject} is why people love it.",
+            "{subject} breaks every rule. And it wins."
+          ],
+          "references": [
+            {
+              "label": "Paradox hook (@samadsaidwhaaat)",
+              "note": "Your storytelling knowledge base: \"Rapper paling controversial yang orang tak boleh benci\", 1.2M views. Gold example: \"Benda paling bodoh yang pernah wujud dalam marketing sebenarnya paling genius.\""
+            }
+          ],
+          "ms": {
+            "description": "Percanggahan yang penonton belum boleh selesaikan, jadi dorang kena terus tengok untuk faham.",
+            "brief": "Buka dengan paradoks yang video ni terangkan.",
+            "howTo": [
+              "Dua bahagian tu mesti betul-betul bercanggah.",
+              "Buka soalan; jangan bagi jawapan dalam hook."
+            ],
+            "hooks": [
+              "Benda paling bosan pasal {subject} sebenarnya paling genius.",
+              "{subject} tak sepatutnya menjadi. Tapi menjadi.",
+              "Benda yang semua orang benci pasal {subject} tu lah sebab dia berjaya.",
+              "Makin kurang kami ubah {subject}, makin ramai yang suka.",
+              "Benda paling pelik pasal {subject}: kenapa orang suka sangat.",
+              "{subject} langgar semua peraturan. Dan dia menang."
+            ]
+          }
+        },
+        {
+          "id": "absurd-stakes",
+          "label": "Absurd Stakes",
+          "description": "A wildly specific big number or an impossible situation. Fill the blanks (___) with real figures.",
+          "brief": "Open with huge, specific stakes.",
+          "howTo": [
+            "Use the most specific real number you have (\"RM140 JUTA\", not \"banyak duit\").",
+            "Fill every ___ with a true figure. Never invent one."
+          ],
+          "hooks": [
+            "We spent RM___ just to get {subject} right.",
+            "We almost lost everything because of {subject}.",
+            "RM___ on the line. All because of {subject}.",
+            "We threw away ___ batches to perfect {subject}.",
+            "One mistake with {subject} could cost us RM___.",
+            "___ people, ___ days, one goal: {subject}."
+          ],
+          "references": [
+            {
+              "label": "Absurd Stakes (@samadsaidwhaaat)",
+              "note": "Your storytelling knowledge base: \"Budak 21 tahun saman Pepsi RM140 JUTA\" (Gold)."
+            },
+            {
+              "label": "MrBeast",
+              "note": "\"I Spent 50 Hours Buried Alive\". The stakes are in the title, the thumbnail and the first sentence."
+            }
+          ],
+          "ms": {
+            "description": "Nombor besar yang sangat spesifik atau situasi mustahil. Isi ruang kosong (___) dengan angka sebenar.",
+            "brief": "Buka dengan pertaruhan besar yang spesifik.",
+            "howTo": [
+              "Guna nombor sebenar paling spesifik (\"RM140 JUTA\", bukan \"banyak duit\").",
+              "Isi setiap ___ dengan angka betul. Jangan reka."
+            ],
+            "hooks": [
+              "Kami habis RM___ semata-mata nak betulkan {subject}.",
+              "Kami hampir hilang semua sebab {subject}.",
+              "RM___ dipertaruhkan. Semua sebab {subject}.",
+              "Kami buang ___ batch untuk sempurnakan {subject}.",
+              "Satu silap dengan {subject} boleh rugi RM___.",
+              "___ orang, ___ hari, satu misi: {subject}."
+            ]
+          }
+        },
+        {
+          "id": "vicarious-access",
+          "label": "Vicarious Access",
+          "description": "Show an exclusive experience most viewers will never have, ideally with a price or scale attached.",
+          "brief": "Open with exclusive access viewers will never get themselves.",
+          "howTo": [
+            "The price or scale IS the hook. Say it early.",
+            "Each reveal must top the one before."
+          ],
+          "hooks": [
+            "You'll probably never see this side of {subject}.",
+            "This is what RM___ worth of {subject} looks like.",
+            "Only a few people ever get to see {subject} like this.",
+            "I got exclusive access to {subject}.",
+            "Come with me where customers never go: {subject}.",
+            "The version of {subject} most people never get to try."
+          ],
+          "references": [
+            {
+              "label": "Vicarious Access (@casey)",
+              "note": "Your storytelling knowledge base: the $21,000 first-class seat review, 80M views. Travel reviews with a dollar amount were 7/14 Gold."
+            }
+          ],
+          "ms": {
+            "description": "Tunjuk pengalaman eksklusif yang kebanyakan penonton takkan dapat, elok kalau ada harga atau skala.",
+            "brief": "Buka dengan akses eksklusif yang penonton takkan dapat sendiri.",
+            "howTo": [
+              "Harga atau skala tu lah hook. Sebut awal.",
+              "Setiap pendedahan mesti lebih hebat dari sebelumnya."
+            ],
+            "hooks": [
+              "Korang mungkin tak pernah tengok sisi {subject} macam ni.",
+              "Ni rupa {subject} bernilai RM___.",
+              "Cuma segelintir orang dapat tengok {subject} macam ni.",
+              "Aku dapat akses eksklusif ke {subject}.",
+              "Jom ikut aku ke tempat pelanggan tak pernah masuk: {subject}.",
+              "Versi {subject} yang ramai orang tak pernah dapat cuba."
+            ]
+          }
+        },
+        {
+          "id": "thesis-bomb",
+          "label": "Thesis Bomb",
+          "description": "State a bold analytical conclusion first; the video is the proof.",
+          "brief": "Open with your bold conclusion, then prove it.",
+          "howTo": [
+            "Only works when your audience already trusts your analysis. Newer accounts do better with Betrayal, Paradox or Absurd Stakes.",
+            "Open the story; never state the moral or lesson in the hook."
+          ],
+          "hooks": [
+            "Here's my take: {subject} changes everything.",
+            "{subject} is the real reason this industry is changing.",
+            "One thing alone proves it: {subject}.",
+            "If you understand {subject}, you understand this whole industry.",
+            "{subject} is quietly beating the competition.",
+            "I'm convinced {subject} is the future of {niche}."
+          ],
+          "references": [
+            {
+              "label": "Thesis Bomb (@kautharrozmal)",
+              "note": "Your storytelling knowledge base: \"isu speed sorang je dah cukup untuk musnahkan propaganda US\", 2.5M views."
+            }
+          ],
+          "ms": {
+            "description": "Nyatakan kesimpulan analisis yang berani dulu; video tu buktinya.",
+            "brief": "Buka dengan kesimpulan berani, lepas tu buktikan.",
+            "howTo": [
+              "Hanya berkesan bila audiens dah percaya analisis korang. Akaun baru lebih baik guna Betrayal, Paradox atau Absurd Stakes.",
+              "Buka cerita; jangan nyatakan moral atau pengajaran dalam hook."
+            ],
+            "hooks": [
+              "Pendapat aku: {subject} ubah segalanya.",
+              "{subject} sebab sebenar industri ni berubah.",
+              "Satu benda je dah cukup buktikan: {subject}.",
+              "Kalau korang faham {subject}, korang faham seluruh industri ni.",
+              "{subject} diam-diam kalahkan pesaing.",
+              "Aku yakin {subject} masa depan {niche}."
+            ]
+          }
+        },
+        {
+          "id": "injustice",
+          "label": "Injustice",
+          "description": "Something unfair is happening to you (or a named person) right now. The creator is inside the story, not commenting on it.",
+          "brief": "Open with an injustice you are living through.",
+          "howTo": [
+            "Be the protagonist. Film it as it happens.",
+            "Keep it true and fair to the other side."
+          ],
+          "hooks": [
+            "I can't believe this happened to us because of {subject}.",
+            "We got rejected because of {subject}.",
+            "They said {subject} would never work.",
+            "This is so unfair, and it's about {subject}.",
+            "I was told to stop talking about {subject}.",
+            "Nobody believed us about {subject}."
+          ],
+          "references": [
+            {
+              "label": "Injustice (@casey)",
+              "note": "Your storytelling knowledge base: \"I'm getting a ticket for riding my bike NOT in the bike lane\", 30M views."
+            }
+          ],
+          "ms": {
+            "description": "Ada benda tak adil sedang jadi pada korang (atau orang yang dinamakan). Creator berada dalam cerita, bukan mengulas dari luar.",
+            "brief": "Buka dengan ketidakadilan yang korang sedang lalui.",
+            "howTo": [
+              "Jadi watak utama. Rakam masa ia berlaku.",
+              "Kekal jujur dan adil pada pihak satu lagi."
+            ],
+            "hooks": [
+              "Tak sangka benda ni jadi kat kami sebab {subject}.",
+              "Kami kena reject sebab {subject}.",
+              "Dorang cakap {subject} takkan berjaya.",
+              "Tak adil langsung, dan semuanya pasal {subject}.",
+              "Aku disuruh berhenti cakap pasal {subject}.",
+              "Takde siapa percaya kami pasal {subject}."
+            ]
+          }
+        },
+        {
+          "id": "authority-admits",
+          "label": "Authority Admits",
+          "description": "A respected figure (or you, the expert) admits a weakness or a mistake. Humility gets shared.",
+          "brief": "Open with an expert admitting they were wrong.",
+          "howTo": [
+            "Works best when the audience sees you or the figure as an authority.",
+            "Admit something real, then show what you learned."
+          ],
+          "hooks": [
+            "Even the experts admit they got {subject} wrong.",
+            "I've been in {niche} for years and I still learned this about {subject}.",
+            "I'll be honest: I was wrong about {subject}.",
+            "The best in {niche} told me one thing about {subject}.",
+            "Our founder admits the truth about {subject}.",
+            "I used to think I knew everything about {subject}."
+          ],
+          "references": [
+            {
+              "label": "Authority admits weakness (@samadsaidwhaaat)",
+              "note": "Your storytelling knowledge base: \"Tun M mengaku ada orang lagi pandai dari dia!\", about 1% shares per view."
+            }
+          ],
+          "ms": {
+            "description": "Tokoh yang dihormati (atau korang sendiri sebagai pakar) mengaku kelemahan atau silap. Rendah diri selalu dikongsi.",
+            "brief": "Buka dengan pakar yang mengaku dia silap.",
+            "howTo": [
+              "Paling berkesan bila audiens nampak korang atau tokoh tu sebagai autoriti.",
+              "Mengaku benda yang betul, lepas tu tunjuk apa yang dipelajari."
+            ],
+            "hooks": [
+              "Pakar pun mengaku dorang silap pasal {subject}.",
+              "Dah bertahun aku dalam {niche}, tapi aku masih belajar benda ni pasal {subject}.",
+              "Jujur cakap: aku silap pasal {subject}.",
+              "Orang terbaik dalam {niche} beritahu aku satu benda pasal {subject}.",
+              "Pengasas kami mengaku kebenaran pasal {subject}.",
+              "Dulu aku ingat aku tahu semua pasal {subject}."
+            ]
+          }
+        },
+        {
+          "id": "outsider-wins",
+          "label": "Outsider Wins",
+          "description": "The underdog nobody expected beats the system. Viewers see themselves in it.",
+          "brief": "Open with the underdog angle.",
+          "howTo": [
+            "Show the odds clearly: what made you the outsider?",
+            "Pairs well with Struggle to Success and Storytelling."
+          ],
+          "hooks": [
+            "Nobody expected a small brand like {brand} to win with {subject}.",
+            "Everyone laughed at {subject}. Not anymore.",
+            "We had zero experience. Then came {subject}.",
+            "They called us too small for {subject}. We did it anyway.",
+            "No big budget, no connections, just {subject}.",
+            "The underdog story behind {subject}."
+          ],
+          "references": [
+            {
+              "label": "Outsider wins (@samadsaidwhaaat)",
+              "note": "Your storytelling knowledge base: G-Dragon rejection-and-comeback story, 1.3M views."
+            }
+          ],
+          "ms": {
+            "description": "Underdog yang takde siapa sangka kalahkan sistem. Penonton nampak diri dorang dalam cerita tu.",
+            "brief": "Buka dengan sudut underdog.",
+            "howTo": [
+              "Tunjuk cabaran dengan jelas: apa yang buat korang orang luar?",
+              "Sesuai dengan Struggle to Success dan Storytelling."
+            ],
+            "hooks": [
+              "Takde siapa sangka brand kecil macam {brand} menang dengan {subject}.",
+              "Semua orang gelakkan {subject}. Sekarang tak lagi.",
+              "Kami langsung takde pengalaman. Lepas tu datang {subject}.",
+              "Dorang kata kami terlalu kecil untuk {subject}. Kami buat juga.",
+              "Takde bajet besar, takde kabel, cuma {subject}.",
+              "Kisah underdog di sebalik {subject}."
+            ]
+          }
+        },
+        {
+          "id": "knowledge-gap",
+          "label": "Knowledge Gap",
+          "description": "Expose something the audience thinks they know but doesn't, about something familiar.",
+          "brief": "Open by exposing a gap in what viewers think they know.",
+          "howTo": [
+            "Pick something familiar to the audience.",
+            "The surprise must be true. Check it."
+          ],
+          "hooks": [
+            "Did you know this about {subject}?",
+            "Most people have no idea how {subject} really works.",
+            "You've seen {subject} a hundred times, but you don't know this.",
+            "The real story behind {subject} isn't what you think.",
+            "Here's something about {subject} you've never noticed.",
+            "Nobody tells you this about {subject}."
+          ],
+          "references": [
+            {
+              "label": "Knowledge Gap Opener (@faizrazakdesign)",
+              "note": "Your storytelling knowledge base: \"Korang tau tak Miniso sebenarnya bukan brand Jepun?\""
+            }
+          ],
+          "ms": {
+            "description": "Dedahkan benda yang audiens ingat dorang tahu tapi sebenarnya tak, pasal sesuatu yang biasa.",
+            "brief": "Buka dengan dedahkan jurang dalam apa yang penonton ingat dorang tahu.",
+            "howTo": [
+              "Pilih benda yang biasa bagi audiens.",
+              "Kejutan tu mesti benar. Semak dulu."
+            ],
+            "hooks": [
+              "Korang tahu tak ni pasal {subject}?",
+              "Ramai orang tak tahu macam mana {subject} sebenarnya berfungsi.",
+              "Dah seratus kali korang nampak {subject}, tapi korang tak tahu ni.",
+              "Kisah sebenar di sebalik {subject} bukan macam korang sangka.",
+              "Ada satu benda pasal {subject} yang korang tak pernah perasan.",
+              "Takde siapa beritahu korang ni pasal {subject}."
+            ]
+          }
+        },
+        {
+          "id": "curiosity-gap",
+          "label": "Curiosity Gap",
+          "description": "Reveal part of a story or result and hold back the rest, so viewers stay to close the loop.",
+          "brief": "Open a loop that only the end of the video closes.",
+          "howTo": [
+            "Promise something specific, then deliver it.",
+            "Pay off the loop before the end, or viewers feel tricked."
+          ],
+          "hooks": [
+            "I did this with {subject} and didn't expect what happened next.",
+            "Something happened with {subject} that we still can't explain.",
+            "Wait until you see what {subject} did.",
+            "There's one thing about {subject} I've never shared before.",
+            "This is the part of {subject} nobody shows you.",
+            "By the end of this video, you'll see {subject} differently."
+          ],
+          "references": [
+            {
+              "label": "Curiosity gap formula",
+              "note": "Short-form hook guides: reveal part of a story or result while withholding the rest, so the viewer needs to keep watching."
+            },
+            {
+              "label": "MrBeast",
+              "note": "Sets the stakes and a curiosity gap in the first seconds, and matches the first sentence to the title."
+            }
+          ],
+          "ms": {
+            "description": "Dedahkan sebahagian cerita atau hasil dan simpan selebihnya, supaya penonton stay untuk tahu penghujungnya.",
+            "brief": "Buka satu persoalan yang hanya terjawab di hujung video.",
+            "howTo": [
+              "Janji benda yang spesifik, lepas tu tunaikan.",
+              "Jawab persoalan tu sebelum habis, kalau tak penonton rasa ditipu."
+            ],
+            "hooks": [
+              "Aku buat ni dengan {subject} dan tak sangka apa jadi lepas tu.",
+              "Ada benda jadi dengan {subject} yang kami sampai sekarang tak boleh terangkan.",
+              "Tunggu sampai korang tengok apa {subject} buat.",
+              "Ada satu benda pasal {subject} yang aku tak pernah kongsi.",
+              "Ni bahagian {subject} yang orang tak pernah tunjuk.",
+              "Habis tengok video ni, korang akan tengok {subject} dengan cara lain."
+            ]
+          }
+        },
+        {
+          "id": "cold-open",
+          "label": "Cold Open",
+          "description": "Start in the middle of the action, like a film opening, with no intro and no \"hi guys\".",
+          "brief": "Open mid-scene, already in the action.",
+          "howTo": [
+            "Skip the intro. The first frame is already the tense moment.",
+            "Add a specific time or place to make it feel real."
+          ],
+          "hooks": [
+            "And that's when {subject} went completely wrong.",
+            "Three minutes before opening, and {subject} wasn't ready.",
+            "This is the moment everything changed for {subject}.",
+            "Nobody in the room said a word when they saw {subject}.",
+            "We had one shot at {subject}. This was it.",
+            "It's 5am, and {subject} is already a problem."
+          ],
+          "references": [
+            {
+              "label": "In medias res",
+              "note": "The classic film technique of opening in the middle of the action, then filling in how we got there."
+            },
+            {
+              "label": "Mid-scene opener (@stephaniesooyt)",
+              "note": "Your storytelling knowledge base: opens mid-scene with people already in conflict, plus a specific date, time and place."
+            }
+          ],
+          "ms": {
+            "description": "Mula di tengah-tengah aksi, macam pembukaan filem, tanpa intro dan tanpa \"hai semua\".",
+            "brief": "Buka di tengah babak, terus dalam aksi.",
+            "howTo": [
+              "Langkau intro. Frame pertama dah saat yang tegang.",
+              "Tambah masa atau tempat yang spesifik supaya rasa real."
+            ],
+            "hooks": [
+              "Dan masa tu lah {subject} jadi kelam-kabut.",
+              "Tiga minit sebelum buka, {subject} belum siap.",
+              "Ni saat semuanya berubah untuk {subject}.",
+              "Takde siapa dalam bilik tu bersuara bila nampak {subject}.",
+              "Kami cuma ada satu peluang untuk {subject}. Inilah dia.",
+              "Pukul 5 pagi, dan {subject} dah jadi masalah."
+            ]
+          }
+        },
+        {
+          "id": "movie-tagline",
+          "label": "Movie Tagline",
+          "description": "A short, dramatic one-liner in the style of a film poster: mood first, details later.",
+          "brief": "Open with a cinematic one-line tagline.",
+          "howTo": [
+            "Keep it under 10 words.",
+            "Pair it with a slow, dramatic shot and music."
+          ],
+          "hooks": [
+            "Just when you thought you knew everything about {subject}...",
+            "One brand. One mission. {subject}.",
+            "This is not just {subject}. This is {brand}.",
+            "Every family has a story. Ours starts with {subject}.",
+            "Some secrets are worth sharing. This one is {subject}.",
+            "The story of {subject} begins now."
+          ],
+          "references": [
+            {
+              "label": "Alien (1979)",
+              "note": "\"In space no one can hear you scream.\" Tone, genre and setting in one line."
+            },
+            {
+              "label": "Jaws 2 (1978)",
+              "note": "\"Just when you thought it was safe to go back in the water...\" Takes something familiar and makes it new."
+            },
+            {
+              "label": "Edward Scissorhands (1990)",
+              "note": "\"His story will touch you, even though he can't.\" Direct address plus a reversal."
+            }
+          ],
+          "ms": {
+            "description": "Satu ayat pendek dan dramatik macam poster filem: mood dulu, butiran kemudian.",
+            "brief": "Buka dengan satu ayat tagline gaya filem.",
+            "howTo": [
+              "Bawah 10 perkataan.",
+              "Gandingkan dengan shot perlahan yang dramatik dan muzik."
+            ],
+            "hooks": [
+              "Baru je korang ingat korang tahu semua pasal {subject}...",
+              "Satu brand. Satu misi. {subject}.",
+              "Ni bukan sekadar {subject}. Ni {brand}.",
+              "Setiap keluarga ada cerita. Cerita kami bermula dengan {subject}.",
+              "Ada rahsia yang patut dikongsi. Yang ni {subject}.",
+              "Kisah {subject} bermula sekarang."
+            ]
+          }
+        },
+        {
+          "id": "confession",
+          "label": "Confession / Secret",
+          "description": "Share something you \"shouldn't\", or admit something personal. People lean in for secrets.",
+          "brief": "Open with a confession or a secret.",
+          "howTo": [
+            "The secret must be real and worth it.",
+            "Lower your voice or go closer to the camera; it feels private."
+          ],
+          "hooks": [
+            "I shouldn't be telling you this about {subject}.",
+            "Confession: we almost gave up on {subject}.",
+            "I've never admitted this about {subject} before.",
+            "Our competitors won't like me sharing this about {subject}.",
+            "Can I be honest about {subject}?",
+            "This is the secret behind {subject}."
+          ],
+          "ms": {
+            "description": "Kongsi benda yang korang \"tak patut\" kongsi, atau mengaku benda peribadi. Orang suka dengar rahsia.",
+            "brief": "Buka dengan pengakuan atau rahsia.",
+            "howTo": [
+              "Rahsia tu mesti betul dan berbaloi.",
+              "Perlahankan suara atau dekat dengan kamera; rasa macam peribadi."
+            ],
+            "hooks": [
+              "Aku tak patut beritahu korang ni pasal {subject}.",
+              "Pengakuan: kami hampir putus asa dengan {subject}.",
+              "Aku tak pernah mengaku ni pasal {subject}.",
+              "Pesaing kami mesti tak suka aku kongsi ni pasal {subject}.",
+              "Boleh aku jujur pasal {subject}?",
+              "Ni rahsia di sebalik {subject}."
+            ]
+          }
+        },
+        {
+          "id": "experiment",
+          "label": "Experiment / Test",
+          "description": "Test something on camera: a challenge, a trial, a taste test. The outcome is the reason to stay.",
+          "brief": "Open with a test whose outcome viewers want to see.",
+          "howTo": [
+            "State the test and the time frame in the first line.",
+            "Show the honest result, even if it is not perfect."
+          ],
+          "hooks": [
+            "I tried {subject} for 7 days. Here's what happened.",
+            "I tested {subject} so you don't have to.",
+            "We put {subject} to the test.",
+            "I gave {subject} to 10 strangers. Watch their reactions.",
+            "Can {subject} survive a 24-hour challenge?",
+            "I asked people on the street about {subject}. The answers surprised me."
+          ],
+          "references": [
+            {
+              "label": "MrBeast",
+              "note": "\"I Survived 7 Days In An Abandoned City\". A clear test, time frame and stakes in one line."
+            },
+            {
+              "label": "Test / challenge vlogs (@casey)",
+              "note": "Your storytelling knowledge base: Casey's Gold vlogs had a test, challenge and outcome structure; day-in-the-life vlogs did not."
+            }
+          ],
+          "ms": {
+            "description": "Uji sesuatu depan kamera: cabaran, percubaan, ujian rasa. Hasilnya sebab orang stay.",
+            "brief": "Buka dengan ujian yang penonton nak tahu hasilnya.",
+            "howTo": [
+              "Sebut ujian dan tempohnya dalam ayat pertama.",
+              "Tunjuk hasil yang jujur, walaupun tak sempurna."
+            ],
+            "hooks": [
+              "Aku cuba {subject} selama 7 hari. Ni yang jadi.",
+              "Aku uji {subject}, jadi korang tak perlu.",
+              "Kami uji {subject} habis-habisan.",
+              "Aku bagi {subject} kat 10 orang asing. Tengok reaksi dorang.",
+              "Boleh ke {subject} bertahan cabaran 24 jam?",
+              "Aku tanya orang ramai pasal {subject}. Jawapan dorang mengejutkan."
+            ]
+          }
+        },
+        {
+          "id": "versus",
+          "label": "Versus",
+          "description": "Put two things side by side: cheap vs expensive, expectation vs reality, old vs new.",
+          "brief": "Open with a head-to-head comparison.",
+          "howTo": [
+            "Make both sides visually clear (split screen, labels).",
+            "Let viewers pick a side in the comments."
+          ],
+          "hooks": [
+            "Cheap vs expensive: {subject}.",
+            "Expectation vs reality: {subject}.",
+            "Old way vs new way: {subject}.",
+            "Amateur vs pro: {subject}.",
+            "Day 1 vs day 100: {subject}.",
+            "What you ordered vs what you got: {subject}."
+          ],
+          "references": [
+            {
+              "label": "MrBeast",
+              "note": "\"$1 vs $1,000,000 Hotel Room!\" The comparison is the whole hook."
+            }
+          ],
+          "ms": {
+            "description": "Letak dua benda sebelah-menyebelah: murah vs mahal, jangkaan vs realiti, lama vs baru.",
+            "brief": "Buka dengan perbandingan bersemuka.",
+            "howTo": [
+              "Pastikan kedua-dua belah jelas secara visual (split screen, label).",
+              "Biar penonton pilih pihak di ruangan komen."
+            ],
+            "hooks": [
+              "Murah vs mahal: {subject}.",
+              "Jangkaan vs realiti: {subject}.",
+              "Cara lama vs cara baru: {subject}.",
+              "Amatur vs pro: {subject}.",
+              "Hari pertama vs hari ke-100: {subject}.",
+              "Apa yang korang order vs apa yang korang dapat: {subject}."
             ]
           }
         }
@@ -2212,7 +3148,7 @@
       "hooksOverride": true,
       "ms": {
         "question": "Bagaimana nak tarik perhatian dalam 3 saat pertama?",
-        "description": "3 saat pertama menentukan sama ada orang terus menonton. Pilih teknik pembukaan.",
+        "description": "3 saat pertama tentukan sama ada orang terus tengok. 23 teknik pembukaan daripada creator terbukti, filem dan knowledge base storytelling anda.",
         "briefLabel": "Buka dengan"
       }
     },

@@ -72,7 +72,7 @@ export function buildBrief(board: Board, selection: Selection, variant = 0, read
     const out: string[] = [];
     subjectPool.forEach((subject, i) => {
       for (const template of list) {
-        if (template.includes('{subject}')) out.push(template.replaceAll('{subject}', subject));
+        if (template.includes('{subject}')) out.push(withSubject(template, subject));
         else if (i === 0) out.push(template);
       }
     });
@@ -113,6 +113,13 @@ export function hookParts(brief: IdeaBrief, profile: Partial<Profile>): TextPart
 
 export function hookText(brief: IdeaBrief, profile: Partial<Profile>): string {
   return brief.hook ? capitalise(fill(brief.hook, profile)) : '';
+}
+
+/** Fill {subject}, capitalising it where it starts a sentence ("One mission. Resipi ..."). */
+function withSubject(template: string, subject: string): string {
+  return template.replace(/(^|[.!?]\s+)?\{subject\}/g, (_, start: string | undefined) =>
+    start !== undefined ? start + capitalise(subject) : subject,
+  );
 }
 
 /** How the profile's "What is this content about?" and key points shape the hooks. */

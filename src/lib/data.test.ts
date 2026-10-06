@@ -87,8 +87,8 @@ describe('buildBrief', () => {
     const core = buildBoard(matrix, ['type', 'present', 'shooting', 'topic']);
     const selection = { type: 'educate', present: 'top-list', shooting: 'whip-pan', topic: 'product-service' };
     const first = buildBrief(core, selection, 0);
-    // Hooks pooled from the type, present style and topic (3 each) × 4 topic subjects.
-    expect(first.hookVariations).toBe(9 * 4);
+    // Hooks pooled from the type (5), present style (6) and topic (5) × 4 topic subjects.
+    expect(first.hookVariations).toBe(16 * 4);
     const hooks = new Set(Array.from({ length: first.hookVariations }, (_, v) => buildBrief(core, selection, v).hook));
     expect(hooks.size).toBe(first.hookVariations);
   });
@@ -100,7 +100,7 @@ describe('buildBrief', () => {
     const brief = buildBrief(core, selection, 0, readFocus(focus, [], 'English'));
     expect(brief.angle).toBeUndefined();
     expect(brief.hook).toContain(focus);
-    expect(brief.hookVariations).toBe(9);
+    expect(brief.hookVariations).toBe(16);
   });
 
   it('reads an intent instead of pasting it into the hook', () => {
@@ -120,13 +120,13 @@ describe('buildBrief', () => {
 
   it('pulls the subject out of the intent words', () => {
     const subject = (focus: string, lang: Profile['language'] = 'English') => readFocus(focus, [], lang)!.subjects[0];
-    expect(subject('cooking rendang with Adabi rendang paste')).toBe('cooking rendang with Adabi rendang paste');
-    expect(subject('How to cook nasi lemak')).toBe('cooking nasi lemak');
+    expect(subject('cooking rendang with Adabi rendang paste')).toBe('rendang with Adabi rendang paste');
+    expect(subject('How to cook nasi lemak')).toBe('nasi lemak');
     expect(subject('New product: sambal tumis paste')).toBe('our new sambal tumis paste');
-    expect(subject('USP produk Adabi', 'Bahasa Melayu')).toBe('apa yang buat Adabi berbeza');
+    expect(subject('USP produk Adabi', 'Bahasa Melayu')).toBe('Adabi');
     expect(subject('Raya promo')).toBe('our Raya promo');
-    expect(subject('Customer testimonials')).toBe('what customers really think of {product}');
-    expect(subject('masak rendang dengan pes rendang Adabi', 'Bahasa Melayu')).toBe('masak rendang dengan pes rendang Adabi');
+    expect(subject('Customer testimonials')).toBe('{product}');
+    expect(subject('masak rendang dengan pes rendang Adabi', 'Bahasa Melayu')).toBe('rendang dengan pes rendang Adabi');
     expect(readFocus('Adabi vs other brands', [], 'English')!.hooks[0]).toBe('Adabi vs other brands: which one wins?');
   });
 
@@ -143,6 +143,25 @@ describe('buildBrief', () => {
     expect(prompt).toContain('This video is about: our new sambal tumis paste');
     expect(prompt).toContain('- No MSG');
     expect(prompt).toContain('Work every key point');
+  });
+
+  it('gives every Hook column type a deep pool in both languages', () => {
+    const hookColumn = matrix.categories.find((c) => c.id === 'hook')!;
+    expect(hookColumn.items.length).toBeGreaterThanOrEqual(20);
+    for (const item of hookColumn.items) {
+      expect(item.hooks!.length, item.id).toBeGreaterThanOrEqual(6);
+      expect(item.ms!.hooks!.length, item.id).toBe(item.hooks!.length);
+    }
+    const board = buildBoard(matrix, ['type', 'present', 'topic', 'hook']);
+    const selection = { type: 'educate', present: 'top-list', topic: 'product-service', hook: 'question' };
+    expect(buildBrief(board, selection).hookVariations).toBe(8 * 4);
+  });
+
+  it('capitalises a subject that starts a sentence inside a hook', () => {
+    const board = buildBoard(matrix, ['hook']);
+    const reading = readFocus('resipi rendang ayam', [], 'English')!;
+    const hooks = Array.from({ length: 6 }, (_, v) => buildBrief(board, { hook: 'movie-tagline' }, v, reading).hook);
+    expect(hooks).toContain('One brand. One mission. This recipe for rendang ayam.');
   });
 
   it('lists what is still missing', () => {
@@ -189,7 +208,7 @@ describe('Bahasa Melayu output', () => {
     const selection = { type: 'business-ads', present: 'lakonan', shooting: 'foodie', topic: 'product-service' };
     const ids = ['type', 'present', 'shooting', 'topic'];
     const bm = buildBrief(buildBoard(ms, ids), selection, 0, readFocus('masak rendang dengan pes rendang Adabi', [], 'Bahasa Melayu'));
-    expect(bm.hook).toMatch(/masak rendang/);
+    expect(bm.hook).toMatch(/rendang dengan pes rendang Adabi/);
     expect(bm.lines[0].label).toBe('Matlamat');
     expect(bm.lines[0].text).toContain('Tukar penonton');
 
