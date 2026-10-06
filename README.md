@@ -33,6 +33,29 @@ the brief, the copied text and the AI script prompt.
 
 Everything is saved in the browser (localStorage), so there's no login and no server.
 
+## Writing scripts with AI
+
+**Connect AI** (top right) lets each user write the full script for an idea with their own AI
+account. There is no server: the key stays in the user's browser and requests go straight from
+the browser to the provider, who bills the user directly.
+
+- **Own API key:** Claude (Anthropic), ChatGPT (OpenAI) or Gemini (Google). This needs a
+  developer/API account with billing; a chat subscription alone doesn't include an API key.
+- **OpenRouter:** "Sign in with OpenRouter" (OAuth PKCE, no copying keys) or paste an
+  OpenRouter key. One account reaches Claude, GPT, Gemini and many more.
+
+After connecting, the app loads the account's live model list and picks a default (Claude:
+`claude-opus-5-5`; OpenRouter: the newest Claude Opus). Users can change the model. Claude
+calls use the official `@anthropic-ai/sdk` in browser mode, with medium effort and the
+server-side refusal fallback on current models; it is only downloaded when someone uses Claude.
+
+**Write the full script with AI** on the brief streams the script (hooks, scenes with
+timestamps, shot list, on-screen text, caption) using the same prompt as "Copy AI script
+prompt", which also carries the hook rules from the storytelling knowledge base. The script can
+be copied, rewritten, or saved into the idea's notes. "Remember my keys on this device" can be
+turned off on shared computers. Code: `src/lib/ai.ts`, `src/state/AiState.tsx`,
+`src/components/AiSettings.tsx`, `src/components/AiScript.tsx`.
+
 ## Running it
 
 ```bash

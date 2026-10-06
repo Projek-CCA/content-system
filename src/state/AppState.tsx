@@ -89,7 +89,7 @@ interface AppStateValue {
   nextVariant: () => void;
 
   saved: SavedIdea[];
-  saveIdea: (selection: Selection, variant: number) => void;
+  saveIdea: (selection: Selection, variant: number, notes?: string) => void;
   updateSaved: (id: string, patch: Partial<Pick<SavedIdea, 'status' | 'notes'>>) => void;
   removeSaved: (id: string) => void;
   isSaved: (selection: Selection) => boolean;
@@ -256,7 +256,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     nextVariant: () => setVariant((v) => v + 1),
 
     saved,
-    saveIdea: (sel, v) => {
+    saveIdea: (sel, v, notes = '') => {
       const brief = buildBrief(board, sel, v, focusReading(profile));
       const idea: SavedIdea = {
         id: `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
@@ -274,7 +274,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
         focus: profile.focus.trim() || undefined,
         variant: v,
         status: 'idea',
-        notes: '',
+        notes,
       };
       setSaved((prev) => [idea, ...prev]);
     },

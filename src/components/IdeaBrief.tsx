@@ -4,6 +4,7 @@ import { copyText } from '../lib/export';
 import { strings } from '../lib/localize';
 import { lockMap, randomSelection } from '../lib/matrix';
 import { useAppState } from '../state/AppState';
+import { AiScript } from './AiScript';
 import { Filled, Parts } from './Filled';
 import { Icon } from './Icon';
 
@@ -179,6 +180,8 @@ export function IdeaBrief() {
           <Icon name="sparkle" /> Copy AI script prompt
         </button>
       </div>
+
+      <AiScript brief={brief} profile={profile} selection={selection} variant={variant} />
     </aside>
   );
 }

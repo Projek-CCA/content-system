@@ -1,3 +1,4 @@
+import { AiButton, AiSettings } from './components/AiSettings';
 import { BatchView } from './components/BatchView';
 import { BuildView } from './components/BuildView';
 import { ConfirmDialog } from './components/ConfirmDialog';
@@ -37,6 +38,7 @@ export function App() {
               <span>Content Idea Matrix</span>
             </span>
           </button>
+          <AiButton />
           <nav className="tabs" aria-label="Sections">
             {TABS.map((t) => (
               <button key={t.id} className={`tab ${view === t.id ? 'is-active' : ''}`} onClick={() => setView(t.id)} aria-current={view === t.id ? 'page' : undefined}>
@@ -65,6 +67,7 @@ export function App() {
       </main>
 
       <ItemDetail />
+      <AiSettings />
       <ConfirmDialog />
       <div className={`toast ${toast ? 'is-visible' : ''}`} role="status" aria-live="polite">
         {toast}

@@ -184,9 +184,10 @@ export function briefToText(brief: IdeaBrief, profile: Partial<Profile>): string
 
 const LANGUAGE_NOTES: Record<Profile['language'], string> = {
   English: 'Write in natural, conversational English.',
-  'Bahasa Melayu': 'Write in natural, conversational Bahasa Melayu.',
+  'Bahasa Melayu':
+    'Write in natural, conversational Bahasa Melayu (korang, takde, dia), not formal written BM (avoid ia, tiada, adalah, tersebut).',
   'Mixed (BM + English)':
-    'Write in a natural mix of Bahasa Melayu and English, the way Malaysians talk casually on social media.',
+    'Write in a natural mix of Bahasa Melayu and English, the way Malaysians talk casually on social media: BM carries the story, English carries the emphasis.',
 };
 
 /** A ready-to-paste prompt for Claude, ChatGPT or any AI assistant. */
@@ -235,6 +236,17 @@ export function briefToAiPrompt(brief: IdeaBrief, profile: Profile): string {
   out.push('5. A post caption with a clear call to action and 5 relevant hashtags.');
   if (points.length) out.push('6. Work every key point listed above into the script naturally.');
   out.push('');
+  out.push('Rules:');
+  out.push('- Each spoken hook is 16 words or fewer, and conflict, a paradox or the stakes land in the first sentence.');
+  out.push('- The hook opens the story. Never state the moral, lesson or call to action in the hook.');
+  out.push('- Never invent statistics, prices or facts. Use the key points given; mark anything you are unsure of as [VERIFY: ...].');
+  out.push('- Write for the ear: short spoken sentences, the way a creator actually talks on camera.');
+  out.push('');
   out.push(LANGUAGE_NOTES[profile.language] ?? LANGUAGE_NOTES.English);
   return out.join('\n');
 }
+
+/** Output instructions for in-app generation, so the script renders cleanly. */
+export const AI_SYSTEM_PROMPT =
+  'You write ready-to-shoot short-form video scripts for small businesses. Reply with the deliverables only, no preamble. ' +
+  'Use "## " headings for each deliverable, numbered or "- " lists, and **bold** sparingly. No tables.';
